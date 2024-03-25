@@ -1,5 +1,5 @@
 from excel_helpers import *
-
+from util import is_letter_ornumber
 
 def get_sums(excel_formula):
     sums = []
@@ -94,7 +94,6 @@ def split_string_operators(string):
     
     current_part = ''    
     brackets_to_close = 0
-    is_first_character = True
     
     building_up_a_part = False
     is_allowed_to_close = False
@@ -119,13 +118,18 @@ def split_string_operators(string):
             brackets_to_close += 1
             i += 2
         
-        elif is_operator(string[i]) and not is_first_character and is_allowed_to_close:
+        elif string[i] == '(':
+            current_part += string[i]
+            brackets_to_close += 1
+        
+        elif is_operator(string[i]) and is_allowed_to_close:
             operators.append(string[i])
             parts.append(current_part)
             
         else:
-            
-            parts.append(string[i])
+            current_part += string[i]
+            if is_letter_or_number(string[i]):
+                is_allowed_to_close = True
         i += 1
     return operators, parts
 
@@ -133,15 +137,15 @@ def split_string_operators(string):
 # Voorbeeld
 input_string = "-A + SUM(A) + B + C"
 operators, parts = split_string_operators(input_string)
-# print("Operatoren:", operators)
-# print("Onderdelen:", parts)
-# input_string = "-A + (-B) + C"
-# operators, parts = split_string_operators(input_string)
-# print("Operatoren:", operators)
-# print("Onderdelen:", parts)
+print("Operatoren:", operators)
+print("Onderdelen:", parts)
+input_string = "-A + (-B) + C"
+operators, parts = split_string_operators(input_string)
+print("Operatoren:", operators)
+print("Onderdelen:", parts)
 
 
 # test the function
-# (extract_formula_cells('=SUM(A1:B3)'))
+(extract_formula_cells('=SUM(A1:B3)'))
 
 
