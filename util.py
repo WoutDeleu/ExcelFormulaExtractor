@@ -1,3 +1,6 @@
+
+
+
 def remove_char_from_string(string, index):
     result_string = ''
     for i in range(len(string)):

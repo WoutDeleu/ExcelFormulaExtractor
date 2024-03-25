@@ -32,3 +32,9 @@ def is_iferror(string):
 def is_excel_cell(string):
     pattern = r'^[A-Z]+[0-9]+$'
     return bool(re.match(pattern, string))
+
+def is_operator(char):
+    if char in ['+', '-', '*', '/']:
+        return True
+    return False
+

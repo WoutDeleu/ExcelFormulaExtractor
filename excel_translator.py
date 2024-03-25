@@ -55,6 +55,13 @@ def  extract_formula_cells(excel_formula):
     # remove first character (=)
     excel_formula = remove_char_from_string(excel_formula, 0)
     
+    # TODO split up excel formula in operators and parts
+    operators, parts = split_string_operators(excel_formula)
+    
+    # handle first 
+    if excel_formula[0] == '-' or excel_formula[0] == '+':
+        excel_formula = remove_char_from_string(excel_formula, 0)
+    
     if is_sum(excel_formula[:3]):
         excel_formula = excel_formula[4:]
         
@@ -69,6 +76,8 @@ def  extract_formula_cells(excel_formula):
         pass
     elif is_excel_cell(excel_formula):
         pass
+    elif excel_formula[0] == '-':
+        pass
     else:
         print(excel_formula)
         raise Exception('Invalid formula')
@@ -76,5 +85,63 @@ def  extract_formula_cells(excel_formula):
     return cells, formula
 
 
-# test the funcction
-(extract_formula_cells('=SUM(A1:B3)'))
+
+
+def split_string_operators(string):
+    # Queues
+    operators = []
+    parts = []
+    
+    current_part = ''    
+    brackets_to_close = 0
+    is_first_character = True
+    
+    building_up_a_part = False
+    is_allowed_to_close = False
+    
+    
+    i = 0
+    while i < len(string):
+        if brackets_to_close > 0:
+            current_part += string[i]
+            if string[i] == ')':
+                brackets_to_close -= 1
+            if string[i] == '(':
+                brackets_to_close += 1
+            
+        elif is_sum(string[i:i+3]):
+            current_part += 'SUM('
+            brackets_to_close += 1
+            i += 3
+        
+        elif is_if(string[i:i+2]):
+            current_part += 'SUM('
+            brackets_to_close += 1
+            i += 2
+        
+        elif is_operator(string[i]) and not is_first_character and is_allowed_to_close:
+            operators.append(string[i])
+            parts.append(current_part)
+            
+        else:
+            
+            parts.append(string[i])
+        i += 1
+    return operators, parts
+
+
+# Voorbeeld
+input_string = "-A + SUM(A) + B + C"
+operators, parts = split_string_operators(input_string)
+# print("Operatoren:", operators)
+# print("Onderdelen:", parts)
+# input_string = "-A + (-B) + C"
+# operators, parts = split_string_operators(input_string)
+# print("Operatoren:", operators)
+# print("Onderdelen:", parts)
+
+
+# test the function
+# (extract_formula_cells('=SUM(A1:B3)'))
+
+
