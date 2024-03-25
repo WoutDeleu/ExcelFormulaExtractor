@@ -25,3 +25,4 @@ def is_letter_or_number(character):
     # Reguliere expressiepatroon om te controleren of iets een letter (hoofd- of kleine letter) of een getal is
     pattern = r'^[a-zA-Z0-9]$'
     return bool(re.match(pattern, character))
+

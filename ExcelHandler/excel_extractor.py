@@ -1,75 +1,31 @@
-from excel_helpers import *
+from ExcelHandler.excel_helpers import *
+from ExcelHandler.handle_sum import handle_sum_calculation
 from Util.util import is_letter_or_number
 from Util.DataStructures import Queue
 
-def get_sums(excel_formula):
-    sums = []
-    counter_closing_brackets_needed = 1
-    current_sum = ''
-    for ch in excel_formula:
-        if ch == '(':
-            counter_closing_brackets_needed += 1
-        elif ch == ')':
-            counter_closing_brackets_needed -= 1
-            if counter_closing_brackets_needed == 0:
-                sums.append(current_sum)
-                current_sum = ''
-        else:
-            current_sum += ch
-    return sums
 
-
-def handle_sum(excel_formula, cells, formula):
-    arguments_unformatted = excel_formula.split(',')
-    for arg in arguments_unformatted:
-        if is_sum(arg[:3]):
-            arg = arg[4:]
-            sums = get_sums(arg)
-            for sum in sums:
-                cells, formula = handle_sum(sum, cells, formula)
-
-        elif ':' in arg:
-            start_col, start_row = extract_col_row_from_excel_cell(arg.split(':')[0])
-            end_col, end_row = extract_col_row_from_excel_cell(arg.split(':')[1])
-            start_col_last_char = start_col[-1]
-            start_col_except_last_char = start_col[:-1]
-            end_col_last_char = end_col[-1]
-            
-            for i in range(int(start_row), int(end_row)+1):
-                for j in range(ord(start_col_last_char), ord(end_col_last_char) + 1):
-                    cells.append(Cell('Tax Calculation', start_col_except_last_char + chr(j) + str(i)))
-                    formula += start_col_except_last_char + chr(j) + str(i) + '+'
-
-        else:
-            cells.append(Cell('Tax Calculation', arg))
-            formula += arg + '+'
-    
-    return cells, formula[:-1]
+def add_to_resulting_formula(resulting_formula, formula, operators):
+    resulting_formula += formula
+    if not operators.is_empty():
+        resulting_formula += operators.pop()
+    return resulting_formula
 
 
 def  extract_formula_cells(excel_formula):
     # TODO handle references to other sheets - nu, default sheet is 'Tax Calculation'
     
     cells = []
-    formula = ''
+    resulting_formula = ''
     
     # remove first character (=)
     excel_formula = remove_char_from_string(excel_formula, 0)
-    
-    # TODO split up excel formula in operators and parts
-    operators, parts = split_string_operators(excel_formula)
+
+    operators, parts = split_up_excel_formula(excel_formula)
     
     for element in parts.get_list():
         if is_sum(element[:3]):
-            element = element[4:]
-            
-            sum_formula = ''
-            sums = get_sums(element)
-            for sum in sums:
-                cells, sum_formula = handle_sum(sum, cells, sum_formula)
-            formula += sum_formula
-            if not operators.is_empty():
-                formula += operators.pop()
+            cells, formula = handle_sum_calculation(cells, element)
+            resulting_formula = add_to_resulting_formula(resulting_formula, formula, operators)
 
         elif is_max(element[:3]):
             pass
@@ -90,12 +46,11 @@ def  extract_formula_cells(excel_formula):
             print(element)
             raise Exception('Invalid formula')
     
-    return cells, formula
+    return cells, resulting_formula
 
 
 
-
-def split_string_operators(string):
+def split_up_excel_formula(string):
     # Queues
     operators = Queue()
     parts = Queue()
@@ -163,8 +118,4 @@ def split_string_operators(string):
         parts.add(current_part)
         
     return operators, parts
-
-# test the function
-(extract_formula_cells('=SUM(A1:B3)'))
-
 

@@ -4,8 +4,8 @@ import formulas as fs
 from Util.DataStructures import Stack
 from Util.util import *
 from Util.Cell import *
-from excel_helpers import *
-from excel_translator import *
+from ExcelHandler.excel_helpers import *
+from ExcelHandler.excel_extractor import *
 
 warnings.simplefilter(action='ignore', category=UserWarning)
 
@@ -46,6 +46,7 @@ def resolve_cell(workbook, cell, formulas, values):
     
     
 def main():
+
     workbook = read_in_excel('Draft PB-berekening - WERKVERSIE V4.xlsx')
     
     starting_cell = Cell('Tax Calculation', 'C41')
@@ -56,12 +57,12 @@ def main():
     values = Stack()
     
     formulas, values = resolve_cell(workbook, starting_cell, formulas, values)
-    # for value in values:
-    #     print(value.cell.location)
-    #     print(value.value)
-    # for value in formulas:
-    #     print(value.cell.location)
-    #     print(value.formula)
+    for value in values:
+        print(value.cell.location)
+        print(value.value)
+    for value in formulas:
+        print(value.cell.location)
+        print(value.formula)
     
 if __name__ == '__main__': 
     main()
