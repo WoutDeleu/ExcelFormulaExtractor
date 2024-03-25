@@ -1,8 +1,8 @@
 import traceback
 import openpyxl
 import re
-from util import *
-from Cell import *
+from Util.util import *
+from Util.Cell import *
 
 
 def read_in_excel(path):
@@ -28,6 +28,12 @@ def is_if(string):
 
 def is_iferror(string):
     return string == 'IFERROR'
+
+def is_max(string):
+    return string == 'MAX'
+
+def is_min(string):
+    return string == 'MIN'
 
 def is_excel_cell(string):
     pattern = r'^[A-Z]+[0-9]+$'

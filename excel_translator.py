@@ -1,5 +1,6 @@
 from excel_helpers import *
-from util import is_letter_ornumber
+from Util.util import is_letter_or_number
+from Util.DataStructures import Queue
 
 def get_sums(excel_formula):
     sums = []
@@ -58,29 +59,36 @@ def  extract_formula_cells(excel_formula):
     # TODO split up excel formula in operators and parts
     operators, parts = split_string_operators(excel_formula)
     
-    # handle first 
-    if excel_formula[0] == '-' or excel_formula[0] == '+':
-        excel_formula = remove_char_from_string(excel_formula, 0)
-    
-    if is_sum(excel_formula[:3]):
-        excel_formula = excel_formula[4:]
-        
-        sums = get_sums(excel_formula)
-        for sum in sums:
-            cells, formula = handle_sum(sum, cells, formula)
-        
-    # TODO Vergeet de AND and OR niet!
-    elif is_if(excel_formula[:2]):
-        pass
-    elif is_iferror(excel_formula[:7]):
-        pass
-    elif is_excel_cell(excel_formula):
-        pass
-    elif excel_formula[0] == '-':
-        pass
-    else:
-        print(excel_formula)
-        raise Exception('Invalid formula')
+    for element in parts.get_list():
+        if is_sum(element[:3]):
+            element = element[4:]
+            
+            sum_formula = ''
+            sums = get_sums(element)
+            for sum in sums:
+                cells, sum_formula = handle_sum(sum, cells, sum_formula)
+            formula += sum_formula
+            if not operators.is_empty():
+                formula += operators.pop()
+
+        elif is_max(element[:3]):
+            pass
+        elif is_min(element[:3]):
+            pass
+        # TODO Vergeet de AND and OR niet!
+        elif is_if(element[:2]):
+            pass
+        elif is_iferror(element[:7]):
+            pass
+        elif is_excel_cell(element):
+            pass
+        elif element[0] == '-':
+            pass
+        elif element[0] == '(':
+            pass
+        else:
+            print(element)
+            raise Exception('Invalid formula')
     
     return cells, formula
 
@@ -89,15 +97,14 @@ def  extract_formula_cells(excel_formula):
 
 def split_string_operators(string):
     # Queues
-    operators = []
-    parts = []
+    operators = Queue()
+    parts = Queue()
     
-    current_part = ''    
+    current_part = ''
     brackets_to_close = 0
     
-    building_up_a_part = False
+    brackets_input_is_handled = True
     is_allowed_to_close = False
-    
     
     i = 0
     while i < len(string):
@@ -107,6 +114,9 @@ def split_string_operators(string):
                 brackets_to_close -= 1
             if string[i] == '(':
                 brackets_to_close += 1
+                
+            if brackets_to_close == 0:
+                brackets_input_is_handled = False
             
         elif is_sum(string[i:i+3]):
             current_part += 'SUM('
@@ -114,36 +124,45 @@ def split_string_operators(string):
             i += 3
         
         elif is_if(string[i:i+2]):
-            current_part += 'SUM('
+            current_part += 'IF('
             brackets_to_close += 1
             i += 2
+            
+        elif is_iferror(string[i:i+7]):
+            current_part += 'IFERROR('
+            brackets_to_close += 1
+            i += 7
+            
+        elif is_max(string[i:i+3]):
+            current_part += 'MAX('
+            brackets_to_close += 1
+            i += 3
+        
+        elif is_min(string[i:i+3]):
+            current_part += 'MIN('
+            brackets_to_close += 1
+            i += 3
         
         elif string[i] == '(':
             current_part += string[i]
             brackets_to_close += 1
         
         elif is_operator(string[i]) and is_allowed_to_close:
-            operators.append(string[i])
-            parts.append(current_part)
+            operators.add(string[i])
+            parts.add(current_part)
+            current_part = ''
+            brackets_input_is_handled = True
             
         else:
             current_part += string[i]
             if is_letter_or_number(string[i]):
                 is_allowed_to_close = True
         i += 1
+        
+    if not brackets_input_is_handled:
+        parts.add(current_part)
+        
     return operators, parts
-
-
-# Voorbeeld
-input_string = "-A + SUM(A) + B + C"
-operators, parts = split_string_operators(input_string)
-print("Operatoren:", operators)
-print("Onderdelen:", parts)
-input_string = "-A + (-B) + C"
-operators, parts = split_string_operators(input_string)
-print("Operatoren:", operators)
-print("Onderdelen:", parts)
-
 
 # test the function
 (extract_formula_cells('=SUM(A1:B3)'))
