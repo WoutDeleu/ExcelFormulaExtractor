@@ -1,4 +1,5 @@
 from ExcelHandler.excel_helpers import *
+from ExcelHandler.handle_max_min import handle_max_calculation
 from ExcelHandler.handle_sum import handle_sum_calculation
 from Util.util import is_letter_or_number
 from Util.DataStructures import Queue
@@ -15,7 +16,7 @@ def  extract_formula_cells(excel_formula):
     # TODO handle references to other sheets - nu, default sheet is 'Tax Calculation'
     
     cells = []
-    resulting_formula = ''
+    formula = ''
     
     # remove first character (=)
     excel_formula = remove_char_from_string(excel_formula, 0)
@@ -24,14 +25,16 @@ def  extract_formula_cells(excel_formula):
     
     for element in parts.get_list():
         if is_sum(element[:3]):
-            cells, formula = handle_sum_calculation(cells, element)
-            resulting_formula = add_to_resulting_formula(resulting_formula, formula, operators)
+            cells, current_formula = handle_sum_calculation(cells, element)
+            formula = add_to_resulting_formula(formula, current_formula, operators)
 
         elif is_max(element[:3]):
-            pass
+            cells, current_formula = handle_max_calculation(cells, element)
+            formula = add_to_resulting_formula(formula, current_formula, operators)
+            
         elif is_min(element[:3]):
             pass
-        # TODO Vergeet de AND and OR niet!
+        
         elif is_if(element[:2]):
             pass
         elif is_iferror(element[:7]):
@@ -46,7 +49,7 @@ def  extract_formula_cells(excel_formula):
             print(element)
             raise Exception('Invalid formula')
     
-    return cells, resulting_formula
+    return cells, formula
 
 
 
@@ -113,8 +116,9 @@ def split_up_excel_formula(string):
             if is_letter_or_number(string[i]):
                 is_allowed_to_close = True
         i += 1
-        
+    
     if not brackets_input_is_handled:
+        # TODO make more elegant - integrate in previous while loop
         parts.add(current_part)
         
     return operators, parts

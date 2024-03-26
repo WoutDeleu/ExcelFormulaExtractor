@@ -23,6 +23,9 @@ def get_sums(excel_formula):
 def handle_sum(excel_formula, cells, formula):
     arguments_unformatted = excel_formula.split(',')
     for arg in arguments_unformatted:
+        
+        # TODO handle recursion / nested functions
+        # Max / min / ...
         if is_sum(arg[:3]):
             arg = arg[4:]
             sums = get_sums(arg)

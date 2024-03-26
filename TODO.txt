@@ -1,4 +1,4 @@
-BUGS
+BUG
     - make retrieving Excel formulas generic -> als je nog een excel file wil toevoegen => maar op 1 plek aanpassen
     - fixen '    if not brackets_input_is_handled:      => Zou moeten gehandeled worden in de voorgaande ifs
         parts.add(current_part) ' 

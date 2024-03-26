@@ -14,8 +14,6 @@ def resolve_cell(workbook, cell, formulas, values):
     sheet = workbook[cell.sheetname]
     print('Resolving cell: ' + cell.location + str(sheet[cell.location].value))
     if(isinstance(sheet[cell.location].value, int) or isinstance(sheet[cell.location].value, float)):
-        
-        print('Value')
         print('Cell: ' + cell.location + str(sheet[cell.location].value))
         
         values.add(CellValue(cell, sheet[cell.location].value))
@@ -23,8 +21,6 @@ def resolve_cell(workbook, cell, formulas, values):
         
         return formulas, values
     else:
-        print('Formula')
-        
         # library imported functions
         function = fs.Parser().ast(sheet[cell.location].value)[1].compile()
         print('Cells used using the shitty library: ' + str(list(function.inputs)))
