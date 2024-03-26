@@ -1,5 +1,5 @@
 from ExcelHandler.excel_helpers import *
-from ExcelHandler.handle_max_min import handle_max_calculation
+from ExcelHandler.handle_max_min import handle_max_min
 from ExcelHandler.handle_sum import handle_sum_calculation
 from Util.util import is_letter_or_number
 from Util.DataStructures import Queue
@@ -24,19 +24,23 @@ def  extract_formula_cells(excel_formula):
     operators, parts = split_up_excel_formula(excel_formula)
     
     for element in parts.get_list():
+        if is_iferror(element[:7]):
+            # TODO handle iferror - for now, just skip
+            # get always the correct formula - split in a different way
+            element = element.rsplit(', ', 1)[:-1]
+            
         if is_sum(element[:3]):
             cells, current_formula = handle_sum_calculation(cells, element)
-            formula = add_to_resulting_formula(formula, current_formula, operators)
 
         elif is_max(element[:3]):
-            cells, current_formula = handle_max_calculation(cells, element)
-            formula = add_to_resulting_formula(formula, current_formula, operators)
+            cells, current_formula = handle_max_min(cells, element)
             
         elif is_min(element[:3]):
-            pass
+            cells, current_formula = handle_max_min(cells, element)
         
         elif is_if(element[:2]):
-            pass
+            cells, current_formula = handle_if_logic(cells, element)
+            
         elif is_iferror(element[:7]):
             pass
         elif is_excel_cell(element):
@@ -48,6 +52,8 @@ def  extract_formula_cells(excel_formula):
         else:
             print(element)
             raise Exception('Invalid formula')
+        
+        formula = add_to_resulting_formula(formula, current_formula, operators)
     
     return cells, formula
 
@@ -80,16 +86,6 @@ def split_up_excel_formula(string):
             current_part += 'SUM('
             brackets_to_close += 1
             i += 3
-        
-        elif is_if(string[i:i+2]):
-            current_part += 'IF('
-            brackets_to_close += 1
-            i += 2
-            
-        elif is_iferror(string[i:i+7]):
-            current_part += 'IFERROR('
-            brackets_to_close += 1
-            i += 7
             
         elif is_max(string[i:i+3]):
             current_part += 'MAX('
@@ -100,6 +96,16 @@ def split_up_excel_formula(string):
             current_part += 'MIN('
             brackets_to_close += 1
             i += 3
+            
+        elif is_if(string[i:i+2]):
+            current_part += 'IF('
+            brackets_to_close += 1
+            i += 2
+            
+        elif is_iferror(string[i:i+7]):
+            current_part += 'IFERROR('
+            brackets_to_close += 1
+            i += 7
         
         elif string[i] == '(':
             current_part += string[i]

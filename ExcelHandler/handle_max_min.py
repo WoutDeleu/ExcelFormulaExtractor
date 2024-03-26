@@ -1,7 +1,7 @@
 from Util.Cell import Cell
 
 
-def handle_max_min_calculation(cells, excel_max_min):
+def handle_max_min(cells, excel_max_min):
     max_min = excel_max_min[4:]
     arguments_unformatted = max_min.split(';')
     
