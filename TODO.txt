@@ -1,10 +1,27 @@
-BUG
-    - make retrieving Excel formulas generic -> als je nog een excel file wil toevoegen => maar op 1 plek aanpassen
-    - fixen '    if not brackets_input_is_handled:      => Zou moeten gehandeled worden in de voorgaande ifs
-        parts.add(current_part) ' 
+HIGH LEVEL PLANNING
+    1. Logica afwerken
+    2. refactoren + docstrings
+    3. Documentatie schrijven
+        Pseudocode
+        HowToRun -> Requirements
 
-1. Logica afwerken
-2. refactoren + docstrings
-3. Documentatie schrijven
-    Pseudocode
-    HowToRun -> Requirements
+
+PLANNING
+    Tuesday:
+    - Excel handlers - incl. recursie in elk
+    - Extra sheet handlers
+
+    Wednsday:
+    - Extra excel functions - zoeken + implementeren
+    - IFERROR bekijken
+    - Testen schrijven? 
+
+    Thursday:
+    - Skelet schrijven + values linken in file
+    - Translator naar Liquid
+
+
+EXTRA FEATURES
+    - make retrieving Excel formulas generic -> als je nog een excel file wil toevoegen => maar op 1 plek aanpassen
+    - fixen ''' if not brackets_input_is_handled:      => Zou moeten gehandeled worden in de voorgaande ifs
+                parts.add(current_part) '''

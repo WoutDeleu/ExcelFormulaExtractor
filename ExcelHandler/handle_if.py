@@ -44,7 +44,8 @@ def handle_if_logic(cells, excel_if):
     if_statement = excel_if[3:-1]
     parts = split_up_if_formula(if_statement)
     
-    for part in parts:
+    # Handle if
+    # for part in parts:
         # TODO get cells
         # TODO get formula
     

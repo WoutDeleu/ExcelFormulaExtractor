@@ -1,4 +1,5 @@
 from ExcelHandler.excel_helpers import *
+from ExcelHandler.handle_if import handle_if_logic
 from ExcelHandler.handle_max_min import handle_max_min
 from ExcelHandler.handle_sum import handle_sum_calculation
 from Util.util import is_letter_or_number
@@ -24,10 +25,8 @@ def  extract_formula_cells(excel_formula):
     operators, parts = split_up_excel_formula(excel_formula)
     
     for element in parts.get_list():
-        if is_iferror(element[:7]):
-            # TODO handle iferror - for now, just skip
-            # get always the correct formula - split in a different way
-            element = element.rsplit(', ', 1)[:-1]
+        if is_iferror(element[:7]):      
+            element = element[7:-1]
             
         if is_sum(element[:3]):
             cells, current_formula = handle_sum_calculation(cells, element)
@@ -40,15 +39,22 @@ def  extract_formula_cells(excel_formula):
         
         elif is_if(element[:2]):
             cells, current_formula = handle_if_logic(cells, element)
-            
-        elif is_iferror(element[:7]):
-            pass
+        
         elif is_excel_cell(element):
-            pass
+            cells.append(Cell('Tax Calculation', element))
+            current_formula = element
+        
         elif element[0] == '-':
-            pass
+            cells.append(Cell('Tax Calculation', element[1:]))
+            current_formula = '(' + element + ')'
+            
         elif element[0] == '(':
+            current_formula = '('
+            # recursion!!
+            
+            
             pass
+        
         else:
             print(element)
             raise Exception('Invalid formula')
