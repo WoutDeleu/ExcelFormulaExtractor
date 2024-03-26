@@ -39,6 +39,10 @@ def is_excel_cell(string):
     pattern = r'^[A-Z]+[0-9]+$'
     return bool(re.match(pattern, string))
 
+def is_number(string):
+    patroon = r'^[-+]?\d*\.?\d+(,\d+)?$'
+    return bool(re.match(patroon, string))
+
 def is_operator(char):
     if char in ['+', '-', '*', '/']:
         return True

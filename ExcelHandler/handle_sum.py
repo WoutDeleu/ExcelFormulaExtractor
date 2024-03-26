@@ -21,7 +21,7 @@ def get_sums(excel_formula):
 
 
 def handle_sum(excel_formula, cells, formula):
-    arguments_unformatted = excel_formula.split(',')
+    arguments_unformatted = excel_formula.split(';')
     for arg in arguments_unformatted:
         
         # TODO handle recursion / nested functions

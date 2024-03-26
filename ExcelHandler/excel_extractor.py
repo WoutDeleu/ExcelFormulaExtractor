@@ -1,5 +1,5 @@
 from ExcelHandler.excel_helpers import *
-from ExcelHandler.handle_if import handle_if_logic
+from ExcelHandler.handle_if import handle_if_logic, split_up_if_formula
 from ExcelHandler.handle_max_min import handle_max_min
 from ExcelHandler.handle_sum import handle_sum_calculation
 from Util.util import is_letter_or_number
@@ -13,11 +13,8 @@ def add_to_resulting_formula(resulting_formula, formula, operators):
     return resulting_formula
 
 
-def  extract_formula_cells(excel_formula):
+def  extract_formula_cells(excel_formula, formula='', cells=[]):
     # TODO handle references to other sheets - nu, default sheet is 'Tax Calculation'
-    
-    cells = []
-    formula = ''
     
     # remove first character (=)
     excel_formula = remove_char_from_string(excel_formula, 0)
@@ -27,6 +24,7 @@ def  extract_formula_cells(excel_formula):
     for element in parts.get_list():
         if is_iferror(element[:7]):      
             element = element[7:-1]
+            element = split_up_if_formula(element)
             
         if is_sum(element[:3]):
             cells, current_formula = handle_sum_calculation(cells, element)
@@ -40,6 +38,9 @@ def  extract_formula_cells(excel_formula):
         elif is_if(element[:2]):
             cells, current_formula = handle_if_logic(cells, element)
         
+        elif is_number(element):
+            current_formula = element
+        
         elif is_excel_cell(element):
             cells.append(Cell('Tax Calculation', element))
             current_formula = element
@@ -51,9 +52,7 @@ def  extract_formula_cells(excel_formula):
         elif element[0] == '(':
             current_formula = '('
             # recursion!!
-            
-            
-            pass
+            current_formula += ')'
         
         else:
             print(element)

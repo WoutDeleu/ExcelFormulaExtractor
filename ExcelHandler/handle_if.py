@@ -48,5 +48,7 @@ def handle_if_logic(cells, excel_if):
     # for part in parts:
         # TODO get cells
         # TODO get formula
+        
+    # TODO handle or / and / ...
     
     # return cells, excel_if

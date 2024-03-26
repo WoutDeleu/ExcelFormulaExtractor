@@ -1,3 +1,4 @@
+import unittest
 import pandas as pd
 import warnings
 import formulas as fs
@@ -43,7 +44,7 @@ def resolve_cell(workbook, cell, formulas, values):
     
 def main():
 
-    workbook = read_in_excel('Draft PB-berekening - WERKVERSIE V4.xlsx')
+    # workbook = read_in_excel('Draft PB-berekening - WERKVERSIE V4.xlsx')
     
     starting_cell = Cell('Tax Calculation', 'C41')
     starting_cell = Cell('Tax Calculation', 'C56')
@@ -52,7 +53,9 @@ def main():
     formulas = Stack()
     values = Stack()
     
-    formulas, values = resolve_cell(workbook, starting_cell, formulas, values)
+    # formulas, values = resolve_cell(workbook, starting_cell, formulas, values)
+    
+    
     for value in values:
         print(value.cell.location)
         print(value.value)
@@ -61,4 +64,5 @@ def main():
         print(value.formula)
     
 if __name__ == '__main__': 
+    unittest.main()
     main()
