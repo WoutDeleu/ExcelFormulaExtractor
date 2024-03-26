@@ -18,7 +18,6 @@ def extract_col_row_from_excel_cell(cell):
     row = cell[i:]
     return col, row
 
-
 # Checks
 def is_sum(string):
     return string == 'SUM'
@@ -48,3 +47,7 @@ def is_operator(char):
         return True
     return False
 
+def is_excel_range(string):
+    # Pattern to check for Excel range format
+    pattern = r'^[A-Z]+[1-9]\d*:[A-Z]+[1-9]\d*$'
+    return bool(re.match(pattern, string))

@@ -1,9 +1,9 @@
 from ExcelHandler.excel_helpers import *
 from ExcelHandler.handle_if import handle_if_logic, split_up_if_formula
 from ExcelHandler.handle_max_min import handle_max_min
-from ExcelHandler.handle_sum import handle_sum_calculation
+from ExcelHandler.handle_sum import handle_sum
 from Util.util import is_letter_or_number
-from Util.DataStructures import Queue
+from Util.DataStructures import Queue, Set
 
 
 def add_to_resulting_formula(resulting_formula, formula, operators):
@@ -13,11 +13,12 @@ def add_to_resulting_formula(resulting_formula, formula, operators):
     return resulting_formula
 
 
-def  extract_formula_cells(excel_formula, formula='', cells=[]):
+def  extract_formula_cells(excel_formula, formula='', cells=Set()):
     # TODO handle references to other sheets - nu, default sheet is 'Tax Calculation'
     
     # remove first character (=)
-    excel_formula = remove_char_from_string(excel_formula, 0)
+    if excel_formula[0] == '=':
+        excel_formula = remove_char_from_string(excel_formula, 0)
 
     operators, parts = split_up_excel_formula(excel_formula)
     
@@ -27,35 +28,42 @@ def  extract_formula_cells(excel_formula, formula='', cells=[]):
             element = split_up_if_formula(element)[0]
             
         if is_sum(element[:3]):
-            cells, current_formula = handle_sum_calculation(cells, element)
+            cells, current_formula = handle_sum(cells, element)
 
         elif is_max(element[:3]):
+            # TODO
             cells, current_formula = handle_max_min(cells, element)
             
         elif is_min(element[:3]):
+            # TODO
             cells, current_formula = handle_max_min(cells, element)
         
         elif is_if(element[:2]):
+            # TODO
             cells, current_formula = handle_if_logic(cells, element)
         
         elif is_number(element):
+            # TODO
             current_formula = element
         
         elif is_excel_cell(element):
+            # TODO
             cells.append(Cell('Tax Calculation', element))
             current_formula = element
         
         elif element[0] == '-':
+            # TODO
             cells.append(Cell('Tax Calculation', element[1:]))
             current_formula = '(' + element + ')'
             
         elif element[0] == '(':
+            # TODO
             current_formula = '('
             # recursion!!
             current_formula += ')'
         
         else:
-            print(element)
+            print('Invalid formula: ' + element)
             raise Exception('Invalid formula')
         
         formula = add_to_resulting_formula(formula, current_formula, operators)
@@ -83,9 +91,6 @@ def split_up_excel_formula(string):
                 brackets_to_close -= 1
             if string[i] == '(':
                 brackets_to_close += 1
-                
-            if brackets_to_close == 0:
-                brackets_input_is_handled = False
             
         elif is_sum(string[i:i+3]):
             current_part += 'SUM('
@@ -112,15 +117,12 @@ def split_up_excel_formula(string):
             brackets_to_close += 1
             i += 7
         
-        elif string[i] == '(':
-            current_part += string[i]
-            brackets_to_close += 1
-        
-        elif is_operator(string[i]) and is_allowed_to_close:
+        elif is_operator(string[i]) and (brackets_to_close == 0 or is_allowed_to_close):
             operators.add(string[i])
             parts.add(current_part)
             current_part = ''
             brackets_input_is_handled = True
+            is_allowed_to_close = False
             
         else:
             current_part += string[i]
@@ -128,7 +130,7 @@ def split_up_excel_formula(string):
                 is_allowed_to_close = True
         i += 1
     
-    if not brackets_input_is_handled:
+    if brackets_to_close == 0:
         # TODO make more elegant - integrate in previous while loop
         parts.add(current_part)
         

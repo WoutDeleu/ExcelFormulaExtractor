@@ -35,7 +35,7 @@ def resolve_cell(workbook, cell, formulas, values):
         
         formulas.add(CellFormula(cell, formula))
         
-        for cell in cells:
+        for cell in cells.get_list():
             formulas, values = resolve_cell(workbook, cell, formulas, values)
             
         return formulas, values
