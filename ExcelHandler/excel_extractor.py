@@ -24,7 +24,7 @@ def  extract_formula_cells(excel_formula, formula='', cells=[]):
     for element in parts.get_list():
         if is_iferror(element[:7]):      
             element = element[7:-1]
-            element = split_up_if_formula(element)
+            element = split_up_if_formula(element)[0]
             
         if is_sum(element[:3]):
             cells, current_formula = handle_sum_calculation(cells, element)

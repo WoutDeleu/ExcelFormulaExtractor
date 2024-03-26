@@ -1,3 +1,4 @@
+from ExcelHandler.excel_extractor import extract_formula_cells
 from ExcelHandler.excel_helpers import extract_col_row_from_excel_cell, is_sum
 from Util.Cell import Cell
 
@@ -56,5 +57,5 @@ def handle_sum_calculation(cells, excel_sum):
     formula = ''
     sums = get_sums(excel_sum)
     for sum in sums:
-        cells, formula = handle_sum(sum, cells, formula)
+        cells, formula = extract_formula_cells(sum, cells, formula)
     return cells, formula
