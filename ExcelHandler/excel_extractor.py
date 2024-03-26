@@ -1,7 +1,6 @@
 from ExcelHandler.excel_helpers import *
 from ExcelHandler.handle_if import handle_if_logic, split_up_if_formula
-from ExcelHandler.handle_max_min import handle_max_min
-from ExcelHandler.handle_sum import handle_sum
+from ExcelHandler.handle_sum_max_min import handle_sum_max_min
 from Util.util import is_letter_or_number
 from Util.DataStructures import Queue, Set
 
@@ -27,16 +26,8 @@ def  extract_formula_cells(excel_formula, formula='', cells=Set()):
             element = element[7:-1]
             element = split_up_if_formula(element)[0]
             
-        if is_sum(element[:3]):
-            cells, current_formula = handle_sum(cells, element)
-
-        elif is_max(element[:3]):
-            # TODO
-            cells, current_formula = handle_max_min(cells, element)
-            
-        elif is_min(element[:3]):
-            # TODO
-            cells, current_formula = handle_max_min(cells, element)
+        if is_sum(element[:3]) or is_max(element[:3]) or is_min(element[:3]):
+            cells, current_formula = handle_sum_max_min(cells, element)
         
         elif is_if(element[:2]):
             # TODO
