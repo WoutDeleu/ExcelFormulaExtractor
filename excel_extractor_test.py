@@ -21,6 +21,15 @@ class TestExcelExtractor(unittest.TestCase):
         
         self.assertTrue(formula == '(A1+A2+A3+B1+B2+B3+A1)')
         
+    def test_if(self):
+        cells, formula = extract_formula_cells('=IF(A1>1;A1;B1)')
+        
+        correct_cells = ['A1', 'B1']
+        for cell in cells.get_list():
+            self.assertTrue(cell.location in correct_cells)
+        
+        self.assertTrue(formula == "IF(A1>1)'{'A1'}'else'{'B1'}'")    
+    
     def test_sum_max_min_combined(self):
         cells, formula = extract_formula_cells('=SUM(A1:A3;B1:B3;MAX(A1;B1))+A1+MIN(A1:A3;B1:B3)')
         

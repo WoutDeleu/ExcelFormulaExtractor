@@ -30,7 +30,6 @@ def  extract_formula_cells(excel_formula, formula='', cells=Set()):
             cells, current_formula = handle_sum_min_max(cells, element)
         
         elif is_if(element[:2]):
-            # TODO
             cells, current_formula = handle_if_logic(cells, element)
         
         elif is_number(element):

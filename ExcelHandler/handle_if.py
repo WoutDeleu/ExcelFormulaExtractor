@@ -1,27 +1,13 @@
+import ExcelHandler
 from Util.Cell import Cell
 
 def split_up_if_formula(string):
     condition_parts = []
     
-    condition_is_completed = False
     brackets_to_close = 0
+    current_part = ''
     
     i = 0
-    current_part = ''
-    while not condition_is_completed:
-        if string[i] == '(':
-            brackets_to_close += 1
-        if string[i] == ')':
-            brackets_to_close -= 1
-        
-        if brackets_to_close == 0 and (string[i] == ',' or string[i] == ';'):
-            condition_parts.append(current_part)
-            current_part = ''
-            condition_is_completed = True
-        else:
-            current_part += string[i]
-        i += 1
-    
     while i < len(string):
         if string[i] == '(':
             brackets_to_close += 1
@@ -37,18 +23,24 @@ def split_up_if_formula(string):
         i += 1
     
     # TODO klopt counting mechanisme
+    condition_parts.append(current_part)
     return condition_parts
+
+def handle_condition(condition):
+    # TODO handle or / and / ...
+    return 'A1>1'
 
 def handle_if_logic(cells, excel_if):
     # Remove 'IF(' and last bracket ')'
     if_statement = excel_if[3:-1]
+    
     parts = split_up_if_formula(if_statement)
     
-    # Handle if
-    # for part in parts:
-        # TODO get cells
-        # TODO get formula
+    # Handle the condition statement
+    condition = handle_condition(parts[0])
         
-    # TODO handle or / and / ...
-    
-    # return cells, excel_if
+    excel_if = 'IF(' + condition + '){'
+    for part in parts[1:]:
+        cells, formula = ExcelHandler.extract_formula_cells(part, cells)
+        excel_if += formula + '}else{'
+    return cells, excel_if[-5]

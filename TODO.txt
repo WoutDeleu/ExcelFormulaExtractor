@@ -7,12 +7,10 @@ HIGH LEVEL PLANNING
 
 
 PLANNING
-    Tuesday:
+    Wednsday:
     - Excel handlers - incl. recursie in elk
     - debuggen
     - Extra sheet handlers
-
-    Wednsday:
     - Extra excel functions - zoeken + implementeren
     - IFERROR bekijken
         divide by zero handlen?
