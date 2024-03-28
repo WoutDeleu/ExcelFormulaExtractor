@@ -50,9 +50,9 @@ def extract_formula_cells(sheetname, excel_formula, formula='', cells=Set()):
         # Reference to another sheet
         # TODO more extensive check?
         elif element[0] == '\'':
-            cells.append(Cell(element[1:], element[3:]))
-            # TODO
-            print() 
+            sheet_location_array = element.split('!')
+            cells.append(Cell(sheet_location_array[0][1:-1], sheet_location_array[1]))
+            current_formula = sheet_location_array[1]
         
         else:
             print('Invalid formula: ' + element)

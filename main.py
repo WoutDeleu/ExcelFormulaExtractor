@@ -28,7 +28,7 @@ def resolve_cell(workbook, cell, formulas, values):
         print('Cells used using the shitty library: ' + str(list(function.inputs)))
         # library imported functions
         
-        cells, formula = extract_formula_cells(sheet, sheet[cell.location].value)
+        cells, formula = extract_formula_cells(cell.sheetname, sheet[cell.location].value, cells=Set())
         
         print('Cells used using the my own beautifull code: ' + list_to_string(cells.get_list()))
         print('Translated formula: ' + formula)
