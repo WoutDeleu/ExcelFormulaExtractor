@@ -3,5 +3,14 @@
         "activityBar.background": "#4B0968",
         "titleBar.activeBackground": "#690C91",
         "titleBar.activeForeground": "#FDF8FE"
-    }
+    },
+    "python.testing.unittestArgs": [
+        "-v",
+        "-s",
+        "./ExcelHandler",
+        "-p",
+        "test_*.py"
+    ],
+    "python.testing.pytestEnabled": false,
+    "python.testing.unittestEnabled": true
 }

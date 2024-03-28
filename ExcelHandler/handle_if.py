@@ -1,46 +1,61 @@
 import ExcelHandler
+from ExcelHandler.excel_helpers import is_and, is_or, is_xor, is_not, split_up_conditions, split_up_formulas
 from Util.Cell import Cell
 
-def split_up_if_formula(string):
-    condition_parts = []
-    
-    brackets_to_close = 0
-    current_part = ''
-    
-    i = 0
-    while i < len(string):
-        if string[i] == '(':
-            brackets_to_close += 1
-        if string[i] == ')':
-            brackets_to_close -= 1
-            
-        
-        if brackets_to_close == 0 and (string[i] == ',' or string[i] == ';'):
-            condition_parts.append(current_part)
-            current_part = ''
-        else:
-            current_part += string[i]
-        i += 1
-    
-    # TODO klopt counting mechanisme
-    condition_parts.append(current_part)
-    return condition_parts
 
-def handle_condition(condition):
-    # TODO handle or / and / ...
-    return 'A1>1'
+def handle_condition(condition, cells):
+    if is_or(condition[:2]):
+        parts = split_up_formulas(condition[3:-1])
+        current_formula = ''
+        for part in parts:
+            cells, formula = handle_condition(part, cells)
+            current_formula += formula + '|'
+        current_formula = '(' + current_formula[:-1] + ')'
+        
+    elif is_and(condition[:3]):
+        parts = split_up_formulas(condition[4:-1])
+        current_formula = ''
+        for part in parts:
+            cells, formula = handle_condition(part, cells)
+            current_formula += formula + '&'
+        current_formula =  '(' + current_formula[:-1] + ')'
+        
+    elif is_xor(condition[:3]):
+        parts = split_up_formulas(condition[4:-1])
+        current_formula = ''
+        for part in parts:
+            cells, formula = handle_condition(part, cells)
+            current_formula += formula + '^'
+        current_formula =  '(' + current_formula[:-1] + ')'
+    elif is_not(condition[:3]):
+        formula = condition[4:-1]
+        cells, formula = handle_condition(formula, cells)
+        current_formula = '!(' + formula + ')'
+    elif condition[0] == '(':
+        cells, current_formula = handle_condition(condition[1:-1], cells)
+    else:
+        parts, operators = split_up_conditions(condition)
+        current_formula = ''
+        for part in parts:
+            cells, formula = ExcelHandler.excel_extractor.extract_formula_cells(part, cells=cells)
+            current_formula += formula
+            if operators:
+                current_formula += operators.pop()
+    return cells, current_formula
+    
+
 
 def handle_if_logic(cells, excel_if):
     # Remove 'IF(' and last bracket ')'
     if_statement = excel_if[3:-1]
     
-    parts = split_up_if_formula(if_statement)
+    parts = split_up_formulas(if_statement)
     
     # Handle the condition statement
-    condition = handle_condition(parts[0])
+    cells, condition = handle_condition(parts[0], cells)
         
     excel_if = 'IF(' + condition + '){'
     for part in parts[1:]:
-        cells, formula = ExcelHandler.extract_formula_cells(part, cells)
+        cells, formula = ExcelHandler.excel_extractor.extract_formula_cells(part, cells=cells)
         excel_if += formula + '}else{'
-    return cells, excel_if[-5]
+    return cells, excel_if[:-5]

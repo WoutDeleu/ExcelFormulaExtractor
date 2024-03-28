@@ -1,28 +1,6 @@
 import ExcelHandler
-from ExcelHandler.excel_helpers import extract_col_row_from_excel_cell, is_excel_range, is_max, is_min, is_sum
+from ExcelHandler.excel_helpers import extract_col_row_from_excel_cell, is_excel_range, is_max, is_min, is_sum, split_up_formulas
 from Util.Cell import Cell
-
-
-
-def split_up(excel_formula):
-    parts = []
-    current_sum = ''
-    counter_closing_brackets_needed = 0
-    for ch in excel_formula:
-        if ch == '(':
-            counter_closing_brackets_needed += 1
-            current_sum += ch
-        elif ch == ')':
-            counter_closing_brackets_needed -= 1
-            current_sum += ch
-        elif ch == ';'  and counter_closing_brackets_needed == 0:
-            parts.append(current_sum)
-            current_sum = ''
-        else:
-            current_sum += ch
-            
-    parts.append(current_sum)
-    return parts
 
 
 def handle_range(sum_range, cells, formula, is_max_min):
@@ -52,7 +30,7 @@ def handle_sum_min_max(cells, excel):
     else:
         formula = '('
     excel = excel[4:-1]
-    parts = split_up(excel)
+    parts = split_up_formulas(excel)
     for part in parts:
         if is_excel_range(part):
             cells, formula = handle_range(part, cells, formula, is_max_min)

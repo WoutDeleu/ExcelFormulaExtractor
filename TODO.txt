@@ -6,6 +6,9 @@ HIGH LEVEL PLANNING
         HowToRun -> Requirements
 
 
+Planning
+debuggen die ene test
+
 PLANNING
     Wednsday:
     - Excel handlers - incl. recursie in elk
