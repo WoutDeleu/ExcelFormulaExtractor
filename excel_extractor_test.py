@@ -15,7 +15,7 @@ class TestExcelExtractor(unittest.TestCase):
         for cell in cells.get_list():
             self.assertTrue(cell.location in correct_cells)
         
-        self.assertTrue(formula == 'MAX(A1;A2;A3;B1;B2;B3)')
+        self.assertTrue(formula == 'MAX(tax_calculation_A1;tax_calculation_A2;tax_calculation_A3;tax_calculation_B1;tax_calculation_B2;tax_calculation_B3)')
         
         
     def test_sum(self):
@@ -24,7 +24,7 @@ class TestExcelExtractor(unittest.TestCase):
         for cell in cells.get_list():
             self.assertTrue(cell.location in correct_cells)
         
-        self.assertTrue(formula == '(A1+A2+A3+B1+B2+B3+A1)')
+        self.assertTrue(formula == '(tax_calculation_A1+tax_calculation_A2+tax_calculation_A3+tax_calculation_B1+tax_calculation_B2+tax_calculation_B3+tax_calculation_A1)')
         
     def test_sum_max_min_combined(self):
         cells, formula = extract_formula_cells('Tax Calculation', '=SUM(A1:A3;B1:B3;MAX(A1;B1))+A1+MIN(A1:A3;B1:B3)', cells=Set())
@@ -32,7 +32,7 @@ class TestExcelExtractor(unittest.TestCase):
         for cell in cells.get_list():
             self.assertTrue(cell.location in correct_cells)
         
-        self.assertTrue(formula == '(A1+A2+A3+B1+B2+B3+MAX(A1;B1))+A1+MIN(A1;A2;A3;B1;B2;B3)')
+        self.assertTrue(formula == '(tax_calculation_A1+tax_calculation_A2+tax_calculation_A3+tax_calculation_B1+tax_calculation_B2+tax_calculation_B3+MAX(tax_calculation_A1;tax_calculation_B1))+tax_calculation_A1+MIN(tax_calculation_A1;tax_calculation_A2;tax_calculation_A3;tax_calculation_B1;tax_calculation_B2;tax_calculation_B3)')
 
     def test_if(self):
         cells, formula = extract_formula_cells('Tax Calculation', '=IF(A1>1;A1;B1)', cells=Set())
@@ -40,21 +40,21 @@ class TestExcelExtractor(unittest.TestCase):
         for cell in cells.get_list():
             self.assertTrue(cell.location in correct_cells)
         
-        self.assertTrue(formula == "IF(A1>1){A1}else{B1}")    
+        self.assertTrue(formula == "IF(tax_calculation_A1>1){tax_calculation_A1}else{tax_calculation_B1}")    
         
     def test_if_and_or(self):
         cells, formula = extract_formula_cells('Tax Calculation', '=IF(AND(OR(A1>1;B1>1);(A2<Q1));A1;B3)', cells=Set())
         correct_cells = ['A1', 'B1', 'A2', 'B3', 'Q1']
         for cell in cells.get_list():
             self.assertTrue(cell.location in correct_cells)
-        self.assertTrue(formula == "IF(((A1>1|B1>1)&A2<Q1)){A1}else{B3}")
+        self.assertTrue(formula == "IF(((tax_calculation_A1>1|tax_calculation_B1>1)&tax_calculation_A2<tax_calculation_Q1)){tax_calculation_A1}else{tax_calculation_B3}")
         
     def test_if_not(self):
         cells, formula = extract_formula_cells('Tax Calculation', '=IF(NOT(A1>1);A2;B2)', cells=Set())
         correct_cells = ['A1', 'B1', 'A2', "B2"]
         for cell in cells.get_list():
             self.assertTrue(cell.location in correct_cells)
-        self.assertTrue(formula == "IF(!(A1>1)){A2}else{B2}")
+        self.assertTrue(formula == "IF(!(tax_calculation_A1>1)){tax_calculation_A2}else{tax_calculation_B2}")
     
     def test_split_up_conditions(self):
         parts, operators = split_up_conditions('A1>1') 

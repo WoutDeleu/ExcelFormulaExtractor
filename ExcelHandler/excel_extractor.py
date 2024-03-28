@@ -35,9 +35,13 @@ def extract_formula_cells(sheetname, excel_formula, formula='', cells=Set()):
             # TODO extra - extra aanduiding voor een getal
             current_formula = element
         
+        elif is_percentage(element):
+            # TODO extra - extra aanduiding voor een getal
+            current_formula = element
+        
         elif is_excel_cell(element):
             cells.append(Cell(sheetname, element))
-            current_formula = element
+            current_formula = format_namespace(sheetname) + '_' + element
         
         elif element[0] == '-':
             cells, current_formula = extract_formula_cells(sheetname, element[1:], formula=formula, cells=cells)
@@ -52,7 +56,7 @@ def extract_formula_cells(sheetname, excel_formula, formula='', cells=Set()):
         elif element[0] == '\'':
             sheet_location_array = element.split('!')
             cells.append(Cell(sheet_location_array[0][1:-1], sheet_location_array[1]))
-            current_formula = sheet_location_array[1]
+            current_formula = format_namespace(sheetname) + '_' + sheet_location_array[1]
         
         else:
             print('Invalid formula: ' + element)
@@ -65,6 +69,7 @@ def extract_formula_cells(sheetname, excel_formula, formula='', cells=Set()):
 
 
 def split_up_excel_formula(string):
+    # TODO fout!!!!!!
     # Queues
     operators = Queue()
     parts = Queue()
@@ -109,11 +114,10 @@ def split_up_excel_formula(string):
             brackets_to_close += 1
             i += 7
         
-        elif is_operator(string[i]) and (brackets_to_close == 0 or is_allowed_to_close):
+        elif is_operator(string[i]) and (brackets_to_close == 0 or is_allowed_to_close) and current_part != '':
             operators.add(string[i])
             parts.add(current_part)
             current_part = ''
-            brackets_input_is_handled = True
             is_allowed_to_close = False
             
         else:

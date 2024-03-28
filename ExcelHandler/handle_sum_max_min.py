@@ -1,6 +1,7 @@
 import ExcelHandler
 from ExcelHandler.excel_helpers import extract_col_row_from_excel_cell, is_excel_range, is_max, is_min, is_sum, split_up_formulas
 from Util.Cell import Cell
+from Util.util import format_namespace
 
 
 def handle_range(sum_range, cells, formula, is_max_min, sheet):
@@ -14,9 +15,9 @@ def handle_range(sum_range, cells, formula, is_max_min, sheet):
         for j in range(ord(start_col_last_char), ord(end_col_last_char) + 1):
             cells.append(Cell(sheet, start_col_except_last_char + chr(j) + str(i)))
             if is_max_min:
-                formula += start_col_except_last_char + chr(j) + str(i) + ';'
+                formula += format_namespace(sheet) + '_' + start_col_except_last_char + chr(j) + str(i) + ';'
             else:
-                formula += start_col_except_last_char + chr(j) + str(i) + '+'
+                formula += format_namespace(sheet) + '_' + start_col_except_last_char + chr(j) + str(i) + '+'
 
     return cells, formula
 

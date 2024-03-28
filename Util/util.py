@@ -26,3 +26,11 @@ def is_letter_or_number(character):
     pattern = r'^[a-zA-Z0-9]$'
     return bool(re.match(pattern, character))
 
+def is_percentage(string):
+    # Reguliere expressiepatroon om te controleren of iets een percentage is
+    pattern = r'^[0-9]+%$'
+    return bool(re.match(pattern, string))
+
+def format_namespace(namespace):
+    return namespace.lower().replace(' ', '_')
+
