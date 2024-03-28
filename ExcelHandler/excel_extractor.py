@@ -33,24 +33,20 @@ def  extract_formula_cells(excel_formula, formula='', cells=Set()):
             cells, current_formula = handle_if_logic(cells, element)
         
         elif is_number(element):
-            # TODO
+            # TODO extra - extra aanduiding voor een getal
             current_formula = element
         
         elif is_excel_cell(element):
-            # TODO
             cells.append(Cell('Tax Calculation', element))
             current_formula = element
         
         elif element[0] == '-':
-            # TODO
-            cells.append(Cell('Tax Calculation', element[1:]))
-            current_formula = '(' + element + ')'
+            cells, current_formula = extract_formula_cells(element[1:], formula, cells)
+            current_formula = '(-' + current_formula + ')'
             
         elif element[0] == '(':
-            # TODO
-            current_formula = '('
-            # recursion!!
-            current_formula += ')'
+            cells, current_formula = extract_formula_cells(element[1:-1], formula, cells)
+            current_formula = '(' + current_formula + ')'
         
         else:
             print('Invalid formula: ' + element)
