@@ -3,12 +3,12 @@ from ExcelHandler.excel_helpers import is_and, is_or, is_xor, is_not, split_up_c
 from Util.Cell import Cell
 
 
-def handle_condition(condition, cells):
+def handle_condition(sheetname, condition, cells):
     if is_or(condition[:2]):
         parts = split_up_formulas(condition[3:-1])
         current_formula = ''
         for part in parts:
-            cells, formula = handle_condition(part, cells)
+            cells, formula = handle_condition(sheetname, part, cells)
             current_formula += formula + '|'
         current_formula = '(' + current_formula[:-1] + ')'
         
@@ -16,7 +16,7 @@ def handle_condition(condition, cells):
         parts = split_up_formulas(condition[4:-1])
         current_formula = ''
         for part in parts:
-            cells, formula = handle_condition(part, cells)
+            cells, formula = handle_condition(sheetname, part, cells)
             current_formula += formula + '&'
         current_formula =  '(' + current_formula[:-1] + ')'
         
@@ -24,20 +24,20 @@ def handle_condition(condition, cells):
         parts = split_up_formulas(condition[4:-1])
         current_formula = ''
         for part in parts:
-            cells, formula = handle_condition(part, cells)
+            cells, formula = handle_condition(sheetname, part, cells)
             current_formula += formula + '^'
         current_formula =  '(' + current_formula[:-1] + ')'
     elif is_not(condition[:3]):
         formula = condition[4:-1]
-        cells, formula = handle_condition(formula, cells)
+        cells, formula = handle_condition(sheetname, formula, cells)
         current_formula = '!(' + formula + ')'
     elif condition[0] == '(':
-        cells, current_formula = handle_condition(condition[1:-1], cells)
+        cells, current_formula = handle_condition(sheetname, condition[1:-1], cells)
     else:
         parts, operators = split_up_conditions(condition)
         current_formula = ''
         for part in parts:
-            cells, formula = ExcelHandler.excel_extractor.extract_formula_cells(part, cells=cells)
+            cells, formula = ExcelHandler.excel_extractor.extract_formula_cells(sheetname, part, cells=cells)
             current_formula += formula
             if operators:
                 current_formula += operators.pop()
@@ -45,17 +45,17 @@ def handle_condition(condition, cells):
     
 
 
-def handle_if_logic(cells, excel_if):
+def handle_if_logic(cells, sheetname, excel_if):
     # Remove 'IF(' and last bracket ')'
     if_statement = excel_if[3:-1]
     
     parts = split_up_formulas(if_statement)
     
     # Handle the condition statement
-    cells, condition = handle_condition(parts[0], cells)
+    cells, condition = handle_condition(sheetname, parts[0], cells)
         
     excel_if = 'IF(' + condition + '){'
     for part in parts[1:]:
-        cells, formula = ExcelHandler.excel_extractor.extract_formula_cells(part, cells=cells)
+        cells, formula = ExcelHandler.excel_extractor.extract_formula_cells(sheetname, part, cells=cells)
         excel_if += formula + '}else{'
     return cells, excel_if[:-5]

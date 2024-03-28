@@ -12,9 +12,8 @@ def add_to_resulting_formula(resulting_formula, formula, operators):
     return resulting_formula
 
 
-def  extract_formula_cells(excel_formula, formula='', cells=Set()):
+def extract_formula_cells(sheetname, excel_formula, formula='', cells=Set()):
     # TODO handle references to other sheets - nu, default sheet is 'Tax Calculation'
-    
     # remove first character (=)
     if excel_formula[0] == '=':
         excel_formula = remove_char_from_string(excel_formula, 0)
@@ -27,26 +26,33 @@ def  extract_formula_cells(excel_formula, formula='', cells=Set()):
             element = split_up_formulas(element)[0]
             
         if is_sum(element[:3]) or is_max(element[:3]) or is_min(element[:3]):
-            cells, current_formula = handle_sum_min_max(cells, element)
+            cells, current_formula = handle_sum_min_max(cells, sheetname, element)
         
         elif is_if(element[:2]):
-            cells, current_formula = handle_if_logic(cells, element)
+            cells, current_formula = handle_if_logic(cells, sheetname, element)
         
         elif is_number(element):
             # TODO extra - extra aanduiding voor een getal
             current_formula = element
         
         elif is_excel_cell(element):
-            cells.append(Cell('Tax Calculation', element))
+            cells.append(Cell(sheetname, element))
             current_formula = element
         
         elif element[0] == '-':
-            cells, current_formula = extract_formula_cells(element[1:], formula, cells)
+            cells, current_formula = extract_formula_cells(sheetname, element[1:], formula=formula, cells=cells)
             current_formula = '(-' + current_formula + ')'
             
         elif element[0] == '(':
-            cells, current_formula = extract_formula_cells(element[1:-1], formula, cells)
+            cells, current_formula = extract_formula_cells(sheetname, element[1:-1], formula=formula, cells=cells)
             current_formula = '(' + current_formula + ')'
+        
+        # Reference to another sheet
+        # TODO more extensive check?
+        elif element[0] == '\'':
+            cells.append(Cell(element[1:], element[3:]))
+            # TODO
+            print() 
         
         else:
             print('Invalid formula: ' + element)
