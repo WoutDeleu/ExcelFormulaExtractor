@@ -40,21 +40,21 @@ class TestExcelExtractor(unittest.TestCase):
         for cell in cells.get_list():
             self.assertTrue(cell.location in correct_cells)
         
-        self.assertTrue(formula == "IF(tax_calculation_A1>1){tax_calculation_A1}else{tax_calculation_B1}")    
+        self.assertTrue(formula == "if(tax_calculation_A1>1){tax_calculation_A1}else{tax_calculation_B1}")    
         
     def test_if_and_or(self):
         cells, formula = extract_formula_cells('Tax Calculation', '=IF(AND(OR(A1>1;B1>1);(A2<Q1));A1;B3)', cells=Set())
         correct_cells = ['A1', 'B1', 'A2', 'B3', 'Q1']
         for cell in cells.get_list():
             self.assertTrue(cell.location in correct_cells)
-        self.assertTrue(formula == "IF(((tax_calculation_A1>1|tax_calculation_B1>1)&tax_calculation_A2<tax_calculation_Q1)){tax_calculation_A1}else{tax_calculation_B3}")
+        self.assertTrue(formula == "if(((tax_calculation_A1>1|tax_calculation_B1>1)&tax_calculation_A2<tax_calculation_Q1)){tax_calculation_A1}else{tax_calculation_B3}")
         
     def test_if_not(self):
         cells, formula = extract_formula_cells('Tax Calculation', '=IF(NOT(A1>1);A2;B2)', cells=Set())
         correct_cells = ['A1', 'B1', 'A2', "B2"]
         for cell in cells.get_list():
             self.assertTrue(cell.location in correct_cells)
-        self.assertTrue(formula == "IF(!(tax_calculation_A1>1)){tax_calculation_A2}else{tax_calculation_B2}")
+        self.assertTrue(formula == "if(!(tax_calculation_A1>1)){tax_calculation_A2}else{tax_calculation_B2}")
     
     def test_split_up_conditions(self):
         parts, operators = split_up_conditions('A1>1') 

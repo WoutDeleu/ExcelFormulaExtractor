@@ -54,7 +54,7 @@ def handle_if_logic(cells, sheetname, excel_if):
     # Handle the condition statement
     cells, condition = handle_condition(sheetname, parts[0], cells)
         
-    excel_if = 'IF(' + condition + '){'
+    excel_if = 'if(' + condition + '){'
     for part in parts[1:]:
         cells, formula = ExcelHandler.excel_extractor.extract_formula_cells(sheetname, part, cells=cells)
         excel_if += formula + '}else{'

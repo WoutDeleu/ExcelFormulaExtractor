@@ -1,10 +1,11 @@
 from ExcelHandler.excel_helpers import *
 from ExcelHandler.handle_if import handle_if_logic
+from ExcelHandler.handle_round import handle_round
 from ExcelHandler.handle_sum_max_min import handle_sum_min_max
 from ExcelHandler.handle_vlookup import handle_vlookup
 from Util.util import is_letter_or_number
 from Util.DataStructures import Queue, Set
-
+from openpyxl.worksheet.formula import ArrayFormula
 
 def add_to_resulting_formula(resulting_formula, formula, operators):
     resulting_formula += formula
@@ -17,6 +18,10 @@ def extract_formula_cells(sheetname, excel_formula, formula='', cells=Set()):
     # TODO handle references to other sheets - nu, default sheet is 'Tax Calculation'
     # remove first character (=)
     if excel_formula == None or excel_formula == '':
+        return cells, ''
+    
+    # TODO handle array functions
+    if type(excel_formula) == ArrayFormula:
         return cells, ''
     
     if excel_formula[0] == '=':
@@ -106,6 +111,14 @@ def split_up_excel_formula(string):
                 brackets_to_close -= 1
             if string[i] == '(':
                 brackets_to_close += 1
+                
+        elif string[i] == '(':
+            current_part += '('
+            brackets_to_close += 1
+            
+        elif string[i] == ')':
+            current_part += ')'
+            brackets_to_close -= 1
             
         elif is_sum(string[i:i+3]):
             current_part += 'SUM('
@@ -129,6 +142,16 @@ def split_up_excel_formula(string):
             
         elif is_iferror(string[i:i+7]):
             current_part += 'IFERROR('
+            brackets_to_close += 1
+            i += 7
+            
+        elif is_round(string[i:i+5]):
+            current_part += 'ROUND('
+            brackets_to_close += 1
+            i += 5
+        
+        elif is_VLOOKUP(string[i:i+7]):
+            current_part += 'VLOOKUP('
             brackets_to_close += 1
             i += 7
         

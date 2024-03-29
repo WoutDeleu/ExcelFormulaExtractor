@@ -15,6 +15,9 @@ def resolve_cell(workbook, cell, formulas, values):
     sheet = workbook[cell.sheetname]
     print('Resolving cell: ' + cell.location + " " + str(sheet[cell.location].value))
     
+    if '=IF(L520=0,0,-L520*(M515/(M515+Q515)))' in str(sheet[cell.location].value):
+        print()
+    
     if(isinstance(sheet[cell.location].value, int) or isinstance(sheet[cell.location].value, float)):
         print('Cell: ' + cell.location + ' ' +  str(sheet[cell.location].value))
         
@@ -23,7 +26,6 @@ def resolve_cell(workbook, cell, formulas, values):
         
         return formulas, values
     else:
-        # library imported functions
         if sheet[cell.location].value != None:
             cells, formula = extract_formula_cells(cell.sheetname, sheet[cell.location].value, cells=Set())
         
