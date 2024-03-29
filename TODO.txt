@@ -11,6 +11,7 @@ debuggen die ene test
 
 PLANNING
     Wednsday:
+    - Clean up code
     - Extra excel functions - zoeken + implementeren
     - IFERROR bekijken
         divide by zero handlen?

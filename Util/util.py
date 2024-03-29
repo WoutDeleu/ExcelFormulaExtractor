@@ -36,3 +36,14 @@ def is_percentage(string):
 def format_namespace(namespace):
     return namespace.lower().replace(' ', '_')
 
+def is_fully_covered_by_brackets(string):
+    count_opened_brackets = 0
+    for ch in string[:-1]:
+        if ch != '(':
+            count_opened_brackets += 1
+        if ch == ')':
+            count_opened_brackets -= 1
+        if count_opened_brackets == 0:
+            return False
+    return True
+
