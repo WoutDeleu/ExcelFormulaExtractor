@@ -31,7 +31,16 @@ class Stack:
     def add(self, cell):
         if not self.contains(cell):
             self.stack.append(cell)
+        else:
+            index = self.find_item_index(cell)
+            self.stack.pop(index)
+            self.stack.append(cell)
             
+    def find_item_index(self, item):
+        for i in range(len(self.stack)):
+            if self.stack[i].cell.location == item.cell.location and self.stack[i].cell.sheetname == item.cell.sheetname:
+                return i
+        
     def contains(self, item):
         for cell in self.stack:
             if cell.cell.location == item.cell.location and cell.cell.sheetname == item.cell.sheetname:
