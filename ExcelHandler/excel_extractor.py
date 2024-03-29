@@ -32,11 +32,14 @@ def extract_formula_cells(sheetname, excel_formula, formula='', cells=Set()):
         if is_sum(element[:3]) or is_max(element[:3]) or is_min(element[:3]):
             cells, current_formula = handle_sum_min_max(cells, sheetname, element)
             
+        elif is_if(element[:2]):
+            cells, current_formula = handle_if_logic(cells, sheetname, element)
+            
         elif is_VLOOKUP(element[:7]):
             cells, current_formula = handle_vlookup(cells, sheetname, element)
         
-        elif is_if(element[:2]):
-            cells, current_formula = handle_if_logic(cells, sheetname, element)
+        elif is_round(element[:5]):
+            cells, current_formula = handle_round(cells, sheetname, element)
         
         elif is_number(element):
             # TODO extra - extra aanduiding voor een getal

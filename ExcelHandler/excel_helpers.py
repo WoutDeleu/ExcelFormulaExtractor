@@ -94,6 +94,9 @@ def is_min(string):
 def is_VLOOKUP(string):
     return string == 'VLOOKUP'
 
+def is_round(string):
+    return string == 'ROUND'
+
 def is_excel_cell(string):
     pattern = r'^[A-Z]+[0-9]+$'
     return bool(re.match(pattern, string))
