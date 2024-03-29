@@ -108,6 +108,8 @@ def is_operator(char):
     return False
 
 def is_excel_range(string):
+    if '!' in string:
+        string = string.split('!')[1]
     # Pattern to check for Excel range format
     pattern = r'^[A-Z]+[1-9]\d*:[A-Z]+[1-9]\d*$'
     return bool(re.match(pattern, string))

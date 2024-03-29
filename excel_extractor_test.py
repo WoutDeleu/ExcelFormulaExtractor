@@ -60,6 +60,12 @@ class TestExcelExtractor(unittest.TestCase):
         parts, operators = split_up_conditions('A1>1') 
         self.assertTrue(parts == ['A1','1'])
         self.assertTrue(operators == ['>'])
-    
+        
+    def test_vlookup(self):
+        cells, formula = extract_formula_cells('Tax Calculation', '=VLOOKUP(A1;A1:A3;1)', cells=Set())
+        correct_cells = ['A1', 'A2', 'A3']
+        for cell in cells.get_list():
+            self.assertTrue(cell.location in correct_cells)
+        self.assertTrue(formula == 'for(cell in [tax_calculation_A1;tax_calculation_A2;tax_calculation_A3]{if(cell == tax_calculation_A1){return update_column(cell, 1)}}')
 if __name__ == '__main__':
     unittest.main()

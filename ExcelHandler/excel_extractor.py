@@ -16,6 +16,9 @@ def add_to_resulting_formula(resulting_formula, formula, operators):
 def extract_formula_cells(sheetname, excel_formula, formula='', cells=Set()):
     # TODO handle references to other sheets - nu, default sheet is 'Tax Calculation'
     # remove first character (=)
+    if excel_formula == None or excel_formula == '':
+        return cells, ''
+    
     if excel_formula[0] == '=':
         excel_formula = remove_char_from_string(excel_formula, 0)
 
@@ -65,9 +68,10 @@ def extract_formula_cells(sheetname, excel_formula, formula='', cells=Set()):
         elif element[0] == '\"':
             current_formula = element
         
-        # else:
-        #     print('Invalid formula: ' + element)
-        #     raise Exception('Invalid formula')
+        elif element[0] == ' ' or element == '' or element == ',' or element == ';' or element == ':' or element == '=' or element == None:  
+            # print('Invalid formula: ' + element)
+            # raise Exception('Invalid formula')
+            formula = ''
         
         # If is text/string value
         else:
