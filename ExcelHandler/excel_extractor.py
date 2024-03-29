@@ -58,12 +58,12 @@ def extract_formula_cells(sheetname, excel_formula, formula='', cells=Set()):
             cells.append(Cell(sheetname, element))
             current_formula = format_namespace(sheetname) + '_' + element
         
-        elif element[0] == '-':
-            cells, current_formula = extract_formula_cells(sheetname, element[1:], formula=formula, cells=cells)
-            current_formula = '(-' + current_formula + ')'
+        elif element[0] == '-' or element[0] == '+':
+            cells, current_formula = extract_formula_cells(sheetname, element[1:], formula='', cells=cells)
+            current_formula = '(' + element[0] + current_formula + ')'
             
         elif element[0] == '(':
-            cells, current_formula = extract_formula_cells(sheetname, element[1:-1], formula=formula, cells=cells)
+            cells, current_formula = extract_formula_cells(sheetname, element[1:-1], formula='', cells=cells)
             current_formula = '(' + current_formula + ')'
         
         # Reference to another sheet
@@ -71,6 +71,7 @@ def extract_formula_cells(sheetname, excel_formula, formula='', cells=Set()):
         elif element[0] == '\'':
             sheet_location_array = element.split('!')
             cells.append(Cell(sheet_location_array[0][1:-1], sheet_location_array[1]))
+            sheetname = sheet_location_array[0][1:-1]
             current_formula = format_namespace(sheetname) + '_' + sheet_location_array[1]
         
         elif element[0] == '\"':
