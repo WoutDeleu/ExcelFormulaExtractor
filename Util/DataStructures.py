@@ -52,7 +52,8 @@ class Stack:
     
     def __str__(self):
         return str(self.stack)
-    
+
+
 class Set:
     def __init__(self):
         self.set = []

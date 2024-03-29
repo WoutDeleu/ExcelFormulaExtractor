@@ -46,9 +46,6 @@ def resolve_cell(workbook, cell, formulas, values):
 def main():
 
     workbook = read_in_excel('Draft PB-berekening - WERKVERSIE V4.xlsx')
-    
-    # starting_cell = Cell('Tax Calculation', 'C41')
-    # starting_cell = Cell('Tax Calculation', 'C56')
     starting_cell = Cell('Tax Calculation', 'C34')
     
     # Stack to keep track of formulas and values 
@@ -57,13 +54,13 @@ def main():
     
     formulas, values = resolve_cell(workbook, starting_cell, formulas, values)
     
-    
     print('######################################################################################################')
     print('##########################################  VALUES  ##################################################')
     print('######################################################################################################')
     for value in values.get_list():
         print(value.cell.location + ': ' + str(value.value))
-        
+    print()
+    
     print('######################################################################################################')
     print('#########################################  FORMULAS  #################################################')
     print('######################################################################################################')
