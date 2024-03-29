@@ -1,28 +1,30 @@
+PLANNING
+    - Clean up code
+
+    - input + interaction in terminal
+
+    - TODOs handlen
+        - VLOOKUP bekijken
+            True/False
+            - No range        
+        - IFERROR bekijken
+            divide by zero handlen?
+            andere string split handlen
+        - Array functions
+        
+    - Translator naar Liquid
+
+    - Testen schrijven? 
+
+    - Skelet schrijven + values linken in file
+    
+
 HIGH LEVEL PLANNING
     1. Logica afwerken
     2. refactoren + docstrings
     3. Documentatie schrijven
         Pseudocode
         HowToRun -> Requirements
-
-
-Planning
-debuggen die ene test
-
-PLANNING
-    Wednsday:
-    - Clean up code
-    - TODOs handlen
-        
-    - Extra excel functions - zoeken + implementeren
-    - IFERROR bekijken
-        divide by zero handlen?
-        andere string split handlen
-    - Testen schrijven? 
-
-    Thursday:
-    - Skelet schrijven + values linken in file
-    - Translator naar Liquid
 
 
 EXTRA FEATURES
