@@ -1,6 +1,7 @@
 from ExcelHandler.excel_helpers import *
 from ExcelHandler.handle_if import handle_if_logic
 from ExcelHandler.handle_sum_max_min import handle_sum_min_max
+from ExcelHandler.handle_vlookup import handle_vlookup
 from Util.util import is_letter_or_number
 from Util.DataStructures import Queue, Set
 
@@ -27,6 +28,9 @@ def extract_formula_cells(sheetname, excel_formula, formula='', cells=Set()):
             
         if is_sum(element[:3]) or is_max(element[:3]) or is_min(element[:3]):
             cells, current_formula = handle_sum_min_max(cells, sheetname, element)
+            
+        elif is_VLOOKUP(element[:7]):
+            cells, current_formula = handle_vlookup(cells, sheetname, element)
         
         elif is_if(element[:2]):
             cells, current_formula = handle_if_logic(cells, sheetname, element)
@@ -58,9 +62,16 @@ def extract_formula_cells(sheetname, excel_formula, formula='', cells=Set()):
             cells.append(Cell(sheet_location_array[0][1:-1], sheet_location_array[1]))
             current_formula = format_namespace(sheetname) + '_' + sheet_location_array[1]
         
+        elif element[0] == '\"':
+            current_formula = element
+        
+        # else:
+        #     print('Invalid formula: ' + element)
+        #     raise Exception('Invalid formula')
+        
+        # If is text/string value
         else:
-            print('Invalid formula: ' + element)
-            raise Exception('Invalid formula')
+            current_formula = '\"' +element + '\"'
         
         formula = add_to_resulting_formula(formula, current_formula, operators)
     

@@ -4,20 +4,29 @@ from Util.Cell import Cell
 from Util.util import format_namespace
 
 
-def handle_range(sum_range, cells, formula, is_max_min, sheet):
-    start_col, start_row = extract_col_row_from_excel_cell(sum_range.split(':')[0])
-    end_col, end_row = extract_col_row_from_excel_cell(sum_range.split(':')[1])
+def handle_range(sum_range, cells, formula, is_max_min, sheetname):
+    start_range = sum_range.split(':')[0]
+    end_range = sum_range.split(':')[1]
+    
+    # TODO more extensive check?
+    if start_range[0] == '\'':
+        sheet_location_array = start_range.split('!')
+        sheetname = sheet_location_array[0][1:-1]
+        start_range = sheet_location_array[1]
+        
+    start_col, start_row = extract_col_row_from_excel_cell(start_range)
+    end_col, end_row = extract_col_row_from_excel_cell(end_range)
     start_col_last_char = start_col[-1]
     start_col_except_last_char = start_col[:-1]
     end_col_last_char = end_col[-1]
     
     for i in range(int(start_row), int(end_row)+1):
         for j in range(ord(start_col_last_char), ord(end_col_last_char) + 1):
-            cells.append(Cell(sheet, start_col_except_last_char + chr(j) + str(i)))
+            cells.append(Cell(sheetname, start_col_except_last_char + chr(j) + str(i)))
             if is_max_min:
-                formula += format_namespace(sheet) + '_' + start_col_except_last_char + chr(j) + str(i) + ';'
+                formula += format_namespace(sheetname) + '_' + start_col_except_last_char + chr(j) + str(i) + ';'
             else:
-                formula += format_namespace(sheet) + '_' + start_col_except_last_char + chr(j) + str(i) + '+'
+                formula += format_namespace(sheetname) + '_' + start_col_except_last_char + chr(j) + str(i) + '+'
 
     return cells, formula
 

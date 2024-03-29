@@ -55,12 +55,18 @@ def split_up_conditions(condition):
     while i < len(condition):
         if condition[i:i+2] in operators:
             parts.append(current_part)
-            used_operators.append(condition[i:i+2])
+            if condition[i:i+2] == '<>':
+                used_operators.append('!=')
+            else: 
+                used_operators.append(condition[i:i+2])
             current_part = ''
             i += 1
         elif condition[i] in operators:
             parts.append(current_part)
-            used_operators.append(condition[i])
+            if condition[i] == '=':
+                used_operators.append('==')
+            else:
+                used_operators.append(condition[i])
             current_part = ''
         else:
             current_part += condition[i]
@@ -84,6 +90,9 @@ def is_max(string):
 
 def is_min(string):
     return string == 'MIN'
+
+def is_VLOOKUP(string):
+    return string == 'VLOOKUP'
 
 def is_excel_cell(string):
     pattern = r'^[A-Z]+[0-9]+$'

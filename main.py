@@ -13,10 +13,10 @@ warnings.simplefilter(action='ignore', category=UserWarning)
 
 def resolve_cell(workbook, cell, formulas, values):
     sheet = workbook[cell.sheetname]
-    print('Resolving cell: ' + cell.location + str(sheet[cell.location].value))
+    print('Resolving cell: ' + cell.location + " " + str(sheet[cell.location].value))
     
     if(isinstance(sheet[cell.location].value, int) or isinstance(sheet[cell.location].value, float)):
-        print('Cell: ' + cell.location + str(sheet[cell.location].value))
+        print('Cell: ' + cell.location + ' ' +  str(sheet[cell.location].value))
         
         values.add(CellValue(cell, sheet[cell.location].value))
         print()
@@ -24,16 +24,17 @@ def resolve_cell(workbook, cell, formulas, values):
         return formulas, values
     else:
         # library imported functions
-        function = fs.Parser().ast(sheet[cell.location].value)[1].compile()
-        print('Cells used using the shitty library: ' + str(list(function.inputs)))
-        # library imported functions
+        if sheet[cell.location].value != None:
+            cells, formula = extract_formula_cells(cell.sheetname, sheet[cell.location].value, cells=Set())
         
-        cells, formula = extract_formula_cells(cell.sheetname, sheet[cell.location].value, cells=Set())
+        else:
+            formula = 0
+            cells = Set()
         
-        print('Cells used using the my own beautifull code: ' + list_to_string(cells.get_list()))
-        print('Translated formula: ' + formula)
+        print('Cells: ' + list_to_string(cells.get_list()))
+        print('Translated formula: ' + str(formula))
         print()
-        
+            
         formulas.add(CellFormula(cell, formula))
         
         for cell in cells.get_list():

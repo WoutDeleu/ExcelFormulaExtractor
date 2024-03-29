@@ -16,6 +16,8 @@ def is_int(var):
         return False
     
 def list_to_string(list):
+    if len(list) == 0:
+        return '[]'
     result = '['
     for item in list:
         result += str(item) + ', '
