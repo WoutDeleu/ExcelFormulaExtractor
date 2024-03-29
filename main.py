@@ -47,8 +47,9 @@ def main():
 
     workbook = read_in_excel('Draft PB-berekening - WERKVERSIE V4.xlsx')
     
-    starting_cell = Cell('Tax Calculation', 'C41')
-    starting_cell = Cell('Tax Calculation', 'C56')
+    # starting_cell = Cell('Tax Calculation', 'C41')
+    # starting_cell = Cell('Tax Calculation', 'C56')
+    starting_cell = Cell('Tax Calculation', 'C34')
     
     # Stack to keep track of formulas and values 
     formulas = Stack()
@@ -57,12 +58,18 @@ def main():
     formulas, values = resolve_cell(workbook, starting_cell, formulas, values)
     
     
-    for value in values:
-        print(value.cell.location)
-        print(value.value)
-    for value in formulas:
-        print(value.cell.location)
-        print(value.formula)
+    print('######################################################################################################')
+    print('##########################################  VALUES  ##################################################')
+    print('######################################################################################################')
+    for value in values.get_list():
+        print(value.cell.location + ': ' + str(value.value))
+        
+    print('######################################################################################################')
+    print('#########################################  FORMULAS  #################################################')
+    print('######################################################################################################')
+    for value in formulas.get_list():
+        print(value.cell.location + ': ' + str(value.formula))
+    
     
 if __name__ == '__main__':
     main()

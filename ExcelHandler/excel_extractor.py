@@ -15,7 +15,6 @@ def add_to_resulting_formula(resulting_formula, formula, operators):
 
 
 def extract_formula_cells(sheetname, excel_formula, formula='', cells=Set()):
-    # TODO handle references to other sheets - nu, default sheet is 'Tax Calculation'
     # remove first character (=)
     if excel_formula == None or excel_formula == '':
         return cells, ''
@@ -66,8 +65,8 @@ def extract_formula_cells(sheetname, excel_formula, formula='', cells=Set()):
             cells, current_formula = extract_formula_cells(sheetname, element[1:-1], formula='', cells=cells)
             current_formula = '(' + current_formula + ')'
         
-        # Reference to another sheet
         # TODO more extensive check?
+        # Reference to another sheet
         elif element[0] == '\'':
             sheet_location_array = element.split('!')
             cells.append(Cell(sheet_location_array[0][1:-1], sheet_location_array[1]))
@@ -78,9 +77,8 @@ def extract_formula_cells(sheetname, excel_formula, formula='', cells=Set()):
             current_formula = element
         
         elif element[0] == ' ' or element == '' or element == ',' or element == ';' or element == ':' or element == '=' or element == None:  
-            # print('Invalid formula: ' + element)
-            # raise Exception('Invalid formula')
-            formula = ''
+            print('Invalid formula: ' + element)
+            raise Exception('Invalid formula')
         
         # If is text/string value
         else:
@@ -93,7 +91,6 @@ def extract_formula_cells(sheetname, excel_formula, formula='', cells=Set()):
 
 
 def split_up_excel_formula(string):
-    # TODO fout!!!!!!
     # Queues
     operators = Queue()
     parts = Queue()
