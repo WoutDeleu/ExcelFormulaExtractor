@@ -1,15 +1,16 @@
 PLANNING
     - Clean up code
-
-    - input + interaction in terminal
+    
+    - Debuggen
 
     - TODOs handlen
         - VLOOKUP bekijken
             True/False
-            - No range        
+            - No range??
         - IFERROR bekijken
             divide by zero handlen?
-            andere string split handlen
+        - +IF/+IFERROR/... 
+        - Cast to positive!
         - Array functions
         
     - Translator naar Liquid
@@ -30,4 +31,4 @@ HIGH LEVEL PLANNING
 EXTRA FEATURES
     - make retrieving Excel formulas generic -> als je nog een excel file wil toevoegen => maar op 1 plek aanpassen
     - fixen ''' if not brackets_input_is_handled:      => Zou moeten gehandeled worden in de voorgaande ifs
-                parts.add(current_part) '''
+                    parts.add(current_part) '''

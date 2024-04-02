@@ -13,7 +13,7 @@ warnings.simplefilter(action='ignore', category=UserWarning)
 def resolve_cell(workbook, cell, formulas, values):
     sheet = workbook[cell.sheetname]
     print('Resolving cell: ' + cell.location + " " + str(sheet[cell.location].value))
-    
+
     if(isinstance(sheet[cell.location].value, int) or isinstance(sheet[cell.location].value, float)):
         print('Cell: ' + cell.location + ' ' +  str(sheet[cell.location].value))
         

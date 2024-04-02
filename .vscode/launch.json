@@ -5,12 +5,14 @@
     "version": "0.2.0",
     "configurations": [
 
+
         {
             "name": "Python Debugger: main.py",
             "type": "debugpy",
             "request": "launch",
             "program": "./main.py",
-            "console": "integratedTerminal"
+            "console": "integratedTerminal",
+            "args": ["Tax Calculation", "D32"]
         },
         {
             "name": "Python Debugger: test.py",

@@ -46,11 +46,9 @@ def extract_formula_cells(sheetname, excel_formula, formula='', cells=Set()):
             cells, current_formula = handle_round(cells, sheetname, element)
         
         elif is_number(element):
-            # TODO extra - extra aanduiding voor een getal
             current_formula = element
         
         elif is_percentage(element):
-            # TODO extra - extra aanduiding voor een getal
             current_formula = element
         
         elif is_excel_cell(element):
@@ -133,15 +131,15 @@ def split_up_excel_formula(string):
             brackets_to_close += 1
             i += 3
             
-        elif is_if(string[i:i+2]):
-            current_part += 'IF('
-            brackets_to_close += 1
-            i += 2
-            
         elif is_iferror(string[i:i+7]):
             current_part += 'IFERROR('
             brackets_to_close += 1
             i += 7
+            
+        elif is_if(string[i:i+2]):
+            current_part += 'IF('
+            brackets_to_close += 1
+            i += 2
             
         elif is_round(string[i:i+5]):
             current_part += 'ROUND('
