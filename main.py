@@ -1,12 +1,11 @@
-import unittest
-import pandas as pd
 import warnings
-import formulas as fs
+import sys
 from Util.DataStructures import Stack
 from Util.util import *
 from Util.Cell import *
 from ExcelHandler.excel_helpers import *
 from ExcelHandler.excel_extractor import *
+from tkinter.filedialog import askopenfilename
 
 warnings.simplefilter(action='ignore', category=UserWarning)
 
@@ -44,9 +43,9 @@ def resolve_cell(workbook, cell, formulas, values):
     
     
 def main():
-
-    workbook = read_in_excel('Draft PB-berekening - WERKVERSIE V4.xlsx')
-    starting_cell = Cell('Tax Calculation', 'C34')
+    filename = askopenfilename()
+    workbook = read_in_excel(filename)
+    starting_cell = Cell(sys.argv[1], sys.argv[2])
     
     # Stack to keep track of formulas and values 
     formulas = Stack()
