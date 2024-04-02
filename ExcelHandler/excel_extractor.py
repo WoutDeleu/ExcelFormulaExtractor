@@ -29,9 +29,9 @@ def extract_formula_cells(sheetname, excel_formula, formula='', cells=Set()):
     operators, parts = split_up_excel_formula(excel_formula)
     
     for element in parts.get_list():
-        if is_iferror(element[:7]):      
-            element = element[7:-1]
-            element = split_up_formulas(element)[0]
+        if is_iferror(element[:7]):
+            cells, current_formula = extract_formula_cells(sheetname, element[8:-1], formula='', cells=cells)
+            # element = split_up_formulas(element)[0]
             
         if is_sum(element[:3]) or is_max(element[:3]) or is_min(element[:3]):
             cells, current_formula = handle_sum_min_max(cells, sheetname, element)

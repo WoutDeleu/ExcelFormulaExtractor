@@ -3,9 +3,8 @@ PLANNING
     
     - Debuggen
 
-    - TODOs handlen
+    - TODOs handlen             => 1 dag
         - VLOOKUP bekijken
-            True/False
             - No range??
         - IFERROR bekijken
             divide by zero handlen?
@@ -13,7 +12,7 @@ PLANNING
         - Cast to positive!
         - Array functions
         
-    - Translator naar Liquid
+    - Translator naar Liquid    => 2 dagen
 
     - Testen schrijven? 
 

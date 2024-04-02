@@ -15,7 +15,8 @@ def resolve_cell(workbook, cell, formulas, values):
     print('Resolving cell: ' + cell.location + " " + str(sheet[cell.location].value))
 
     if(isinstance(sheet[cell.location].value, int) or isinstance(sheet[cell.location].value, float)):
-        print('Cell: ' + cell.location + ' ' +  str(sheet[cell.location].value))
+        print('Cell: ' + cell.location)
+        print('Value: ' + str(sheet[cell.location].value))
         
         values.add(CellValue(cell, sheet[cell.location].value))
         print()
@@ -32,10 +33,12 @@ def resolve_cell(workbook, cell, formulas, values):
         print('Cells: ' + list_to_string(cells.get_list()))
         print('Translated formula: ' + str(formula))
         print()
-            
+        
         formulas.add(CellFormula(cell, formula))
         
         for cell in cells.get_list():
+            if cell.location == "D163":
+                pass
             formulas, values = resolve_cell(workbook, cell, formulas, values)
             
         return formulas, values
