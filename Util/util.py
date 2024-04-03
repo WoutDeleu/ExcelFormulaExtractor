@@ -45,3 +45,27 @@ def format_namespace(namespace):
 
 def is_constant(string):
     return isinstance(string, int) or isinstance(string, float)
+
+
+def print_results(formulas, values, errors):
+    print('######################################################################################################')
+    print('##########################################  VALUES  ##################################################')
+    print('######################################################################################################')
+    for value in values.get_list():
+        print(value.cell.location + ': ' + str(value.value))
+        # print(value.cell.location + '-' + value.cell.sheetname + ': ' + str(value.value))
+    print()
+    
+    print('######################################################################################################')
+    print('#########################################  FORMULAS  #################################################')
+    print('######################################################################################################')
+    for value in formulas.get_list():
+        print(value.cell.location + ': ' + str(value.formula))
+        
+    print('######################################################################################################')
+    print('##########################################  EMPTY  ##################################################')
+    print('######################################################################################################')
+    for error in errors.get_list():
+        # print(error.cell.location + ': ' + str(error.value))
+        print(error.cell.location + '-' + error.cell.sheetname + ': ' + str(error.value))
+    

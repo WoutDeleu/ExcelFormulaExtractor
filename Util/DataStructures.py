@@ -36,12 +36,35 @@ class Stack:
             self.stack.pop(index)
             self.stack.append(cell)
             
+    def move_to_top(self, item):
+        index = self.find_item_index(item)
+        item = self.stack.pop(index)
+        self.stack.append(item)
+            
     def find_item_index(self, item):
-        for i in range(len(self.stack)):
-            if self.stack[i].cell.location == item.cell.location and self.stack[i].cell.sheetname == item.cell.sheetname:
-                return i
+        if isinstance(item, Cell):
+            for i in range(len(self.stack)):
+                if self.stack[i].cell.location == item.location and self.stack[i].cell.sheetname == item.sheetname:
+                    return i
+        elif isinstance(item, CellFormula) or isinstance(item, CellValue):
+                if self.stack[i].cell.location == item.cell.location and self.stack[i].cell.sheetname == item.cell.sheetname:
+                    return i
         
     def contains(self, item):
+        if isinstance(item, Cell):
+            for cell in self.stack:
+                if cell.cell.location == item.location and cell.cell.sheetname == item.sheetname:
+                    return True
+            return False
+        elif isinstance(item, CellFormula) or isinstance(item, CellValue):
+            for cell in self.stack:
+                if cell.cell.location == item.cell.location and cell.cell.sheetname == item.cell.sheetname:
+                    return True
+            return False
+        else:
+            return False
+    
+    def contains_cell(self, item):
         for cell in self.stack:
             if cell.cell.location == item.cell.location and cell.cell.sheetname == item.cell.sheetname:
                 return True
@@ -80,6 +103,6 @@ class Set:
                 if cell.location == item.location and cell.sheetname == item.sheetname:
                     return True
             return False
-        
+    
     def __str__(self):
         return str(self.set)
