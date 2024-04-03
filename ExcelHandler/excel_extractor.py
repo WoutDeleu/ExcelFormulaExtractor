@@ -29,6 +29,7 @@ def extract_formula_cells(sheetname, excel_formula, formula='', cells=Set()):
     operators, parts = split_up_excel_formula(excel_formula)
     
     for element in parts.get_list():
+        
         if is_iferror(element[:7]):
             cells, current_formula = extract_formula_cells(sheetname, element[8:-3], formula='', cells=cells)
             # element = split_up_formulas(element)[0]
@@ -165,6 +166,13 @@ def split_up_excel_formula(string):
     if brackets_to_close == 0:
         # TODO make more elegant - integrate in previous while loop
         parts.add(current_part)
-        
-    return operators, parts
+    
+    formatted_parts = Queue()
+    for part in parts.get_list():
+        if is_absolute_reference(part) and is_excel_cell(absolute_to_relative(part)): 
+            formatted_parts.add(absolute_to_relative(part))
+        else:
+            formatted_parts.add(part)
+    
+    return operators, formatted_parts
 

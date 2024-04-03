@@ -12,7 +12,7 @@
             "request": "launch",
             "program": "./main.py",
             "console": "integratedTerminal",
-            "args": ["Tax Calculation", "D32"]
+            "args": ["Tax Calculation", "C34"]
         },
         {
             "name": "Python Debugger: test.py",

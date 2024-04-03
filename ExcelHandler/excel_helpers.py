@@ -128,7 +128,8 @@ def is_excel_range(string):
         string = string.split('!')[1]
     # Pattern to check for Excel range format
     pattern = r'^[A-Z]+[1-9]\d*:[A-Z]+[1-9]\d*$'
-    return bool(re.match(pattern, string))
+    pattern_absolute = r'^\$?[A-Z]+\$\d+:\$?[A-Z]+\$\d+$'
+    return bool(re.match(pattern, string)) or bool(re.match(pattern_absolute, string))
 
 def is_or(string):
     return string == 'OR'
@@ -141,3 +142,36 @@ def is_not(string):
 
 def is_xor(string):
     return string == 'XOR'
+
+# Absolute and relative cell references
+def is_absolute_reference(cell_reference):
+    """
+    Check if a cell reference is absolute or not.
+    
+    Parameters:
+        cell_reference (str): The cell reference to check.
+        
+    Returns:
+        bool: True if the cell reference is absolute, False otherwise.
+    """
+    # Absolute references in Excel start with a "$" sign
+    if "$" in cell_reference:
+        return True
+    else:
+        return False
+
+def absolute_to_relative(cell_reference):
+    """
+    Convert an absolute cell reference to a relative cell reference.
+    
+    Parameters:
+        cell_reference (str): The absolute cell reference to convert.
+        
+    Returns:
+        str: The relative cell reference.
+    """
+    # Als het een absolute referentie is, verwijder dan alle "$" tekens
+    if "$" in cell_reference:
+        cell_reference = cell_reference.replace("$", "")
+        
+    return cell_reference

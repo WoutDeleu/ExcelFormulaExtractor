@@ -11,24 +11,27 @@ warnings.simplefilter(action='ignore', category=UserWarning)
 
 
 def resolve_cell(workbook, cell, formulas, values, errors):
+    if cell.location == 'D422':
+        pass
+    
     sheet = workbook[cell.sheetname]
     print('Resolving cell: ' + cell.location + " " + str(sheet[cell.location].value))
 
     if sheet[cell.location].value == None:
         print('Cell: ' + cell.location)
         print('None')
+        print()
         
         errors.add(CellValue(cell, 'None'))
-        print()
         
         return formulas, values, errors
         
     elif is_constant(sheet[cell.location].value):
         print('Cell: ' + cell.location)
         print('Value: ' + str(sheet[cell.location].value))
+        print()
         
         values.add(CellValue(cell, sheet[cell.location].value))
-        print()
         
         return formulas, values, errors
     
@@ -40,9 +43,9 @@ def resolve_cell(workbook, cell, formulas, values, errors):
             
         print('Cell: ' + cell.location)
         print('Value: ' + str(sheet[cell.location].value))
+        print()
         
         values.add(CellValue(cell, value))
-        print()
         
         return formulas, values, errors
     else:
