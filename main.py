@@ -75,7 +75,7 @@ def main():
     values = Stack()
     errors = Stack()
     
-    formulas, values = resolve_cell(workbook, starting_cell, formulas, values, errors)
+    formulas, values, errors = resolve_cell(workbook, starting_cell, formulas, values, errors)
     
     print('######################################################################################################')
     print('##########################################  VALUES  ##################################################')
@@ -90,6 +90,12 @@ def main():
     print('######################################################################################################')
     for value in formulas.get_list():
         print(value.cell.location + ': ' + str(value.formula))
+        
+    print('######################################################################################################')
+    print('##########################################  ERRORS  ##################################################')
+    print('######################################################################################################')
+    for error in errors.get_list():
+        print(error.cell.location + ': ' + str(error.error))
     
     
 if __name__ == '__main__':
