@@ -6,6 +6,7 @@ PLANNING
     - TODOs handlen             => 1 dag
         - VLOOKUP bekijken
             - No range??
+        - DATEDIF
         - IFERROR bekijken
             divide by zero handlen?
         - +IF/+IFERROR/... 

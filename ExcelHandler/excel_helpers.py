@@ -74,6 +74,19 @@ def split_up_conditions(condition):
     parts.append(current_part)
     return parts, used_operators
 
+def is_fully_covered_by_brackets(string):
+    if string[0] != '(':
+        return False
+    count_opened_brackets = 0
+    for ch in string[:-1]:
+        if ch == '(':
+            count_opened_brackets += 1
+        if ch == ')':
+            count_opened_brackets -= 1
+        if count_opened_brackets == 0:
+            return False
+    return True
+
 
 # Checks
 def is_sum(string):

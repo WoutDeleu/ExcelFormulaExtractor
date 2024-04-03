@@ -14,6 +14,13 @@ def is_int(var):
         return True
     except ValueError:
         return False
+
+def is_float(var):
+    try:
+        float(var)
+        return True
+    except ValueError:
+        return False
     
 def list_to_string(list):
     if len(list) == 0:
@@ -36,14 +43,5 @@ def is_percentage(string):
 def format_namespace(namespace):
     return namespace.lower().replace(' ', '_')
 
-def is_fully_covered_by_brackets(string):
-    count_opened_brackets = 0
-    for ch in string[:-1]:
-        if ch != '(':
-            count_opened_brackets += 1
-        if ch == ')':
-            count_opened_brackets -= 1
-        if count_opened_brackets == 0:
-            return False
-    return True
-
+def is_constant(string):
+    return isinstance(string, int) or isinstance(string, float)

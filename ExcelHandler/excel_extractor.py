@@ -30,14 +30,14 @@ def extract_formula_cells(sheetname, excel_formula, formula='', cells=Set()):
     
     for element in parts.get_list():
         if is_iferror(element[:7]):
-            cells, current_formula = extract_formula_cells(sheetname, element[8:-1], formula='', cells=cells)
+            cells, current_formula = extract_formula_cells(sheetname, element[8:-3], formula='', cells=cells)
             # element = split_up_formulas(element)[0]
-            
-        if is_sum(element[:3]) or is_max(element[:3]) or is_min(element[:3]):
-            cells, current_formula = handle_sum_min_max(cells, sheetname, element)
             
         elif is_if(element[:2]):
             cells, current_formula = handle_if_logic(cells, sheetname, element)
+            
+        elif is_sum(element[:3]) or is_max(element[:3]) or is_min(element[:3]):
+            cells, current_formula = handle_sum_min_max(cells, sheetname, element)
             
         elif is_VLOOKUP(element[:7]):
             cells, current_formula = handle_vlookup(cells, sheetname, element)
@@ -54,22 +54,21 @@ def extract_formula_cells(sheetname, excel_formula, formula='', cells=Set()):
         elif is_excel_cell(element):
             cells.append(Cell(sheetname, element))
             current_formula = format_namespace(sheetname) + '_' + element
+            
+        elif is_fully_covered_by_brackets(element):
+            cells, current_formula = extract_formula_cells(sheetname, element[1:-1], formula='', cells=cells)
+            current_formula = '(' + current_formula + ')'
         
         elif element[0] == '-' or element[0] == '+':
             cells, current_formula = extract_formula_cells(sheetname, element[1:], formula='', cells=cells)
             current_formula = '(' + element[0] + current_formula + ')'
             
-        elif element[0] == '(':
-            cells, current_formula = extract_formula_cells(sheetname, element[1:-1], formula='', cells=cells)
-            current_formula = '(' + current_formula + ')'
-        
         # TODO more extensive check?
         # Reference to another sheet
         elif element[0] == '\'':
             sheet_location_array = element.split('!')
             cells.append(Cell(sheet_location_array[0][1:-1], sheet_location_array[1]))
-            sheetname = sheet_location_array[0][1:-1]
-            current_formula = format_namespace(sheetname) + '_' + sheet_location_array[1]
+            current_formula = format_namespace(sheet_location_array[0][1:-1]) + '_' + sheet_location_array[1]
         
         elif element[0] == '\"':
             current_formula = element

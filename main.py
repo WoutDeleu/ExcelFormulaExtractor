@@ -10,18 +10,41 @@ from tkinter.filedialog import askopenfilename
 warnings.simplefilter(action='ignore', category=UserWarning)
 
 
-def resolve_cell(workbook, cell, formulas, values):
+def resolve_cell(workbook, cell, formulas, values, errors):
     sheet = workbook[cell.sheetname]
     print('Resolving cell: ' + cell.location + " " + str(sheet[cell.location].value))
 
-    if(isinstance(sheet[cell.location].value, int) or isinstance(sheet[cell.location].value, float)):
+    if sheet[cell.location].value == None:
+        print('Cell: ' + cell.location)
+        print('None')
+        
+        errors.add(CellValue(cell, 'None'))
+        print()
+        
+        return formulas, values, errors
+        
+    elif is_constant(sheet[cell.location].value):
         print('Cell: ' + cell.location)
         print('Value: ' + str(sheet[cell.location].value))
         
         values.add(CellValue(cell, sheet[cell.location].value))
         print()
         
-        return formulas, values
+        return formulas, values, errors
+    
+    elif sheet[cell.location].value[0] == '=' and (is_int(sheet[cell.location].value[1:]) or is_float(sheet[cell.location].value[1:])):
+        if is_int(sheet[cell.location].value[1:]):
+            value = int(sheet[cell.location].value[1:])
+        elif is_float(sheet[cell.location].value[1:]):
+            value = float(sheet[cell.location].value[1:])
+            
+        print('Cell: ' + cell.location)
+        print('Value: ' + str(sheet[cell.location].value))
+        
+        values.add(CellValue(cell, value))
+        print()
+        
+        return formulas, values, errors
     else:
         if sheet[cell.location].value != None:
             cells, formula = extract_formula_cells(cell.sheetname, sheet[cell.location].value, cells=Set())
@@ -37,12 +60,9 @@ def resolve_cell(workbook, cell, formulas, values):
         formulas.add(CellFormula(cell, formula))
         
         for cell in cells.get_list():
-            if cell.location == "D163":
-                pass
-            formulas, values = resolve_cell(workbook, cell, formulas, values)
+            formulas, values = resolve_cell(workbook, cell, formulas, values, errors)
             
         return formulas, values
-    
     
     
 def main():
@@ -53,14 +73,16 @@ def main():
     # Stack to keep track of formulas and values 
     formulas = Stack()
     values = Stack()
+    errors = Stack()
     
-    formulas, values = resolve_cell(workbook, starting_cell, formulas, values)
+    formulas, values = resolve_cell(workbook, starting_cell, formulas, values, errors)
     
     print('######################################################################################################')
     print('##########################################  VALUES  ##################################################')
     print('######################################################################################################')
     for value in values.get_list():
         print(value.cell.location + ': ' + str(value.value))
+        # print(value.cell.location + '-' + value.cell.sheetname + ': ' + str(value.value))
     print()
     
     print('######################################################################################################')
