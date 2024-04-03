@@ -59,8 +59,12 @@ def extract_formula_cells(sheetname, excel_formula, formula='', cells=Set()):
         elif is_fully_covered_by_brackets(element):
             cells, current_formula = extract_formula_cells(sheetname, element[1:-1], formula='', cells=cells)
             current_formula = '(' + current_formula + ')'
-        
-        elif element[0] == '-' or element[0] == '+':
+            
+        elif element[0] == '+':
+            cells, current_formula = extract_formula_cells(sheetname, element[1:], formula='', cells=cells)
+            current_formula = 'abs(' + current_formula + ')'
+            
+        elif element[0] == '-':
             cells, current_formula = extract_formula_cells(sheetname, element[1:], formula='', cells=cells)
             current_formula = '(' + element[0] + current_formula + ')'
             
