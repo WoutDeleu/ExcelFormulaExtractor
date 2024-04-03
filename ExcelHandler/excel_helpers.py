@@ -124,12 +124,22 @@ def is_operator(char):
     return False
 
 def is_excel_range(string):
-    if '!' in string:
-        string = string.split('!')[1]
-    # Pattern to check for Excel range format
+    # # Pattern to check for Excel range format
     pattern = r'^[A-Z]+[1-9]\d*:[A-Z]+[1-9]\d*$'
-    pattern_absolute = r'^\$?[A-Z]+\$\d+:\$?[A-Z]+\$\d+$'
-    return bool(re.match(pattern, string)) or bool(re.match(pattern_absolute, string))
+    pattern_absolute = r'^\$?[A-Z]+\$?\d+:\$?[A-Z]+\$?\d+$'
+    strings = string.split('!')
+    if len(strings) == 1:
+        return bool(re.match(pattern, string)) or bool(re.match(pattern_absolute, string))
+    elif len(strings) == 2:
+        if strings[0] == '\'':
+            return bool(re.match(pattern, strings[1])) or bool(re.match(pattern_absolute, strings[1]))
+        else:
+            checking_string = strings[0].split(':')[0] + ':' + strings[1]
+            return bool(re.match(pattern, checking_string)) or bool(re.match(pattern_absolute, checking_string))
+    elif len(strings) == 3:
+        checking_string = strings[1].split(':')[0] + ':' + strings[2]
+        return bool(re.match(pattern, checking_string)) or bool(re.match(pattern_absolute, checking_string))
+    
 
 def is_or(string):
     return string == 'OR'

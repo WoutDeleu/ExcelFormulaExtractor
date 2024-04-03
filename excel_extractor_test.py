@@ -74,5 +74,6 @@ class TestExcelExtractor(unittest.TestCase):
         for cell in cells.get_list():
             self.assertTrue(cell.location in correct_cells)
         self.assertTrue(formula == '(tax_calculation_L246+tax_calculation_L247+tax_calculation_L248)')
+        
 if __name__ == '__main__':
     unittest.main()
