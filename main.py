@@ -98,7 +98,8 @@ def main():
     print('##########################################  ERRORS  ##################################################')
     print('######################################################################################################')
     for error in errors.get_list():
-        print(error.cell.location + ': ' + str(error.value))
+        # print(error.cell.location + ': ' + str(error.value))
+        print(error.cell.location + '-' + error.cell.sheetname + ': ' + str(error.value))
     
     
 if __name__ == '__main__':
