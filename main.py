@@ -60,9 +60,9 @@ def resolve_cell(workbook, cell, formulas, values, errors):
         formulas.add(CellFormula(cell, formula))
         
         for cell in cells.get_list():
-            formulas, values = resolve_cell(workbook, cell, formulas, values, errors)
+            formulas, values, errors = resolve_cell(workbook, cell, formulas, values, errors)
             
-        return formulas, values
+        return formulas, values, errors
     
     
 def main():
@@ -95,7 +95,7 @@ def main():
     print('##########################################  ERRORS  ##################################################')
     print('######################################################################################################')
     for error in errors.get_list():
-        print(error.cell.location + ': ' + str(error.error))
+        print(error.cell.location + ': ' + str(error.value))
     
     
 if __name__ == '__main__':
