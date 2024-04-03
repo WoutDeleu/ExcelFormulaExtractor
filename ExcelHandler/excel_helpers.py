@@ -131,7 +131,7 @@ def is_excel_range(string):
     if len(strings) == 1:
         return bool(re.match(pattern, string)) or bool(re.match(pattern_absolute, string))
     elif len(strings) == 2:
-        if strings[0] == '\'':
+        if strings[0][0] == '\'':
             return bool(re.match(pattern, strings[1])) or bool(re.match(pattern_absolute, strings[1]))
         else:
             checking_string = strings[0].split(':')[0] + ':' + strings[1]
