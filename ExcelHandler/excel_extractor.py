@@ -72,7 +72,11 @@ def extract_formula_cells(sheetname, excel_formula, formula='', cells=Set()):
         # Reference to another sheet
         elif element[0] == '\'':
             sheet_location_array = element.split('!')
-            cells.append(Cell(sheet_location_array[0][1:-1], sheet_location_array[1]))
+            
+            if is_absolute_reference(sheet_location_array[1]) and is_excel_cell(absolute_to_relative(sheet_location_array[1])):
+                cells.append(Cell(sheet_location_array[0][1:-1], absolute_to_relative(sheet_location_array[1])))
+            else:
+                cells.append(Cell(sheet_location_array[0][1:-1], sheet_location_array[1]))
             current_formula = format_namespace(sheet_location_array[0][1:-1]) + '_' + sheet_location_array[1]
         
         elif element[0] == '\"':
