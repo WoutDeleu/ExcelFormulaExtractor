@@ -9,8 +9,6 @@ PLANNING
             divide by zero handlen?
         - Cast to positive!
         - Array functions
-
-    - Prevent infinitive loops
         
     - Translator naar Liquid    => 2 dagen
 

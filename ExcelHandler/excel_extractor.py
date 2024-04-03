@@ -99,8 +99,8 @@ def split_up_excel_formula(string):
     
     current_part = ''
     brackets_to_close = 0
+    quotes_to_close = 0
     
-    brackets_input_is_handled = True
     is_allowed_to_close = False
     
     i = 0
@@ -112,6 +112,11 @@ def split_up_excel_formula(string):
             if string[i] == '(':
                 brackets_to_close += 1
                 
+        elif quotes_to_close > 0:
+            current_part += string[i]
+            if string[i] == '\'':
+                quotes_to_close -= 1
+                
         elif string[i] == '(':
             current_part += '('
             brackets_to_close += 1
@@ -119,6 +124,10 @@ def split_up_excel_formula(string):
         elif string[i] == ')':
             current_part += ')'
             brackets_to_close -= 1
+            
+        elif string[i] == '\'':
+            current_part += '\''
+            quotes_to_close += 1
             
         elif is_sum(string[i:i+3]):
             current_part += 'SUM('
@@ -155,7 +164,7 @@ def split_up_excel_formula(string):
             brackets_to_close += 1
             i += 7
         
-        elif is_operator(string[i]) and (brackets_to_close == 0 or is_allowed_to_close) and current_part != '':
+        elif is_operator(string[i]) and ((brackets_to_close == 0 and quotes_to_close == 0) or is_allowed_to_close) and current_part != '':
             operators.add(string[i])
             parts.add(current_part)
             current_part = ''

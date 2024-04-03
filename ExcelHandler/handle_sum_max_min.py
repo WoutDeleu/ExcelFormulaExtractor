@@ -10,10 +10,15 @@ def handle_range(sum_range, cells, formula, is_max_min, sheetname):
     
     
     # TODO more extensive check?
+    # TODO in theory sheets should be the same
     if start_range[0] == '\'':
         sheet_location_array = start_range.split('!')
         sheetname = sheet_location_array[0][1:-1]
         start_range = sheet_location_array[1]
+    if end_range[0] == '\'':
+        sheet_location_array = start_range.split('!')
+        sheetname = sheet_location_array[0][1:-1]
+        end_range = sheet_location_array[1]
     
     if is_absolute_reference(start_range) and is_excel_cell(absolute_to_relative(start_range)): 
         start_range = absolute_to_relative(start_range)

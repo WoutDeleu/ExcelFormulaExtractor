@@ -5,7 +5,7 @@ from ExcelHandler.excel_helpers import read_in_excel, split_up_conditions
 from Util.DataStructures import Set
 
 warnings.simplefilter(action='ignore', category=UserWarning)
-workbook = read_in_excel('Draft PB-berekening - WERKVERSIE V4.xlsx')
+workbook = read_in_excel('PB-berekening.xlsx')
 
 class TestExcelExtractor(unittest.TestCase):
     
@@ -67,5 +67,12 @@ class TestExcelExtractor(unittest.TestCase):
         for cell in cells.get_list():
             self.assertTrue(cell.location in correct_cells)
         self.assertTrue(formula == 'for(cell in [tax_calculation_A1;tax_calculation_A2;tax_calculation_A3]{if(cell == tax_calculation_A1){return update_column(cell, 1)}}')
+        
+    def test_range(self):
+        cells, formula = extract_formula_cells('Tax Calculation', 'SUM(\'Tax Calculation\'!$L$246:\'Tax Calculation\'!L248)', cells=Set())
+        correct_cells = ['L246', 'L247', 'L248']
+        for cell in cells.get_list():
+            self.assertTrue(cell.location in correct_cells)
+        self.assertTrue(formula == '(tax_calculation_L246+tax_calculation_L247+tax_calculation_L248)')
 if __name__ == '__main__':
     unittest.main()
