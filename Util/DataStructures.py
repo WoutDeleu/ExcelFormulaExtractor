@@ -47,6 +47,7 @@ class Stack:
                 if self.stack[i].cell.location == item.location and self.stack[i].cell.sheetname == item.sheetname:
                     return i
         elif isinstance(item, CellFormula) or isinstance(item, CellValue):
+            for i in range(len(self.stack)):
                 if self.stack[i].cell.location == item.cell.location and self.stack[i].cell.sheetname == item.cell.sheetname:
                     return i
         

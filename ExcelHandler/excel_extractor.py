@@ -1,8 +1,10 @@
+from ExcelHandler.ExcelFunctions.handle_date import handle_date, handle_datedif
 from ExcelHandler.excel_helpers import *
 from ExcelHandler.ExcelFunctions.handle_if import handle_if_logic
 from ExcelHandler.ExcelFunctions.handle_round import handle_round
 from ExcelHandler.ExcelFunctions.handle_sum_max_min import handle_sum_min_max
 from ExcelHandler.ExcelFunctions.handle_vlookup import handle_vlookup
+from ExcelHandler.handle_left_mid_right import handle_left, handle_mid, handle_right
 from Util.util import is_letter_or_number
 from Util.DataStructures import Queue, Set
 
@@ -26,6 +28,7 @@ def extract_formula_cells(sheetname, excel_formula, formula='', cells=Set()):
         
         if is_iferror(element[:7]):
             cells, current_formula = extract_formula_cells(sheetname, element[8:-3], formula='', cells=cells)
+            current_formula = '(iferror)' + current_formula
             
         elif is_if(element[:2]):
             cells, current_formula = handle_if_logic(cells, sheetname, element)
@@ -38,6 +41,22 @@ def extract_formula_cells(sheetname, excel_formula, formula='', cells=Set()):
         
         elif is_round(element[:5]):
             cells, current_formula = handle_round(cells, sheetname, element)
+        
+        elif is_datedif(element[:7]):
+            cells, current_formula = handle_datedif(cells, sheetname, element)
+        
+        elif is_date(element[:4]):
+            cells, current_formula = handle_date(cells, sheetname, element)
+        
+        elif is_left(element[:4]):
+            cells, current_formula = handle_left(cells, sheetname, element)
+            
+        elif is_mid(element[:3]):
+            cells, current_formula = handle_mid(cells, sheetname, element)
+            
+        elif is_right(element[:5]):
+            cells, current_formula = handle_right(cells, sheetname, element)
+            
         
         elif is_number(element) or is_percentage(element):
             current_formula = element
@@ -78,7 +97,7 @@ def extract_formula_cells(sheetname, excel_formula, formula='', cells=Set()):
         
         # If is text/string value
         else:
-            current_formula = '\"' +element + '\"'
+            current_formula = '\"' + element + '\"'
         
         formula = add_to_resulting_formula(formula, current_formula, operators)
     
@@ -156,6 +175,31 @@ def split_up_excel_formula(string):
             current_part += 'VLOOKUP('
             brackets_to_close += 1
             i += 7
+            
+        elif is_datedif(string[i:i+7]):
+            current_part += 'DATEDIF('
+            brackets_to_close += 1
+            i += 7
+        
+        elif is_date(string[i:i+4]):
+            current_part += 'DATE('
+            brackets_to_close += 1
+            i += 4
+            
+        elif is_left(string[i:i+4]):
+            current_part += 'LEFT('
+            brackets_to_close += 1
+            i += 4
+        
+        elif is_mid(string[i:i+3]):
+            current_part += 'MID('
+            brackets_to_close += 1
+            i += 3
+            
+        elif is_right(string[i:i+5]):
+            current_part += 'RIGHT('
+            brackets_to_close += 1
+            i += 5
         
         elif is_operator(string[i]) and ((brackets_to_close == 0 and quotes_to_close == 0) or is_allowed_to_close) and current_part != '':
             operators.add(string[i])

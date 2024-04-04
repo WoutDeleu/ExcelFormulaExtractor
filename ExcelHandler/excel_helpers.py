@@ -111,6 +111,21 @@ def is_VLOOKUP(string):
 def is_round(string):
     return string == 'ROUND'
 
+def is_date(string):
+    return string == 'DATE'
+
+def is_datedif(string):
+    return string == 'DATEDIF'
+
+def is_left(string):
+    return string == 'LEFT'
+
+def is_right(string):
+    return string == 'RIGHT'
+
+def is_mid(string):
+    return string == 'MID'
+
 def is_excel_cell(string):
     pattern = r'^[A-Z]+[0-9]+$'
     return bool(re.match(pattern, string))
@@ -125,7 +140,7 @@ def is_operator(char):
     return False
 
 def is_exception(string):
-    return  string == "/" or type(string) == ArrayFormula or isinstance(string, datetime.time) or string == None or string == '' or string == 'Ottignies- Louvain- La-Neuve'
+    return  string == "/" or type(string) == ArrayFormula or isinstance(string, datetime.time) or isinstance(string, datetime.datetime) or string == None or string == '' or string == 'Ottignies- Louvain- La-Neuve'
 
 
 def is_excel_range(string):

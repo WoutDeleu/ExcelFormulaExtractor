@@ -75,5 +75,12 @@ class TestExcelExtractor(unittest.TestCase):
             self.assertTrue(cell.location in correct_cells)
         self.assertTrue(formula == '(tax_calculation_L246+tax_calculation_L247+tax_calculation_L248)')
         
+    def test_datedif(self):
+        cells, formula = extract_formula_cells('Tax Calculation', '=DATEDIF(A1;A3;"y")', cells=Set())
+        correct_cells = ['A1', 'A3']
+        for cell in cells.get_list():
+            self.assertTrue(cell.location in correct_cells)
+        self.assertTrue(formula == 'DATEDIF(tax_calculation_A1;tax_calculation_A3;y)')
+    
 if __name__ == '__main__':
     unittest.main()

@@ -12,7 +12,7 @@ from openpyxl.worksheet.formula import ArrayFormula
 warnings.simplefilter(action='ignore', category=UserWarning)
 
 def handle_constants(formulas, values, exceptions, sheet, cell):
-    if is_constant(sheet[cell.location].value):
+    if isinstance(sheet[cell.location].value, datetime.time) or isinstance(sheet[cell.location].value, datetime.datetime) or is_constant(sheet[cell.location].value):
         value = sheet[cell.location].value
     else: 
         if is_int(sheet[cell.location].value[1:]):
@@ -38,10 +38,6 @@ def handle_exceptions(formulas, values, exceptions, sheet, cell):
     if type(sheet[cell.location].value) == ArrayFormula:
         pass
     
-    # TODO date time objects
-    if isinstance(sheet[cell.location].value, datetime.time):
-        pass
-    
     if sheet[cell.location].value == None or sheet[cell.location].value == '':
         print('Cell: ' + cell.location)
         print('None')
@@ -50,7 +46,11 @@ def handle_exceptions(formulas, values, exceptions, sheet, cell):
         exceptions.add(CellValue(cell, 'None'))
         
     if sheet[cell.location].value == 'Ottignies- Louvain- La-Neuve':
-        pass
+        exceptions.add(CellValue(cell, sheet[cell.location].value))
+        print('Cell: ' + cell.location)
+        print('Date: ' + str(sheet[cell.location].value))
+        print()
+        
     return formulas, values, exceptions
     
 
@@ -68,6 +68,12 @@ def handle_formulas(formulas, values, exceptions, workbook, sheet, cell):
         if not formulas.contains(cell) and not values.contains(cell) and not exceptions.contains(cell) and cell.location != '#REF':
             formulas, values, exceptions = resolve_cell(workbook, cell, formulas, values, exceptions)
         
+        elif cell.location == '#REF':
+            exceptions.add(CellValue(cell, '#REF'))
+            print('Cell: ' + cell.location)
+            print('Value: #REF')
+            print()
+            
         elif formulas.contains(cell):
             formulas.move_to_top(cell)
         
@@ -86,7 +92,7 @@ def resolve_cell(workbook, cell, formulas, values, exceptions):
     if is_exception(sheet[cell.location].value):
         return handle_exceptions(formulas, values, exceptions, sheet, cell)
     
-    elif is_constant(sheet[cell.location].value) or (sheet[cell.location].value[0] == '=' and is_int(str(sheet[cell.location].value[1:]) or is_float(sheet[cell.location].value)[1:])):
+    elif is_constant(sheet[cell.location].value) or (sheet[cell.location].value[0] == '=' and is_int(str(sheet[cell.location].value[1:]) or is_float(sheet[cell.location].value)[1:])) or isinstance(sheet[cell.location].value, datetime.time) or isinstance(sheet[cell.location].value, datetime.datetime):
         return handle_constants(formulas, values, exceptions, sheet, cell)
     
     else:
@@ -110,21 +116,26 @@ def run_full_analysis(workbook):
 
 
 def main():
+    print('Welcome to the Excel Extraction Tool')
+    print('Please select the Excel file you want to analyse')
     filename = askopenfilename()
     workbook = read_in_excel(filename)
     
     # TODO - Remove this hardcoded list of starting cells
-    run_full_analysis(workbook)
+    # run_full_analysis(workbook)
     
-    # starting_cell = Cell(sys.argv[1], sys.argv[2])
+    print('Enter the sheetname and cell location of the cell you want to start the analysis from')
+    sheetname = input("\tsheetname: ")
+    cell_number = input("\tcell number: ")
+    starting_cell = Cell(sheetname, cell_number)
     
-    # # Stack to keep track of formulas and values 
-    # formulas = Stack()
-    # values = Stack()
-    # exceptions = Stack()
+    # Stack to keep track of formulas and values 
+    formulas = Stack()
+    values = Stack()
+    exceptions = Stack()
     
-    # formulas, values, exceptions = resolve_cell(workbook, starting_cell, formulas, values, exceptions)
-    # print_results(formulas, values, exceptions)
+    formulas, values, exceptions = resolve_cell(workbook, starting_cell, formulas, values, exceptions)
+    print_results(formulas, values, exceptions)
     
     
 if __name__ == '__main__':

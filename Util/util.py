@@ -46,6 +46,16 @@ def format_namespace(namespace):
 def is_constant(string):
     return isinstance(string, int) or isinstance(string, float)
 
+def write_results_to_file(data_structure, filename, name):
+    file = open(filename+'_'+name+'.txt', 'w+')
+    while not data_structure.is_empty():
+        value = data_structure.pop()
+        if name == 'formulas':
+            file.write(format_namespace(value.cell.sheetname) + '_' + value.cell.location + '=' + str(value.formula) + '\n')
+        else:
+            file.write(format_namespace(value.cell.sheetname) + '_' + value.cell.location + '=' + str(value.value) + '\n')
+    file.close()
+    
 
 def print_results(formulas, values, exceptions):
     print('######################################################################################################')
@@ -61,6 +71,7 @@ def print_results(formulas, values, exceptions):
     print('######################################################################################################')
     for value in formulas.get_list():
         print(value.cell.location + ': ' + str(value.formula))
+    print()
         
     print('######################################################################################################')
     print('#######################################  EXCEPTIONS  #################################################')
@@ -68,3 +79,9 @@ def print_results(formulas, values, exceptions):
     for error in exceptions.get_list():
         # print(error.cell.location + ': ' + str(error.value))
         print(error.cell.location + '-' + error.cell.sheetname + ': ' + str(error.value))
+    print()
+    
+    filename = input('What is the filename where you want to write your results to? ')
+    write_results_to_file(values, filename, 'values')
+    write_results_to_file(formulas, filename, 'formulas')
+    write_results_to_file(exceptions, filename, 'exceptions')

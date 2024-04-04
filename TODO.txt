@@ -1,33 +1,22 @@
 PLANNING
-    - Zorgen dat het volledig draait
+    - Arrayfunction
 
-    - Clean up
+    - write2file
 
-    - Exceptions handlen
+    - Translator naar Liquid
 
-    - TODOs handlen             => 1 dag
-        - DATEDIF
-        - Array functions
-        - #REF fixen
-        - Handle DateTime obj
-
-    - IFERROR bekijken
-        divide by zero handlen?
-
-    - Translator naar Liquid    = 2 dagen
+    - Uitgebreider handlen
+        -> date
+        -> datedif
+        -> left/right/mid
 
     - Testen schrijven?
-
-    - Skelet schrijven + values linken in file
     
-
-HIGH LEVEL PLANNING
-    1. Logica afwerken
-    2. refactoren + docstrings
-    3. Documentatie schrijven
+    - refactoren + docstrings
+    - Documentatie schrijven
         Pseudocode
         HowToRun -> Requirements
-
+    
 
 EXTRA FEATURES
     - make retrieving Excel formulas generic -> als je nog een excel file wil toevoegen => maar op 1 plek aanpassen
