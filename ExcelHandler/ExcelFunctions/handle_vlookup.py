@@ -1,6 +1,6 @@
 import ExcelHandler
 from ExcelHandler.excel_helpers import is_excel_range, split_up_formulas
-from ExcelHandler.handle_sum_max_min import handle_range
+from ExcelHandler.ExcelFunctions.handle_sum_max_min import handle_range
 
 def handle_vlookup(cells, sheetname, element):
     """Handles the VLOOKUP formula.
@@ -31,4 +31,4 @@ def handle_vlookup(cells, sheetname, element):
     
     formula = 'for(cell in ' + '[' + range + ']{'+ 'if(cell == '+ matching_value + '){' + 'return update_column(cell, ' + offset + ')' +  '}' + '}'
 
-    return cells,see calls on pc linuxformula
+    return cells, formula

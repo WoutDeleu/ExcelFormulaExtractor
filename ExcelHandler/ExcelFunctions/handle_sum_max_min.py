@@ -1,5 +1,5 @@
 import ExcelHandler
-from ExcelHandler.excel_helpers import absolute_to_relative, extract_col_row_from_excel_cell, is_absolute_reference, is_excel_cell, is_excel_range, is_max, is_min, is_sum, split_up_formulas
+from ExcelHandler.excel_helpers import extract_col_row_from_excel_cell, handle_absolute_relative_cell, is_absolute_reference, is_excel_cell, is_excel_range, is_max, is_min, is_sum, split_up_formulas
 from Util.Cell import Cell
 from Util.util import format_namespace
 
@@ -19,11 +19,9 @@ def handle_range(sum_range, cells, formula, is_max_min, sheetname):
         sheetname = sheet_location_array[0][1:-1]
         end_range = sheet_location_array[1]
     
-    if is_absolute_reference(start_range) and is_excel_cell(absolute_to_relative(start_range)): 
-        start_range = absolute_to_relative(start_range)
-    if is_absolute_reference(end_range) and is_excel_cell(absolute_to_relative(end_range)): 
-        end_range = absolute_to_relative(end_range)
-        
+    start_range = handle_absolute_relative_cell(start_range)
+    end_range = handle_absolute_relative_cell(end_range)
+    
     start_col, start_row = extract_col_row_from_excel_cell(start_range)
     end_col, end_row = extract_col_row_from_excel_cell(end_range)
     start_col_last_char = start_col[-1]

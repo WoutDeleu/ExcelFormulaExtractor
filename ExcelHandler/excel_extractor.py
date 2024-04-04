@@ -1,12 +1,10 @@
 from ExcelHandler.excel_helpers import *
-from ExcelHandler.handle_if import handle_if_logic
-from ExcelHandler.handle_round import handle_round
-from ExcelHandler.handle_sum_max_min import handle_sum_min_max
-from ExcelHandler.handle_vlookup import handle_vlookup
+from ExcelHandler.ExcelFunctions.handle_if import handle_if_logic
+from ExcelHandler.ExcelFunctions.handle_round import handle_round
+from ExcelHandler.ExcelFunctions.handle_sum_max_min import handle_sum_min_max
+from ExcelHandler.ExcelFunctions.handle_vlookup import handle_vlookup
 from Util.util import is_letter_or_number
 from Util.DataStructures import Queue, Set
-from openpyxl.worksheet.formula import ArrayFormula
-from datetime import datetime
 
 def add_to_resulting_formula(resulting_formula, formula, operators):
     resulting_formula += formula
@@ -16,33 +14,18 @@ def add_to_resulting_formula(resulting_formula, formula, operators):
 
 
 def extract_formula_cells(sheetname, excel_formula, formula='', cells=Set()):
+    if excel_formula == '':
+        return cells, formula
+    
     # remove first character (=)
-    if excel_formula == None or excel_formula == '':
-        return cells, ''
-    
-    # TODO handle array functions
-    if type(excel_formula) == ArrayFormula:
-        return cells, ''
-    # TODO handle array functions
-    if type(excel_formula) == datetime.time:
-        return cells, ''
-    
-    # TODO handle /
-    if excel_formula == "/":
-        return cells, '/'
-    
     if excel_formula[0] == '=':
         excel_formula = remove_char_from_string(excel_formula, 0)
-
-    if excel_formula == 'Ottignies- Louvain- La-Neuve':
-        return cells, '\"Ottignies- Louvain- La-Neuve\"'
     operators, parts = split_up_excel_formula(excel_formula)
     
     for element in parts.get_list():
         
         if is_iferror(element[:7]):
             cells, current_formula = extract_formula_cells(sheetname, element[8:-3], formula='', cells=cells)
-            # element = split_up_formulas(element)[0]
             
         elif is_if(element[:2]):
             cells, current_formula = handle_if_logic(cells, sheetname, element)
@@ -56,10 +39,7 @@ def extract_formula_cells(sheetname, excel_formula, formula='', cells=Set()):
         elif is_round(element[:5]):
             cells, current_formula = handle_round(cells, sheetname, element)
         
-        elif is_number(element):
-            current_formula = element
-        
-        elif is_percentage(element):
+        elif is_number(element) or is_percentage(element):
             current_formula = element
         
         elif is_excel_cell(element):
@@ -80,17 +60,14 @@ def extract_formula_cells(sheetname, excel_formula, formula='', cells=Set()):
             
         # TODO more extensive check?
         # Reference to another sheet
-        elif element[0] == '\'' or element.replace(' ', '')[0] == '\'':
-            if element[1] == '\'':
-                element = remove_char_from_string(element, 0)
+        elif is_led_by_sheetname(element):
+            element = handle_leading_space(element)
             sheet_location_array = element.split('!')
             if sheet_location_array[1].find(" ") != -1:
                 sheet_location_array[1] = sheet_location_array[1].replace(" ", "")
-            if is_absolute_reference(sheet_location_array[1]) and is_excel_cell(absolute_to_relative(sheet_location_array[1])):
-                cells.append(Cell(sheet_location_array[0][1:-1], absolute_to_relative(sheet_location_array[1])))
-            else:
-                cells.append(Cell(sheet_location_array[0][1:-1], sheet_location_array[1]))
-            current_formula = format_namespace(sheet_location_array[0][1:-1]) + '_' + absolute_to_relative(sheet_location_array[1])
+            relative_cell = handle_absolute_relative_cell(sheet_location_array[1])
+            cells.append(Cell(sheet_location_array[0][1:-1], relative_cell))
+            current_formula = format_namespace(sheet_location_array[0][1:-1]) + '_' + relative_cell
             
         elif element[0] == '\"':
             current_formula = element
@@ -106,7 +83,6 @@ def extract_formula_cells(sheetname, excel_formula, formula='', cells=Set()):
         formula = add_to_resulting_formula(formula, current_formula, operators)
     
     return cells, formula
-
 
 
 def split_up_excel_formula(string):
@@ -199,10 +175,8 @@ def split_up_excel_formula(string):
     
     formatted_parts = Queue()
     for part in parts.get_list():
-        if is_absolute_reference(part) and is_excel_cell(absolute_to_relative(part)): 
-            formatted_parts.add(absolute_to_relative(part))
-        else:
-            formatted_parts.add(part)
+        part = handle_absolute_relative_cell(part)
+        formatted_parts.add(part)
     
     return operators, formatted_parts
 

@@ -47,7 +47,7 @@ def is_constant(string):
     return isinstance(string, int) or isinstance(string, float)
 
 
-def print_results(formulas, values, errors):
+def print_results(formulas, values, exceptions):
     print('######################################################################################################')
     print('##########################################  VALUES  ##################################################')
     print('######################################################################################################')
@@ -65,7 +65,6 @@ def print_results(formulas, values, errors):
     print('######################################################################################################')
     print('#######################################  EXCEPTIONS  #################################################')
     print('######################################################################################################')
-    for error in errors.get_list():
+    for error in exceptions.get_list():
         # print(error.cell.location + ': ' + str(error.value))
         print(error.cell.location + '-' + error.cell.sheetname + ': ' + str(error.value))
-    

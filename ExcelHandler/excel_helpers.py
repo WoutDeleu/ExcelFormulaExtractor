@@ -3,7 +3,8 @@ import openpyxl
 import re
 from Util.util import *
 from Util.Cell import *
-
+from openpyxl.worksheet.formula import ArrayFormula
+import datetime
 
 def read_in_excel(path):
     workbook = openpyxl.load_workbook(filename=path)
@@ -123,6 +124,10 @@ def is_operator(char):
         return True
     return False
 
+def is_exception(string):
+    return  string == "/" or type(string) == ArrayFormula or isinstance(string, datetime.time) or string == None or string == '' or string == 'Ottignies- Louvain- La-Neuve'
+
+
 def is_excel_range(string):
     # # Pattern to check for Excel range format
     pattern = r'^[A-Z]+[1-9]\d*:[A-Z]+[1-9]\d*$'
@@ -140,6 +145,13 @@ def is_excel_range(string):
         checking_string = strings[1].split(':')[0] + ':' + strings[2]
         return bool(re.match(pattern, checking_string)) or bool(re.match(pattern_absolute, checking_string))
     
+def is_led_by_sheetname(string):
+    return string[0] == '\'' or string.replace(' ', '')[0] == '\''
+
+def handle_leading_space(string):
+    if string[0] == ' ':
+        return handle_leading_space(string[1:])
+    return string
 
 def is_or(string):
     return string == 'OR'
@@ -185,3 +197,10 @@ def absolute_to_relative(cell_reference):
         cell_reference = cell_reference.replace("$", "")
         
     return cell_reference
+
+
+def handle_absolute_relative_cell(cell):
+    if is_absolute_reference(cell) and is_excel_cell(absolute_to_relative(cell)):
+        return absolute_to_relative(cell)
+    else:
+        return cell
