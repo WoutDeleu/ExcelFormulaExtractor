@@ -1,18 +1,22 @@
 PLANNING
-    - Clean up code
-    
-    - Debuggen
+    - Zorgen dat het volledig draait
+
+    - Clean up
+
+    - Exceptions handlen
 
     - TODOs handlen             => 1 dag
         - DATEDIF
-        - IFERROR bekijken
-            divide by zero handlen?
-        - Cast to positive!
         - Array functions
-        
-    - Translator naar Liquid    => 2 dagen
+        - #REF fixen
+        - Handle DateTime obj
 
-    - Testen schrijven? 
+    - IFERROR bekijken
+        divide by zero handlen?
+
+    - Translator naar Liquid    = 2 dagen
+
+    - Testen schrijven?
 
     - Skelet schrijven + values linken in file
     

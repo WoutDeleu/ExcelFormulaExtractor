@@ -1,5 +1,5 @@
 import ExcelHandler
-from ExcelHandler.excel_helpers import is_and, is_fully_covered_by_brackets, is_or, is_xor, is_not, split_up_conditions, split_up_formulas
+from ExcelHandler.excel_helpers import is_and, is_fully_covered_by_brackets, is_if, is_or, is_xor, is_not, split_up_conditions, split_up_formulas
 
 
 
@@ -33,6 +33,8 @@ def handle_condition(sheetname, condition, cells):
         current_formula = '!(' + formula + ')'
     elif is_fully_covered_by_brackets(condition):
         cells, current_formula = handle_condition(sheetname, condition[1:-1], cells)
+    elif is_if(condition[:2]):
+        cells, current_formula = handle_if_logic(cells, sheetname, condition)
     else:
         parts, operators = split_up_conditions(condition)
         current_formula = ''

@@ -31,4 +31,4 @@ def handle_vlookup(cells, sheetname, element):
     
     formula = 'for(cell in ' + '[' + range + ']{'+ 'if(cell == '+ matching_value + '){' + 'return update_column(cell, ' + offset + ')' +  '}' + '}'
 
-    return cells, formula
+    return cells,see calls on pc linuxformula

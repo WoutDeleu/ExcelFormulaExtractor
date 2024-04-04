@@ -6,6 +6,7 @@ from Util.Cell import *
 from ExcelHandler.excel_helpers import *
 from ExcelHandler.excel_extractor import *
 from tkinter.filedialog import askopenfilename
+import datetime
 
 warnings.simplefilter(action='ignore', category=UserWarning)
 
@@ -13,9 +14,15 @@ warnings.simplefilter(action='ignore', category=UserWarning)
 def resolve_cell(workbook, cell, formulas, values, errors):    
     sheet = workbook[cell.sheetname]
     print('Resolving cell: ' + cell.location + " " + str(sheet[cell.location].value))
-    if cell.location == 'F40':
-        pass
 
+    # TODO handle array functions
+    if type(sheet[cell.location].value) == ArrayFormula:
+        return formulas, values, errors
+    
+    # TODO date time objects
+    if isinstance(sheet[cell.location].value, datetime.time):
+        return formulas, values, errors
+    
     if sheet[cell.location].value == None:
         print('Cell: ' + cell.location)
         print('None')
@@ -62,7 +69,7 @@ def resolve_cell(workbook, cell, formulas, values, errors):
         formulas.add(CellFormula(cell, formula))
         
         for cell in cells.get_list():
-            if not formulas.contains(cell) and not values.contains(cell) and not errors.contains(cell):
+            if not formulas.contains(cell) and not values.contains(cell) and not errors.contains(cell) and cell.location != '#REF':
                 formulas, values, errors = resolve_cell(workbook, cell, formulas, values, errors)
             
             elif formulas.contains(cell):
