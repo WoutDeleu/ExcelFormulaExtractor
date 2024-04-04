@@ -1,8 +1,6 @@
 PLANNING
     - Arrayfunction
 
-    - write2file
-
     - Translator naar Liquid
 
     - Uitgebreider handlen
