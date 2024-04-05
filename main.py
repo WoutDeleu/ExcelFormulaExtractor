@@ -11,6 +11,7 @@ from openpyxl.worksheet.formula import ArrayFormula
 
 warnings.simplefilter(action='ignore', category=UserWarning)
 
+# TODO - Remove this hardcoded list of starting cells
 global table_cells
 table_cells = ['C32', 'C33', 'C34', 'C35', 'C36', 'C37', 'C38', 'C40', 'C41', 'C42', 'C43', 'C44', 'C45', 'C46', 'C47', 'C48', 'C49', 'C50', 'C51', 'C52', 'C53', 'C54', 'C55', 'C56', 'C57', 'C58', 'C60', 'C61', 'D32', 'D33', 'D34', 'D35', 'D36', 'D37', 'D38', 'D40', 'D41', 'D42', 'D43', 'D44', 'D45', 'D46', 'D47', 'D48', 'D49', 'D50', 'D51', 'D52', 'D53', 'D54', 'D55', 'D56', 'D57', 'D58', 'D60']
 
@@ -76,6 +77,7 @@ def handle_formulas(formulas, values, exceptions, workbook, sheet, cell):
     formulas.add(CellFormula(cell, formula))
     
     for cell in cells.get_list():
+        # TODO - Remove this hardcoded list of starting cells
         if not formulas.contains(cell) and not values.contains(cell) and not exceptions.contains(cell) and cell.location != '#REF' and (not is_in_starting_table(cell)):
             formulas, values, exceptions = resolve_cell(workbook, cell, formulas, values, exceptions)
         
@@ -141,6 +143,7 @@ def main():
     sheetname = input("\tsheetname: ")
     cell_number = input("\tcell number: ")
     starting_cell = Cell(sheetname, cell_number)
+    # TODO - Remove this hardcoded list of starting cells
     global table_cells
     table_cells.remove(cell_number)
     
