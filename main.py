@@ -36,7 +36,7 @@ def handle_exceptions(formulas, values, exceptions, sheet, cell):
 
     # TODO handle array functions
     if type(sheet[cell.location].value) == ArrayFormula:
-        pass
+        exceptions.add(CellValue(cell, sheet[cell.location].value))
     
     if sheet[cell.location].value == None or sheet[cell.location].value == '':
         print('Cell: ' + cell.location)
