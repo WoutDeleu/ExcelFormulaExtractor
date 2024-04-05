@@ -82,6 +82,6 @@ def print_results(formulas, values, exceptions):
     print()
     
     filename = input('What is the filename where you want to write your results to? ')
-    write_results_to_file(values, filename, 'values')
-    write_results_to_file(formulas, filename, 'formulas')
-    write_results_to_file(exceptions, filename, 'exceptions')
+    write_results_to_file(values, 'results/'+filename, 'values')
+    write_results_to_file(formulas, 'results/'+filename, 'formulas')
+    write_results_to_file(exceptions, 'results/'+filename, 'exceptions')
