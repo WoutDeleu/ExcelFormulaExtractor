@@ -1,9 +1,9 @@
 PLANNING
-    - Arrayfunction
 
     - Translator naar Liquid
 
     - Uitgebreider handlen
+        -> Arrayfunction
         -> date
         -> datedif
         -> left/right/mid
