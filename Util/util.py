@@ -47,14 +47,15 @@ def is_constant(string):
     return isinstance(string, int) or isinstance(string, float)
 
 def write_results_to_file(data_structure, filename, name):
-    file = open(filename+'_'+name+'.txt', 'w+')
-    while not data_structure.is_empty():
-        value = data_structure.pop()
-        if name == 'formulas':
-            file.write(format_namespace(value.cell.sheetname) + '_' + value.cell.location + '=' + str(value.formula) + '\n')
-        else:
-            file.write(format_namespace(value.cell.sheetname) + '_' + value.cell.location + '=' + str(value.value) + '\n')
-    file.close()
+    if not data_structure.is_empty():
+        file = open(filename+'_'+name+'.txt', 'w+')
+        while not data_structure.is_empty():
+            value = data_structure.pop()
+            if name == 'formulas':
+                file.write(format_namespace(value.cell.sheetname) + '_' + value.cell.location + '=' + str(value.formula) + '\n')
+            else:
+                file.write(format_namespace(value.cell.sheetname) + '_' + value.cell.location + '=' + str(value.value) + '\n')
+        file.close()
     
 
 def print_results(formulas, values, exceptions, to_file=True):
