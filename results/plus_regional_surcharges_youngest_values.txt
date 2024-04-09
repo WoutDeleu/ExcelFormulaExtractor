@@ -1,0 +1,2 @@
+overview_indexed_amounts_F242=0.32591
+overview_indexed_amounts_F240=0.33257

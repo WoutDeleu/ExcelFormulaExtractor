@@ -1,0 +1,17 @@
+tax_calculation_M195=0
+tax_calculation_L191=0
+tax_calculation_L193=0
+tax_calculation_L190=0
+tax_calculation_L189=0
+tax_calculation_L188=0
+tax_calculation_L187=0
+tax_calculation_L186=0
+tax_calculation_L185=0
+tax_calculation_L184=0
+tax_calculation_L183=0
+tax_calculation_L182=0
+tax_calculation_L174=0
+tax_calculation_L173=0
+tax_calculation_L172=0
+tax_calculation_L171=0
+tax_calculation_L170=0

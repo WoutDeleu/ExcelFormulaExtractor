@@ -1,0 +1,1166 @@
+communal_tax_A589="Zwijndrecht"
+communal_tax_C589=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A589){return update_column(cell, 2)}}
+communal_tax_A588="Zwevegem"
+communal_tax_C588=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A588){return update_column(cell, 2)}}
+communal_tax_A587="Zwalm"
+communal_tax_C587=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A587){return update_column(cell, 2)}}
+communal_tax_A586="Zutendaal"
+communal_tax_C586=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A586){return update_column(cell, 2)}}
+communal_tax_A585="Zulte"
+communal_tax_C585=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A585){return update_column(cell, 2)}}
+communal_tax_A584="Zuienkerke"
+communal_tax_C584=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A584){return update_column(cell, 2)}}
+communal_tax_A583="Zoutleeuw"
+communal_tax_C583=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A583){return update_column(cell, 2)}}
+communal_tax_A582="Zottegem"
+communal_tax_C582=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A582){return update_column(cell, 2)}}
+communal_tax_A581="Zonnebeke"
+communal_tax_C581=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A581){return update_column(cell, 2)}}
+communal_tax_A580="Zonhoven"
+communal_tax_C580=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A580){return update_column(cell, 2)}}
+communal_tax_A579="Zoersel"
+communal_tax_C579=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A579){return update_column(cell, 2)}}
+communal_tax_A578="Zemst"
+communal_tax_C578=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A578){return update_column(cell, 2)}}
+communal_tax_A577="Zelzate"
+communal_tax_C577=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A577){return update_column(cell, 2)}}
+communal_tax_A576="Zele"
+communal_tax_C576=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A576){return update_column(cell, 2)}}
+communal_tax_A575="Zedelgem"
+communal_tax_C575=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A575){return update_column(cell, 2)}}
+communal_tax_A574="Zaventem"
+communal_tax_C574=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A574){return update_column(cell, 2)}}
+communal_tax_A573="Zandhoven"
+communal_tax_C573=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A573){return update_column(cell, 2)}}
+communal_tax_A572="Yvoir"
+communal_tax_C572=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A572){return update_column(cell, 2)}}
+communal_tax_A571="Wuustwezel"
+communal_tax_C571=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A571){return update_column(cell, 2)}}
+communal_tax_A570="Wortegem"-"Petegem"
+communal_tax_C570=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A570){return update_column(cell, 2)}}
+communal_tax_A569="Wommelgem"
+communal_tax_C569=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A569){return update_column(cell, 2)}}
+communal_tax_A568="Wingene"
+communal_tax_C568=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A568){return update_column(cell, 2)}}
+communal_tax_A567="Willebroek"
+communal_tax_C567=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A567){return update_column(cell, 2)}}
+communal_tax_A566="Wijnegem"
+communal_tax_C566=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A566){return update_column(cell, 2)}}
+communal_tax_A565="Wielsbeke"
+communal_tax_C565=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A565){return update_column(cell, 2)}}
+communal_tax_A564="Wichelen"
+communal_tax_C564=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A564){return update_column(cell, 2)}}
+communal_tax_A563="Wezembeek"-"Oppem"
+communal_tax_C563=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A563){return update_column(cell, 2)}}
+communal_tax_A562="Wevelgem"
+communal_tax_C562=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A562){return update_column(cell, 2)}}
+communal_tax_A561="Wetteren"
+communal_tax_C561=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A561){return update_column(cell, 2)}}
+communal_tax_A560="Westerlo"
+communal_tax_C560=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A560){return update_column(cell, 2)}}
+communal_tax_A559="Wervik"
+communal_tax_C559=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A559){return update_column(cell, 2)}}
+communal_tax_A558="Wemmel"
+communal_tax_C558=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A558){return update_column(cell, 2)}}
+communal_tax_A557="Wellin"
+communal_tax_C557=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A557){return update_column(cell, 2)}}
+communal_tax_A556="Wellen"
+communal_tax_C556=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A556){return update_column(cell, 2)}}
+communal_tax_A555="Welkenraedt"
+communal_tax_C555=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A555){return update_column(cell, 2)}}
+communal_tax_C554="WALLONIË"
+communal_tax_A554="Wavre"
+communal_tax_A553="Watermaal"-"Bosvoorde"
+communal_tax_C553=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A553){return update_column(cell, 2)}}
+communal_tax_A552="Waterloo"
+communal_tax_C552=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A552){return update_column(cell, 2)}}
+communal_tax_A551="Wasseiges"
+communal_tax_C551=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A551){return update_column(cell, 2)}}
+communal_tax_C550="WALLONIË"
+communal_tax_A550="Waremme"
+communal_tax_A549="Waregem"
+communal_tax_C549=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A549){return update_column(cell, 2)}}
+communal_tax_A548="Wanze"
+communal_tax_C548=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A548){return update_column(cell, 2)}}
+communal_tax_A547="Walhain"
+communal_tax_C547=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A547){return update_column(cell, 2)}}
+communal_tax_A546="Walcourt"
+communal_tax_C546=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A546){return update_column(cell, 2)}}
+communal_tax_C545="WALLONIË"
+communal_tax_A545="Waimes"
+communal_tax_A544="Wachtebeke"
+communal_tax_C544=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A544){return update_column(cell, 2)}}
+communal_tax_A543="Waasmunster"
+communal_tax_C543=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A543){return update_column(cell, 2)}}
+communal_tax_A542="Vresse"-"sur"-"Semois"
+communal_tax_C542=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A542){return update_column(cell, 2)}}
+communal_tax_A541="Vosselaar"
+communal_tax_C541=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A541){return update_column(cell, 2)}}
+communal_tax_A540="Vorst"
+communal_tax_C540=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A540){return update_column(cell, 2)}}
+communal_tax_A539="Vorselaar"
+communal_tax_C539=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A539){return update_column(cell, 2)}}
+communal_tax_A538="Voeren"
+communal_tax_C538=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A538){return update_column(cell, 2)}}
+communal_tax_A537="Vleteren"
+communal_tax_C537=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A537){return update_column(cell, 2)}}
+communal_tax_C536="WALLONIË"
+communal_tax_A536="Visé"
+communal_tax_A535="Virton"
+communal_tax_C535=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A535){return update_column(cell, 2)}}
+communal_tax_A534="Viroinval"
+communal_tax_C534=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A534){return update_column(cell, 2)}}
+communal_tax_A533="Vilvoorde"
+communal_tax_C533=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A533){return update_column(cell, 2)}}
+communal_tax_A532="Villers"-"le"-"Bouillet"
+communal_tax_C532=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A532){return update_column(cell, 2)}}
+communal_tax_A531="Villers"-"la"-"Ville"
+communal_tax_C531=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A531){return update_column(cell, 2)}}
+communal_tax_A530="Vielsalm"
+communal_tax_C530=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A530){return update_column(cell, 2)}}
+communal_tax_A529="Veurne"
+communal_tax_C529=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A529){return update_column(cell, 2)}}
+communal_tax_A528="Verviers"
+communal_tax_C528=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A528){return update_column(cell, 2)}}
+communal_tax_A527="Verlaine"
+communal_tax_C527=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A527){return update_column(cell, 2)}}
+communal_tax_A526="Vaux"-"sur"-"Sûre"
+communal_tax_C526=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A526){return update_column(cell, 2)}}
+communal_tax_A525="Ukkel"
+communal_tax_C525=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A525){return update_column(cell, 2)}}
+communal_tax_A524="Turnhout"
+communal_tax_C524=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A524){return update_column(cell, 2)}}
+communal_tax_C523="WALLONIË"
+communal_tax_A523="Tubize"
+communal_tax_A522="Trooz"
+communal_tax_C522=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A522){return update_column(cell, 2)}}
+communal_tax_A521="Trois"-"Ponts"
+communal_tax_C521=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A521){return update_column(cell, 2)}}
+communal_tax_A520="Tremelo"
+communal_tax_C520=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A520){return update_column(cell, 2)}}
+communal_tax_C519="WALLONIË"
+communal_tax_A519="Tournai"
+communal_tax_A518="Torhout"
+communal_tax_C518=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A518){return update_column(cell, 2)}}
+communal_tax_A517="Tongeren"
+communal_tax_C517=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A517){return update_column(cell, 2)}}
+communal_tax_A516="Tintigny"
+communal_tax_C516=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A516){return update_column(cell, 2)}}
+communal_tax_A515="Tinlot"
+communal_tax_C515=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A515){return update_column(cell, 2)}}
+communal_tax_A514="Tienen"
+communal_tax_C514=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A514){return update_column(cell, 2)}}
+communal_tax_A513="Tielt"-"Winge"
+communal_tax_C513=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A513){return update_column(cell, 2)}}
+communal_tax_A512="Tielt"
+communal_tax_C512=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A512){return update_column(cell, 2)}}
+communal_tax_A511="Thuin"
+communal_tax_C511=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A511){return update_column(cell, 2)}}
+communal_tax_A510="Thimister"-"Clermont"
+communal_tax_C510=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A510){return update_column(cell, 2)}}
+communal_tax_A509="Theux"
+communal_tax_C509=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A509){return update_column(cell, 2)}}
+communal_tax_A508="Tessenderlo"
+communal_tax_C508=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A508){return update_column(cell, 2)}}
+communal_tax_A507="Tervuren"
+communal_tax_C507=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A507){return update_column(cell, 2)}}
+communal_tax_A506="Ternat"
+communal_tax_C506=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A506){return update_column(cell, 2)}}
+communal_tax_A505="Tenneville"
+communal_tax_C505=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A505){return update_column(cell, 2)}}
+communal_tax_A504="Temse"
+communal_tax_C504=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A504){return update_column(cell, 2)}}
+communal_tax_A503="Tellin"
+communal_tax_C503=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A503){return update_column(cell, 2)}}
+communal_tax_A502="Stoumont"
+communal_tax_C502=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A502){return update_column(cell, 2)}}
+communal_tax_A501="Stekene"
+communal_tax_C501=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A501){return update_column(cell, 2)}}
+communal_tax_A500="Steenokkerzeel"
+communal_tax_C500=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A500){return update_column(cell, 2)}}
+communal_tax_A499="Stavelot"
+communal_tax_C499=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A499){return update_column(cell, 2)}}
+communal_tax_A498="Staden"
+communal_tax_C498=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A498){return update_column(cell, 2)}}
+communal_tax_A497="Stabroek"
+communal_tax_C497=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A497){return update_column(cell, 2)}}
+communal_tax_A496="Sprimont"
+communal_tax_C496=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A496){return update_column(cell, 2)}}
+communal_tax_A495="Spiere"-"Helkijn"
+communal_tax_C495=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A495){return update_column(cell, 2)}}
+communal_tax_A494="Spa"
+communal_tax_C494=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A494){return update_column(cell, 2)}}
+communal_tax_A493="Soumagne"
+communal_tax_C493=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A493){return update_column(cell, 2)}}
+communal_tax_A492="Somme"-"Leuze"
+communal_tax_C492=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A492){return update_column(cell, 2)}}
+communal_tax_A491="Sombreffe"
+communal_tax_C491=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A491){return update_column(cell, 2)}}
+communal_tax_C490="BRUSSEL"
+communal_tax_A490="Soignies"
+communal_tax_A489="Sivry"-"Rance"
+communal_tax_C489=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A489){return update_column(cell, 2)}}
+communal_tax_A488="Sint"-"Truiden"
+communal_tax_C488=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A488){return update_column(cell, 2)}}
+communal_tax_A487="Sint"-"Pieters"-"Woluwe"
+communal_tax_C487=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A487){return update_column(cell, 2)}}
+communal_tax_A486="Sint"-"Pieters"-"Leeuw"
+communal_tax_C486=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A486){return update_column(cell, 2)}}
+communal_tax_A485="Sint"-"Niklaas"
+communal_tax_C485=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A485){return update_column(cell, 2)}}
+communal_tax_A484="Sint"-"Martens"-"Latem"
+communal_tax_C484=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A484){return update_column(cell, 2)}}
+communal_tax_A483="Sint"-"Lievens"-"Houtem"
+communal_tax_C483=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A483){return update_column(cell, 2)}}
+communal_tax_A482="Sint"-"Laureins"
+communal_tax_C482=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A482){return update_column(cell, 2)}}
+communal_tax_C481="BRUSSEL"
+communal_tax_A481="Sint"-"Lambrechts"-"
+Woluwe"
+communal_tax_A480="Sint"-"Katelijne"-"Waver"
+communal_tax_C480=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A480){return update_column(cell, 2)}}
+communal_tax_A479="Sint"-"Joost"-"ten"-"Node"
+communal_tax_C479=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A479){return update_column(cell, 2)}}
+communal_tax_A478="Sint"-"Jans"-"Molenbeek"
+communal_tax_C478=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A478){return update_column(cell, 2)}}
+communal_tax_A477="Sint"-"Gillis"-"Waas"
+communal_tax_C477=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A477){return update_column(cell, 2)}}
+communal_tax_A476="Sint"-"Gillis"
+communal_tax_C476=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A476){return update_column(cell, 2)}}
+communal_tax_A475="Sint"-"Genesius"-"Rode"
+communal_tax_C475=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A475){return update_column(cell, 2)}}
+communal_tax_C474="BRUSSEL"
+communal_tax_A474="Sint"-"Agatha"-"Berchem"
+communal_tax_C473="WALLONIË"
+communal_tax_A473="Silly"
+communal_tax_A472="Seraing"
+communal_tax_C472=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A472){return update_column(cell, 2)}}
+communal_tax_A471="Seneffe"
+communal_tax_C471=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A471){return update_column(cell, 2)}}
+communal_tax_A470="Schoten"
+communal_tax_C470=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A470){return update_column(cell, 2)}}
+communal_tax_A469="Schilde"
+communal_tax_C469=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A469){return update_column(cell, 2)}}
+communal_tax_A468="Scherpenheuvel"-"Zichem"
+communal_tax_C468=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A468){return update_column(cell, 2)}}
+communal_tax_A467="Schelle"
+communal_tax_C467=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A467){return update_column(cell, 2)}}
+communal_tax_A466="Schaarbeek"
+communal_tax_C466=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A466){return update_column(cell, 2)}}
+communal_tax_C465="WALLONIË"
+communal_tax_A465="Sankt Vith"
+communal_tax_A464="Sambreville"
+communal_tax_C464=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A464){return update_column(cell, 2)}}
+communal_tax_A463="Saint"-"Nicolas"
+communal_tax_C463=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A463){return update_column(cell, 2)}}
+communal_tax_A462="Saint"-"Léger"
+communal_tax_C462=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A462){return update_column(cell, 2)}}
+communal_tax_A461="Saint"-"Hubert"
+communal_tax_C461=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A461){return update_column(cell, 2)}}
+communal_tax_A460="Saint"-"Ghislain"
+communal_tax_C460=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A460){return update_column(cell, 2)}}
+communal_tax_C459="WALLONIË"
+communal_tax_A459="Saint"-"Georges"-"sur"-"
+Meuse"
+communal_tax_A458="Sainte"-"Ode"
+communal_tax_C458=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A458){return update_column(cell, 2)}}
+communal_tax_A457="Rumst"
+communal_tax_C457=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A457){return update_column(cell, 2)}}
+communal_tax_A456="Rumes"
+communal_tax_C456=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A456){return update_column(cell, 2)}}
+communal_tax_A455="Ruiselede"
+communal_tax_C455=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A455){return update_column(cell, 2)}}
+communal_tax_A454="Rouvroy"
+communal_tax_C454=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A454){return update_column(cell, 2)}}
+communal_tax_A453="Rotselaar"
+communal_tax_C453=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A453){return update_column(cell, 2)}}
+communal_tax_A452="Roosdaal"
+communal_tax_C452=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A452){return update_column(cell, 2)}}
+communal_tax_A451="Ronse"
+communal_tax_C451=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A451){return update_column(cell, 2)}}
+communal_tax_A450="Roeselare"
+communal_tax_C450=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A450){return update_column(cell, 2)}}
+communal_tax_A449="Rochefort"
+communal_tax_C449=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A449){return update_column(cell, 2)}}
+communal_tax_A448="Rixensart"
+communal_tax_C448=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A448){return update_column(cell, 2)}}
+communal_tax_A447="Rijkevorsel"
+communal_tax_C447=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A447){return update_column(cell, 2)}}
+communal_tax_A446="Riemst"
+communal_tax_C446=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A446){return update_column(cell, 2)}}
+communal_tax_A445="Retie"
+communal_tax_C445=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A445){return update_column(cell, 2)}}
+communal_tax_A444="Rendeux"
+communal_tax_C444=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A444){return update_column(cell, 2)}}
+communal_tax_A443="Remicourt"
+communal_tax_C443=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A443){return update_column(cell, 2)}}
+communal_tax_A442="Rebecq"
+communal_tax_C442=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A442){return update_column(cell, 2)}}
+communal_tax_A441="Ravels"
+communal_tax_C441=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A441){return update_column(cell, 2)}}
+communal_tax_A440="Ranst"
+communal_tax_C440=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A440){return update_column(cell, 2)}}
+communal_tax_A439="Ramillies"
+communal_tax_C439=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A439){return update_column(cell, 2)}}
+communal_tax_A438="Raeren"
+communal_tax_C438=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A438){return update_column(cell, 2)}}
+communal_tax_A437="Quiévrain"
+communal_tax_C437=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A437){return update_column(cell, 2)}}
+communal_tax_A436="Quévy"
+communal_tax_C436=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A436){return update_column(cell, 2)}}
+communal_tax_A435="Quaregnon"
+communal_tax_C435=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A435){return update_column(cell, 2)}}
+communal_tax_A434="Puurs"-"Sint"-"Amands"
+communal_tax_C434=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A434){return update_column(cell, 2)}}
+communal_tax_A433="Putte"
+communal_tax_C433=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A433){return update_column(cell, 2)}}
+communal_tax_A432="Profondeville"
+communal_tax_C432=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A432){return update_column(cell, 2)}}
+communal_tax_A431="Poperinge"
+communal_tax_C431=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A431){return update_column(cell, 2)}}
+communal_tax_A430="Pont"-"à"-"Celles"
+communal_tax_C430=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A430){return update_column(cell, 2)}}
+communal_tax_A429="Plombières"
+communal_tax_C429=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A429){return update_column(cell, 2)}}
+communal_tax_A428="Pittem"
+communal_tax_C428=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A428){return update_column(cell, 2)}}
+communal_tax_A427="Philippeville"
+communal_tax_C427=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A427){return update_column(cell, 2)}}
+communal_tax_C426="WALLONIË"
+communal_tax_A426="Perwez"
+communal_tax_A425="Péruwelz"
+communal_tax_C425=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A425){return update_column(cell, 2)}}
+communal_tax_A424="Pepinster"
+communal_tax_C424=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A424){return update_column(cell, 2)}}
+communal_tax_A423="Pepingen"
+communal_tax_C423=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A423){return update_column(cell, 2)}}
+communal_tax_A422="Pelt"
+communal_tax_C422=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A422){return update_column(cell, 2)}}
+communal_tax_A421="Peer"
+communal_tax_C421=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A421){return update_column(cell, 2)}}
+communal_tax_A420="Pecq"
+communal_tax_C420=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A420){return update_column(cell, 2)}}
+communal_tax_A419="Paliseul"
+communal_tax_C419=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A419){return update_column(cell, 2)}}
+communal_tax_A418="Overijse"
+communal_tax_C418=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A418){return update_column(cell, 2)}}
+communal_tax_A417="Oupeye"
+communal_tax_C417=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A417){return update_column(cell, 2)}}
+communal_tax_A416="Ouffet"
+communal_tax_C416=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A416){return update_column(cell, 2)}}
+communal_tax_A415="Oud"-"Turnhout"
+communal_tax_C415=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A415){return update_column(cell, 2)}}
+communal_tax_A414="Oudsbergen"
+communal_tax_C414=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A414){return update_column(cell, 2)}}
+communal_tax_A413="Oud"-"Heverlee"
+communal_tax_C413=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A413){return update_column(cell, 2)}}
+communal_tax_A412="Oudergem"
+communal_tax_C412=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A412){return update_column(cell, 2)}}
+communal_tax_A411="Oudenburg"
+communal_tax_C411=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A411){return update_column(cell, 2)}}
+communal_tax_A410="Oudenaarde"
+communal_tax_C410=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A410){return update_column(cell, 2)}}
+communal_tax_C409="WALLONIË"
+communal_tax_A408="Orp"-"Jauche"
+communal_tax_C408=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A408){return update_column(cell, 2)}}
+communal_tax_C407="WALLONIË"
+communal_tax_A407="Oreye"
+communal_tax_A406="Opwijk"
+communal_tax_C406=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A406){return update_column(cell, 2)}}
+communal_tax_A405="Oostrozebeke"
+communal_tax_C405=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A405){return update_column(cell, 2)}}
+communal_tax_A404="Oostkamp"
+communal_tax_C404=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A404){return update_column(cell, 2)}}
+communal_tax_A403="Oosterzele"
+communal_tax_C403=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A403){return update_column(cell, 2)}}
+communal_tax_A402="Oostende"
+communal_tax_C402=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A402){return update_column(cell, 2)}}
+communal_tax_A401="Onhaye"
+communal_tax_C401=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A401){return update_column(cell, 2)}}
+communal_tax_A400="Olne"
+communal_tax_C400=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A400){return update_column(cell, 2)}}
+communal_tax_A399="Olen"
+communal_tax_C399=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A399){return update_column(cell, 2)}}
+communal_tax_A398="Ohey"
+communal_tax_C398=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A398){return update_column(cell, 2)}}
+communal_tax_C397="WALLONIË"
+communal_tax_A397="Nivelles"
+communal_tax_A396="Ninove"
+communal_tax_C396=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A396){return update_column(cell, 2)}}
+communal_tax_A395="Nijlen"
+communal_tax_C395=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A395){return update_column(cell, 2)}}
+communal_tax_A394="Nieuwpoort"
+communal_tax_C394=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A394){return update_column(cell, 2)}}
+communal_tax_A393="Nieuwerkerken"
+communal_tax_C393=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A393){return update_column(cell, 2)}}
+communal_tax_A392="Niel"
+communal_tax_C392=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A392){return update_column(cell, 2)}}
+communal_tax_A391="Neupré"
+communal_tax_C391=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A391){return update_column(cell, 2)}}
+communal_tax_A390="Neufchâteau"
+communal_tax_C390=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A390){return update_column(cell, 2)}}
+communal_tax_A389="Nazareth"
+communal_tax_C389=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A389){return update_column(cell, 2)}}
+communal_tax_A388="Nassogne"
+communal_tax_C388=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A388){return update_column(cell, 2)}}
+communal_tax_A387="Nandrin"
+communal_tax_C387=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A387){return update_column(cell, 2)}}
+communal_tax_C386="WALLONIË"
+communal_tax_A386="Namur"
+communal_tax_A385="Musson"
+communal_tax_C385=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A385){return update_column(cell, 2)}}
+communal_tax_C384="WALLONIË"
+communal_tax_A384="Mouscron"
+communal_tax_A383="Mortsel"
+communal_tax_C383=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A383){return update_column(cell, 2)}}
+communal_tax_A382="Morlanwelz"
+communal_tax_C382=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A382){return update_column(cell, 2)}}
+communal_tax_A381="Moorslede"
+communal_tax_C381=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A381){return update_column(cell, 2)}}
+communal_tax_A380="Mont"-"Saint"-"Guibert"
+communal_tax_C380=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A380){return update_column(cell, 2)}}
+communal_tax_A379="Montigny"-"le"-"Tilleul"
+communal_tax_C379=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A379){return update_column(cell, 2)}}
+communal_tax_A378="Mont"-"de"-"l'Enclus"
+communal_tax_C378=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A378){return update_column(cell, 2)}}
+communal_tax_C377="WALLONIË"
+communal_tax_A377="Mons"
+communal_tax_A376="Momignies"
+communal_tax_C376=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A376){return update_column(cell, 2)}}
+communal_tax_A375="Mol"
+communal_tax_C375=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A375){return update_column(cell, 2)}}
+communal_tax_A374="Moerbeke"
+communal_tax_C374=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A374){return update_column(cell, 2)}}
+communal_tax_A373="Modave"
+communal_tax_C373=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A373){return update_column(cell, 2)}}
+communal_tax_A372="Middelkerke"
+communal_tax_C372=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A372){return update_column(cell, 2)}}
+communal_tax_A371="Meulebeke"
+communal_tax_C371=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A371){return update_column(cell, 2)}}
+communal_tax_A370="Mettet"
+communal_tax_C370=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A370){return update_column(cell, 2)}}
+communal_tax_A369="Messancy"
+communal_tax_C369=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A369){return update_column(cell, 2)}}
+communal_tax_A368="Mesen"
+communal_tax_C368=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A368){return update_column(cell, 2)}}
+communal_tax_A367="Merksplas"
+communal_tax_C367=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A367){return update_column(cell, 2)}}
+communal_tax_A366="Merelbeke"
+communal_tax_C366=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A366){return update_column(cell, 2)}}
+communal_tax_A365="Merchtem"
+communal_tax_C365=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A365){return update_column(cell, 2)}}
+communal_tax_A364="Merbes"-"le"-"Château"
+communal_tax_C364=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A364){return update_column(cell, 2)}}
+communal_tax_A363="Menen"
+communal_tax_C363=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A363){return update_column(cell, 2)}}
+communal_tax_A362="Melle"
+communal_tax_C362=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A362){return update_column(cell, 2)}}
+communal_tax_A361="Meix"-"devant"-"Virton"
+communal_tax_C361=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A361){return update_column(cell, 2)}}
+communal_tax_A360="Meise"
+communal_tax_C360=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A360){return update_column(cell, 2)}}
+communal_tax_A359="Meerhout"
+communal_tax_C359=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A359){return update_column(cell, 2)}}
+communal_tax_A358="Mechelen"
+communal_tax_C358=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A358){return update_column(cell, 2)}}
+communal_tax_A357="Martelange"
+communal_tax_C357=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A357){return update_column(cell, 2)}}
+communal_tax_A356="Marchin"
+communal_tax_C356=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A356){return update_column(cell, 2)}}
+communal_tax_A355="Marche"-"en"-"Famenne"
+communal_tax_C355=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A355){return update_column(cell, 2)}}
+communal_tax_A354="Manhay"
+communal_tax_C354=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A354){return update_column(cell, 2)}}
+communal_tax_A353="Manage"
+communal_tax_C353=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A353){return update_column(cell, 2)}}
+communal_tax_A352="Malmedy"
+communal_tax_C352=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A352){return update_column(cell, 2)}}
+communal_tax_A351="Malle"
+communal_tax_C351=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A351){return update_column(cell, 2)}}
+communal_tax_A350="Maldegem"
+communal_tax_C350=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A350){return update_column(cell, 2)}}
+communal_tax_A349="Machelen"
+communal_tax_C349=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A349){return update_column(cell, 2)}}
+communal_tax_A348="Maasmechelen"
+communal_tax_C348=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A348){return update_column(cell, 2)}}
+communal_tax_A347="Maaseik"
+communal_tax_C347=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A347){return update_column(cell, 2)}}
+communal_tax_A346="Maarkedal"
+communal_tax_C346=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A346){return update_column(cell, 2)}}
+communal_tax_A345="Lummen"
+communal_tax_C345=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A345){return update_column(cell, 2)}}
+communal_tax_A344="Lubbeek"
+communal_tax_C344=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A344){return update_column(cell, 2)}}
+communal_tax_A343="Lo"-"Reninge"
+communal_tax_C343=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A343){return update_column(cell, 2)}}
+communal_tax_A342="Lontzen"
+communal_tax_C342=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A342){return update_column(cell, 2)}}
+communal_tax_A341="Londerzeel"
+communal_tax_C341=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A341){return update_column(cell, 2)}}
+communal_tax_A340="Lommel"
+communal_tax_C340=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A340){return update_column(cell, 2)}}
+communal_tax_A339="Lokeren"
+communal_tax_C339=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A339){return update_column(cell, 2)}}
+communal_tax_A338="Lochristi"
+communal_tax_C338=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A338){return update_column(cell, 2)}}
+communal_tax_A337="Lobbes"
+communal_tax_C337=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A337){return update_column(cell, 2)}}
+communal_tax_A336="Linter"
+communal_tax_C336=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A336){return update_column(cell, 2)}}
+communal_tax_A335="Lint"
+communal_tax_C335=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A335){return update_column(cell, 2)}}
+communal_tax_A334="Linkebeek"
+communal_tax_C334=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A334){return update_column(cell, 2)}}
+communal_tax_C333="WALLONIË"
+communal_tax_A333="Lincent"
+communal_tax_C332="WALLONIË"
+communal_tax_A332="Limbourg"
+communal_tax_A331="Lille"
+communal_tax_C331=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A331){return update_column(cell, 2)}}
+communal_tax_A330="Lievegem"
+communal_tax_C330=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A330){return update_column(cell, 2)}}
+communal_tax_A329="Lierneux"
+communal_tax_C329=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A329){return update_column(cell, 2)}}
+communal_tax_A328="Lierde"
+communal_tax_C328=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A328){return update_column(cell, 2)}}
+communal_tax_A327="Lier"
+communal_tax_C327=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A327){return update_column(cell, 2)}}
+communal_tax_C326="WALLONIË"
+communal_tax_A326="Liège"
+communal_tax_A325="Liedekerke"
+communal_tax_C325=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A325){return update_column(cell, 2)}}
+communal_tax_A324="Lichtervelde"
+communal_tax_C324=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A324){return update_column(cell, 2)}}
+communal_tax_A323="Libramont"-"Chevigny"
+communal_tax_C323=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A323){return update_column(cell, 2)}}
+communal_tax_A322="Libin"
+communal_tax_C322=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A322){return update_column(cell, 2)}}
+communal_tax_A321="Leuze"-"en"-"Hainaut"
+communal_tax_C321=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A321){return update_column(cell, 2)}}
+communal_tax_A320="Leuven"
+communal_tax_C320=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A320){return update_column(cell, 2)}}
+communal_tax_C319="WALLONIË"
+communal_tax_A319="Lessines"
+communal_tax_C318="WALLONIË"
+communal_tax_A318="Les"-"Bons"-"Villers"
+communal_tax_A317="Leopoldsburg"
+communal_tax_C317=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A317){return update_column(cell, 2)}}
+communal_tax_A316="Lens"
+communal_tax_C316=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A316){return update_column(cell, 2)}}
+communal_tax_A315="Lennik"
+communal_tax_C315=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A315){return update_column(cell, 2)}}
+communal_tax_A314="Lendelede"
+communal_tax_C314=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A314){return update_column(cell, 2)}}
+communal_tax_A313="Léglise"
+communal_tax_C313=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A313){return update_column(cell, 2)}}
+communal_tax_A312="Ledegem"
+communal_tax_C312=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A312){return update_column(cell, 2)}}
+communal_tax_A311="Lede"
+communal_tax_C311=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A311){return update_column(cell, 2)}}
+communal_tax_A310="Lebbeke"
+communal_tax_C310=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A310){return update_column(cell, 2)}}
+communal_tax_C309="WALLONIË"
+communal_tax_A309="Le Roeulx"
+communal_tax_A308="Lasne"
+communal_tax_C308=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A308){return update_column(cell, 2)}}
+communal_tax_A307="Langemark"-"Poelkapelle"
+communal_tax_C307=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A307){return update_column(cell, 2)}}
+communal_tax_A306="Landen"
+communal_tax_C306=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A306){return update_column(cell, 2)}}
+communal_tax_A305="Lanaken"
+communal_tax_C305=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A305){return update_column(cell, 2)}}
+communal_tax_A304="Laarne"
+communal_tax_C304=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A304){return update_column(cell, 2)}}
+communal_tax_A303="Laakdal"
+communal_tax_C303=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A303){return update_column(cell, 2)}}
+communal_tax_A302="La Roche"-"en"-"Ardenne"
+communal_tax_C302=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A302){return update_column(cell, 2)}}
+communal_tax_A301="La Louvière"
+communal_tax_C301=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A301){return update_column(cell, 2)}}
+communal_tax_C300="WALLONIË"
+communal_tax_A300="La Hulpe"
+communal_tax_A299="La Bruyère"
+communal_tax_C299=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A299){return update_column(cell, 2)}}
+communal_tax_A298="Kuurne"
+communal_tax_C298=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A298){return update_column(cell, 2)}}
+communal_tax_A297="Kruisem"
+communal_tax_C297=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A297){return update_column(cell, 2)}}
+communal_tax_A296="Kruibeke"
+communal_tax_C296=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A296){return update_column(cell, 2)}}
+communal_tax_A295="Kraainem"
+communal_tax_C295=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A295){return update_column(cell, 2)}}
+communal_tax_A294="Kortrijk"
+communal_tax_C294=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A294){return update_column(cell, 2)}}
+communal_tax_C293="VLAANDEREN"
+communal_tax_A293="Kortessem"
+communal_tax_A292="Kortenberg"
+communal_tax_C292=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A292){return update_column(cell, 2)}}
+communal_tax_A291="Kortenaken"
+communal_tax_C291=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A291){return update_column(cell, 2)}}
+communal_tax_A290="Kortemark"
+communal_tax_C290=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A290){return update_column(cell, 2)}}
+communal_tax_A289="Kontich"
+communal_tax_C289=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A289){return update_column(cell, 2)}}
+communal_tax_A288="Koksijde"
+communal_tax_C288=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A288){return update_column(cell, 2)}}
+communal_tax_A287="Koekelberg"
+communal_tax_C287=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A287){return update_column(cell, 2)}}
+communal_tax_A286="Koekelare"
+communal_tax_C286=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A286){return update_column(cell, 2)}}
+communal_tax_A285="Knokke"-"Heist"
+communal_tax_C285=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A285){return update_column(cell, 2)}}
+communal_tax_A284="Kluisbergen"
+communal_tax_C284=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A284){return update_column(cell, 2)}}
+communal_tax_A283="Kinrooi"
+communal_tax_C283=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A283){return update_column(cell, 2)}}
+communal_tax_A282="Kelmis"
+communal_tax_C282=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A282){return update_column(cell, 2)}}
+communal_tax_A281="Keerbergen"
+communal_tax_C281=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A281){return update_column(cell, 2)}}
+communal_tax_A280="Kasterlee"
+communal_tax_C280=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A280){return update_column(cell, 2)}}
+communal_tax_A279="Kaprijke"
+communal_tax_C279=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A279){return update_column(cell, 2)}}
+communal_tax_A278="Kapelle"-"op"-"den"-"Bos"
+communal_tax_C278=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A278){return update_column(cell, 2)}}
+communal_tax_A277="Kapellen"
+communal_tax_C277=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A277){return update_column(cell, 2)}}
+communal_tax_A276="Kampenhout"
+communal_tax_C276=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A276){return update_column(cell, 2)}}
+communal_tax_A275="Kalmthout"
+communal_tax_C275=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A275){return update_column(cell, 2)}}
+communal_tax_C274="WALLONIË"
+communal_tax_A274="Jurbise"
+communal_tax_A273="Juprelle"
+communal_tax_C273=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A273){return update_column(cell, 2)}}
+communal_tax_C272="WALLONIË"
+communal_tax_A272="Jodoigne"
+communal_tax_A271="Jette"
+communal_tax_C271=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A271){return update_column(cell, 2)}}
+communal_tax_A270="Jemeppe"-"sur"-"Sambre"
+communal_tax_C270=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A270){return update_column(cell, 2)}}
+communal_tax_A269="Jalhay"
+communal_tax_C269=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A269){return update_column(cell, 2)}}
+communal_tax_A268="Jabbeke"
+communal_tax_C268=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A268){return update_column(cell, 2)}}
+communal_tax_A267="Izegem"
+communal_tax_C267=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A267){return update_column(cell, 2)}}
+communal_tax_C266="WALLONIË"
+communal_tax_A266="Ittre"
+communal_tax_A265="Ingelmunster"
+communal_tax_C265=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A265){return update_column(cell, 2)}}
+communal_tax_A264="Incourt"
+communal_tax_C264=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A264){return update_column(cell, 2)}}
+communal_tax_A263="Ieper"
+communal_tax_C263=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A263){return update_column(cell, 2)}}
+communal_tax_A262="Ichtegem"
+communal_tax_C262=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A262){return update_column(cell, 2)}}
+communal_tax_C261="WALLONIË"
+communal_tax_A261="Huy"
+communal_tax_A260="Hulshout"
+communal_tax_C260=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A260){return update_column(cell, 2)}}
+communal_tax_A259="Huldenberg"
+communal_tax_C259=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A259){return update_column(cell, 2)}}
+communal_tax_A258="Hove"
+communal_tax_C258=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A258){return update_column(cell, 2)}}
+communal_tax_A257="Houyet"
+communal_tax_C257=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A257){return update_column(cell, 2)}}
+communal_tax_A256="Houthulst"
+communal_tax_C256=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A256){return update_column(cell, 2)}}
+communal_tax_A255="Houthalen"-"Helchteren"
+communal_tax_C255=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A255){return update_column(cell, 2)}}
+communal_tax_A254="Houffalize"
+communal_tax_C254=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A254){return update_column(cell, 2)}}
+communal_tax_A253="Hotton"
+communal_tax_C253=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A253){return update_column(cell, 2)}}
+communal_tax_A252="Horebeke"
+communal_tax_C252=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A252){return update_column(cell, 2)}}
+communal_tax_A251="Hoogstraten"
+communal_tax_C251=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A251){return update_column(cell, 2)}}
+communal_tax_A250="Hooglede"
+communal_tax_C250=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A250){return update_column(cell, 2)}}
+communal_tax_A249="Honnelles"
+communal_tax_C249=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A249){return update_column(cell, 2)}}
+communal_tax_A248="Holsbeek"
+communal_tax_C248=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A248){return update_column(cell, 2)}}
+communal_tax_A247="Hoeselt"
+communal_tax_C247=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A247){return update_column(cell, 2)}}
+communal_tax_A246="Hoeilaart"
+communal_tax_C246=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A246){return update_column(cell, 2)}}
+communal_tax_A245="Hoegaarden"
+communal_tax_C245=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A245){return update_column(cell, 2)}}
+communal_tax_A244="Heuvelland"
+communal_tax_C244=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A244){return update_column(cell, 2)}}
+communal_tax_A243="Heusden"-"Zolder"
+communal_tax_C243=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A243){return update_column(cell, 2)}}
+communal_tax_A242="Herzele"
+communal_tax_C242=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A242){return update_column(cell, 2)}}
+communal_tax_A241="Herve"
+communal_tax_C241=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A241){return update_column(cell, 2)}}
+communal_tax_A240="Herstappe"
+communal_tax_C240=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A240){return update_column(cell, 2)}}
+communal_tax_A239="Herstal"
+communal_tax_C239=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A239){return update_column(cell, 2)}}
+communal_tax_A238="Herselt"
+communal_tax_C238=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A238){return update_column(cell, 2)}}
+communal_tax_A237="Héron"
+communal_tax_C237=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A237){return update_column(cell, 2)}}
+communal_tax_A236="Herne"
+communal_tax_C236=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A236){return update_column(cell, 2)}}
+communal_tax_A235="Herk"-"de"-"Stad"
+communal_tax_C235=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A235){return update_column(cell, 2)}}
+communal_tax_A234="Herenthout"
+communal_tax_C234=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A234){return update_column(cell, 2)}}
+communal_tax_A233="Herentals"
+communal_tax_C233=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A233){return update_column(cell, 2)}}
+communal_tax_A232="Herent"
+communal_tax_C232=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A232){return update_column(cell, 2)}}
+communal_tax_A231="Herbeumont"
+communal_tax_C231=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A231){return update_column(cell, 2)}}
+communal_tax_A230="Hensies"
+communal_tax_C230=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A230){return update_column(cell, 2)}}
+communal_tax_A229="Hemiksem"
+communal_tax_C229=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A229){return update_column(cell, 2)}}
+communal_tax_A228="Hélécine"
+communal_tax_C228=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A228){return update_column(cell, 2)}}
+communal_tax_A227="Heist"-"op"-"den"-"Berg"
+communal_tax_C227=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A227){return update_column(cell, 2)}}
+communal_tax_A226="Heers"
+communal_tax_C226=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A226){return update_column(cell, 2)}}
+communal_tax_A225="Hechtel"-"Eksel"
+communal_tax_C225=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A225){return update_column(cell, 2)}}
+communal_tax_A224="Havelange"
+communal_tax_C224=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A224){return update_column(cell, 2)}}
+communal_tax_A223="Hastière"
+communal_tax_C223=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A223){return update_column(cell, 2)}}
+communal_tax_C222="VLAANDEREN"
+communal_tax_A222="Hasselt"
+communal_tax_A221="Harelbeke"
+communal_tax_C221=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A221){return update_column(cell, 2)}}
+communal_tax_C220="WALLONIË"
+communal_tax_A220="Hannut"
+communal_tax_C219="WALLONIË"
+communal_tax_A219="Ham"-"sur"-"Heure"-"
+Nalinnes"
+communal_tax_A218="Hamont"-"Achel"
+communal_tax_C218=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A218){return update_column(cell, 2)}}
+communal_tax_A217="Hamois"
+communal_tax_C217=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A217){return update_column(cell, 2)}}
+communal_tax_A216="Hamoir"
+communal_tax_C216=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A216){return update_column(cell, 2)}}
+communal_tax_A215="Hamme"
+communal_tax_C215=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A215){return update_column(cell, 2)}}
+communal_tax_A214="Ham"
+communal_tax_C214=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A214){return update_column(cell, 2)}}
+communal_tax_A213="Halle"
+communal_tax_C213=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A213){return update_column(cell, 2)}}
+communal_tax_A212="Halen"
+communal_tax_C212=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A212){return update_column(cell, 2)}}
+communal_tax_A211="Habay"
+communal_tax_C211=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A211){return update_column(cell, 2)}}
+communal_tax_A210="Haaltert"
+communal_tax_C210=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A210){return update_column(cell, 2)}}
+communal_tax_A209="Haacht"
+communal_tax_C209=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A209){return update_column(cell, 2)}}
+communal_tax_A208="Grobbendonk"
+communal_tax_C208=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A208){return update_column(cell, 2)}}
+communal_tax_A207="Grimbergen"
+communal_tax_C207=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A207){return update_column(cell, 2)}}
+communal_tax_C206="WALLONIË"
+communal_tax_A206="Grez"-"Doiceau"
+communal_tax_A205="Grâce"-"Hollogne"
+communal_tax_C205=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A205){return update_column(cell, 2)}}
+communal_tax_A204="Gouvy"
+communal_tax_C204=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A204){return update_column(cell, 2)}}
+communal_tax_A203="Gooik"
+communal_tax_C203=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A203){return update_column(cell, 2)}}
+communal_tax_A202="Glabbeek"
+communal_tax_C202=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A202){return update_column(cell, 2)}}
+communal_tax_A201="Gistel"
+communal_tax_C201=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A201){return update_column(cell, 2)}}
+communal_tax_A200="Gingelom"
+communal_tax_C200=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A200){return update_column(cell, 2)}}
+communal_tax_A199="Gesves"
+communal_tax_C199=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A199){return update_column(cell, 2)}}
+communal_tax_A198="Gerpinnes"
+communal_tax_C198=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A198){return update_column(cell, 2)}}
+communal_tax_A197="Geraardsbergen"
+communal_tax_C197=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A197){return update_column(cell, 2)}}
+communal_tax_A196="Gent"
+communal_tax_C196=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A196){return update_column(cell, 2)}}
+communal_tax_A195="Genk"
+communal_tax_C195=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A195){return update_column(cell, 2)}}
+communal_tax_C194="WALLONIË"
+communal_tax_A194="Genappe"
+communal_tax_C193="WALLONIË"
+communal_tax_A193="Gembloux"
+communal_tax_A192="Geetbets"
+communal_tax_C192=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A192){return update_column(cell, 2)}}
+communal_tax_A191="Geer"
+communal_tax_C191=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A191){return update_column(cell, 2)}}
+communal_tax_A190="Geel"
+communal_tax_C190=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A190){return update_column(cell, 2)}}
+communal_tax_A189="Gedinne"
+communal_tax_C189=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A189){return update_column(cell, 2)}}
+communal_tax_A188="Gavere"
+communal_tax_C188=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A188){return update_column(cell, 2)}}
+communal_tax_A187="Ganshoren"
+communal_tax_C187=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A187){return update_column(cell, 2)}}
+communal_tax_A186="Galmaarden"
+communal_tax_C186=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A186){return update_column(cell, 2)}}
+communal_tax_A185="Froidchapelle"
+communal_tax_C185=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A185){return update_column(cell, 2)}}
+communal_tax_A184="Frasnes"-"lez"-"Anvaing"
+communal_tax_C184=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A184){return update_column(cell, 2)}}
+communal_tax_A183="Frameries"
+communal_tax_C183=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A183){return update_column(cell, 2)}}
+communal_tax_A182="Fosses"-"la"-"Ville"
+communal_tax_C182=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A182){return update_column(cell, 2)}}
+communal_tax_C181="WALLONIË"
+communal_tax_A181="Fontaine"-"l'Evêque"
+communal_tax_A180="Florenville"
+communal_tax_C180=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A180){return update_column(cell, 2)}}
+communal_tax_A179="Florennes"
+communal_tax_C179=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A179){return update_column(cell, 2)}}
+communal_tax_A178="Floreffe"
+communal_tax_C178=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A178){return update_column(cell, 2)}}
+communal_tax_C177="WALLONIË"
+communal_tax_A177="Flobecq"
+communal_tax_A176="Fleurus"
+communal_tax_C176=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A176){return update_column(cell, 2)}}
+communal_tax_A175="Fléron"
+communal_tax_C175=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A175){return update_column(cell, 2)}}
+communal_tax_A174="Flémalle"
+communal_tax_C174=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A174){return update_column(cell, 2)}}
+communal_tax_A173="Fexhe"-"le"-"Haut"-"Clocher"
+communal_tax_C173=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A173){return update_column(cell, 2)}}
+communal_tax_A172="Ferrières"
+communal_tax_C172=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A172){return update_column(cell, 2)}}
+communal_tax_A171="Fernelmont"
+communal_tax_C171=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A171){return update_column(cell, 2)}}
+communal_tax_A170="Fauvillers"
+communal_tax_C170=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A170){return update_column(cell, 2)}}
+communal_tax_A169="Farciennes"
+communal_tax_C169=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A169){return update_column(cell, 2)}}
+communal_tax_A168="Faimes"
+communal_tax_C168=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A168){return update_column(cell, 2)}}
+communal_tax_A167="Evergem"
+communal_tax_C167=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A167){return update_column(cell, 2)}}
+communal_tax_A166="Evere"
+communal_tax_C166=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A166){return update_column(cell, 2)}}
+communal_tax_A165="Eupen"
+communal_tax_C165=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A165){return update_column(cell, 2)}}
+communal_tax_A164="Etterbeek"
+communal_tax_C164=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A164){return update_column(cell, 2)}}
+communal_tax_C163="WALLONIË"
+communal_tax_A163="Etalle"
+communal_tax_A162="Estinnes"
+communal_tax_C162=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A162){return update_column(cell, 2)}}
+communal_tax_A161="Estaimpuis"
+communal_tax_C161=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A161){return update_column(cell, 2)}}
+communal_tax_A160="Essen"
+communal_tax_C160=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A160){return update_column(cell, 2)}}
+communal_tax_A159="Esneux"
+communal_tax_C159=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A159){return update_column(cell, 2)}}
+communal_tax_A158="Erquelinnes"
+communal_tax_C158=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A158){return update_column(cell, 2)}}
+communal_tax_A157="Erpe"-"Mere"
+communal_tax_C157=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A157){return update_column(cell, 2)}}
+communal_tax_C156="WALLONIË"
+communal_tax_A156="Erezée"
+communal_tax_A155="Engis"
+communal_tax_C155=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A155){return update_column(cell, 2)}}
+communal_tax_C154="WALLONIË"
+communal_tax_A154="Enghien"
+communal_tax_A153="Elsene"
+communal_tax_C153=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A153){return update_column(cell, 2)}}
+communal_tax_C152="WALLONIË"
+communal_tax_A152="Ellezelles"
+communal_tax_C151="WALLONIË"
+communal_tax_A151="Eghezée"
+communal_tax_A150="Eeklo"
+communal_tax_C150=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A150){return update_column(cell, 2)}}
+communal_tax_A149="Edegem"
+communal_tax_C149=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A149){return update_column(cell, 2)}}
+communal_tax_C148="WALLONIË"
+communal_tax_A148="Ecaussinnes"
+communal_tax_A147="Durbuy"
+communal_tax_C147=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A147){return update_column(cell, 2)}}
+communal_tax_A146="Duffel"
+communal_tax_C146=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A146){return update_column(cell, 2)}}
+communal_tax_A145="Drogenbos"
+communal_tax_C145=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A145){return update_column(cell, 2)}}
+communal_tax_A144="Dour"
+communal_tax_C144=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A144){return update_column(cell, 2)}}
+communal_tax_A143="Donceel"
+communal_tax_C143=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A143){return update_column(cell, 2)}}
+communal_tax_A142="Doische"
+communal_tax_C142=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A142){return update_column(cell, 2)}}
+communal_tax_A141="Dison"
+communal_tax_C141=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A141){return update_column(cell, 2)}}
+communal_tax_A140="Dinant"
+communal_tax_C140=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A140){return update_column(cell, 2)}}
+communal_tax_A139="Dilsen"-"Stokkem"
+communal_tax_C139=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A139){return update_column(cell, 2)}}
+communal_tax_A138="Dilbeek"
+communal_tax_C138=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A138){return update_column(cell, 2)}}
+communal_tax_A137="Diksmuide"
+communal_tax_C137=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A137){return update_column(cell, 2)}}
+communal_tax_A136="Diest"
+communal_tax_C136=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A136){return update_column(cell, 2)}}
+communal_tax_A135="Diepenbeek"
+communal_tax_C135=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A135){return update_column(cell, 2)}}
+communal_tax_A134="Destelbergen"
+communal_tax_C134=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A134){return update_column(cell, 2)}}
+communal_tax_A133="Dessel"
+communal_tax_C133=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A133){return update_column(cell, 2)}}
+communal_tax_A132="Dentergem"
+communal_tax_C132=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A132){return update_column(cell, 2)}}
+communal_tax_A131="Dendermonde"
+communal_tax_C131=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A131){return update_column(cell, 2)}}
+communal_tax_A130="Denderleeuw"
+communal_tax_C130=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A130){return update_column(cell, 2)}}
+communal_tax_A129="Deinze"
+communal_tax_C129=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A129){return update_column(cell, 2)}}
+communal_tax_A128="Deerlijk"
+communal_tax_C128=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A128){return update_column(cell, 2)}}
+communal_tax_A127="De Pinte"
+communal_tax_C127=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A127){return update_column(cell, 2)}}
+communal_tax_A126="De Panne"
+communal_tax_C126=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A126){return update_column(cell, 2)}}
+communal_tax_A125="De Haan"
+communal_tax_C125=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A125){return update_column(cell, 2)}}
+communal_tax_A124="Daverdisse"
+communal_tax_C124=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A124){return update_column(cell, 2)}}
+communal_tax_A123="Damme"
+communal_tax_C123=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A123){return update_column(cell, 2)}}
+communal_tax_A122="Dalhem"
+communal_tax_C122=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A122){return update_column(cell, 2)}}
+communal_tax_A121="Crisnée"
+communal_tax_C121=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A121){return update_column(cell, 2)}}
+communal_tax_A120="Couvin"
+communal_tax_C120=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A120){return update_column(cell, 2)}}
+communal_tax_C119="WALLONIË"
+communal_tax_A119="Court"-"Saint"-"Etienne"
+communal_tax_A118="Courcelles"
+communal_tax_C118=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A118){return update_column(cell, 2)}}
+communal_tax_C117="WALLONIË"
+communal_tax_A117="Comines"-"Warneton"
+communal_tax_A116="Comblain"-"au"-"Pont"
+communal_tax_C116=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A116){return update_column(cell, 2)}}
+communal_tax_A115="Colfontaine"
+communal_tax_C115=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A115){return update_column(cell, 2)}}
+communal_tax_A114="Clavier"
+communal_tax_C114=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A114){return update_column(cell, 2)}}
+communal_tax_A113="Ciney"
+communal_tax_C113=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A113){return update_column(cell, 2)}}
+communal_tax_A112="Chiny"
+communal_tax_C112=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A112){return update_column(cell, 2)}}
+communal_tax_A111="Chimay"
+communal_tax_C111=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A111){return update_column(cell, 2)}}
+communal_tax_A110="Chièvres"
+communal_tax_C110=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A110){return update_column(cell, 2)}}
+communal_tax_A109="Chaumont"-"Gistoux"
+communal_tax_C109=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A109){return update_column(cell, 2)}}
+communal_tax_A108="Chaudfontaine"
+communal_tax_C108=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A108){return update_column(cell, 2)}}
+communal_tax_A107="Châtelet"
+communal_tax_C107=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A107){return update_column(cell, 2)}}
+communal_tax_A106="Chastre"
+communal_tax_C106=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A106){return update_column(cell, 2)}}
+communal_tax_A105="Charleroi"
+communal_tax_C105=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A105){return update_column(cell, 2)}}
+communal_tax_A104="Chapelle"-"lez"-"Herlaimont"
+communal_tax_C104=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A104){return update_column(cell, 2)}}
+communal_tax_A103="Cerfontaine"
+communal_tax_C103=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A103){return update_column(cell, 2)}}
+communal_tax_A102="Celles"
+communal_tax_C102=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A102){return update_column(cell, 2)}}
+communal_tax_A101="Bütgenbach"
+communal_tax_C101=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A101){return update_column(cell, 2)}}
+communal_tax_A100="Burg"-"Reuland"
+communal_tax_C100=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A100){return update_column(cell, 2)}}
+communal_tax_A99="Burdinne"
+communal_tax_C99=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A99){return update_column(cell, 2)}}
+communal_tax_A98="Büllingen"
+communal_tax_C98=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A98){return update_column(cell, 2)}}
+communal_tax_A97="Buggenhout"
+communal_tax_C97=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A97){return update_column(cell, 2)}}
+communal_tax_A96="Brussel"
+communal_tax_C96=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A96){return update_column(cell, 2)}}
+communal_tax_A95="Brunehaut"
+communal_tax_C95=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A95){return update_column(cell, 2)}}
+communal_tax_A94="Brugge"
+communal_tax_C94=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A94){return update_column(cell, 2)}}
+communal_tax_A93="Brugelette"
+communal_tax_C93=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A93){return update_column(cell, 2)}}
+communal_tax_A92="Bree"
+communal_tax_C92=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A92){return update_column(cell, 2)}}
+communal_tax_A91="Bredene"
+communal_tax_C91=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A91){return update_column(cell, 2)}}
+communal_tax_A90="Brecht"
+communal_tax_C90=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A90){return update_column(cell, 2)}}
+communal_tax_A89="Brasschaat"
+communal_tax_C89=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A89){return update_column(cell, 2)}}
+communal_tax_A88="Brakel"
+communal_tax_C88=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A88){return update_column(cell, 2)}}
+communal_tax_A87="Braives"
+communal_tax_C87=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A87){return update_column(cell, 2)}}
+communal_tax_C86="WALLONIË"
+communal_tax_A86="Braine"-"le"-"Comte"
+communal_tax_C85="WALLONIË"
+communal_tax_A85="Braine"-"le"-"Château"
+communal_tax_C84="WALLONIË"
+communal_tax_A84="Braine"-"l'Alleud"
+communal_tax_A83="Boutersem"
+communal_tax_C83=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A83){return update_column(cell, 2)}}
+communal_tax_A82="Boussu"
+communal_tax_C82=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A82){return update_column(cell, 2)}}
+communal_tax_A81="Bouillon"
+communal_tax_C81=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A81){return update_column(cell, 2)}}
+communal_tax_A80="Borsbeek"
+communal_tax_C80=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A80){return update_column(cell, 2)}}
+communal_tax_A79="Bornem"
+communal_tax_C79=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A79){return update_column(cell, 2)}}
+communal_tax_A78="Borgloon"
+communal_tax_C78=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A78){return update_column(cell, 2)}}
+communal_tax_A77="Boortmeerbeek"
+communal_tax_C77=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A77){return update_column(cell, 2)}}
+communal_tax_A76="Boom"
+communal_tax_C76=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A76){return update_column(cell, 2)}}
+communal_tax_A75="Bonheiden"
+communal_tax_C75=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A75){return update_column(cell, 2)}}
+communal_tax_A74="Boechout"
+communal_tax_C74=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A74){return update_column(cell, 2)}}
+communal_tax_A73="Bocholt"
+communal_tax_C73=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A73){return update_column(cell, 2)}}
+communal_tax_C72="WALLONIË"
+communal_tax_A72="Blégny"
+communal_tax_A71="Blankenberge"
+communal_tax_C71=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A71){return update_column(cell, 2)}}
+communal_tax_A70="Binche"
+communal_tax_C70=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A70){return update_column(cell, 2)}}
+communal_tax_A69="Bilzen"
+communal_tax_C69=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A69){return update_column(cell, 2)}}
+communal_tax_A68="Bièvre"
+communal_tax_C68=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A68){return update_column(cell, 2)}}
+communal_tax_A67="Bierbeek"
+communal_tax_C67=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A67){return update_column(cell, 2)}}
+communal_tax_A66="Beyne"-"Heusay"
+communal_tax_C66=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A66){return update_column(cell, 2)}}
+communal_tax_A65="Beveren"
+communal_tax_C65=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A65){return update_column(cell, 2)}}
+communal_tax_A64="Bever"
+communal_tax_C64=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A64){return update_column(cell, 2)}}
+communal_tax_A63="Bertrix"
+communal_tax_C63=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A63){return update_column(cell, 2)}}
+communal_tax_A62="Bertogne"
+communal_tax_C62=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A62){return update_column(cell, 2)}}
+communal_tax_A61="Bertem"
+communal_tax_C61=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A61){return update_column(cell, 2)}}
+communal_tax_A60="Bernissart"
+communal_tax_C60=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A60){return update_column(cell, 2)}}
+communal_tax_A59="Berloz"
+communal_tax_C59=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A59){return update_column(cell, 2)}}
+communal_tax_A58="Berlare"
+communal_tax_C58=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A58){return update_column(cell, 2)}}
+communal_tax_A57="Berlaar"
+communal_tax_C57=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A57){return update_column(cell, 2)}}
+communal_tax_A56="Beringen"
+communal_tax_C56=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A56){return update_column(cell, 2)}}
+communal_tax_C55="WALLONIË"
+communal_tax_A55="Beloeil"
+communal_tax_A54="Bekkevoort"
+communal_tax_C54=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A54){return update_column(cell, 2)}}
+communal_tax_A53="Begijnendijk"
+communal_tax_C53=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A53){return update_column(cell, 2)}}
+communal_tax_A52="Beersel"
+communal_tax_C52=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A52){return update_column(cell, 2)}}
+communal_tax_A51="Beerse"
+communal_tax_C51=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A51){return update_column(cell, 2)}}
+communal_tax_A50="Beernem"
+communal_tax_C50=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A50){return update_column(cell, 2)}}
+communal_tax_C49="WALLONIË"
+communal_tax_A49="Beauvechain"
+communal_tax_A48="Beauraing"
+communal_tax_C48=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A48){return update_column(cell, 2)}}
+communal_tax_A47="Beaumont"
+communal_tax_C47=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A47){return update_column(cell, 2)}}
+communal_tax_C46="WALLONIË"
+communal_tax_A46="Bastogne"
+communal_tax_C45="WALLONIË"
+communal_tax_A45="Bassenge"
+communal_tax_A44="Balen"
+communal_tax_C44=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A44){return update_column(cell, 2)}}
+communal_tax_A43="Baelen"
+communal_tax_C43=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A43){return update_column(cell, 2)}}
+communal_tax_A42="Baarle"-"Hertog"
+communal_tax_C42=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A42){return update_column(cell, 2)}}
+communal_tax_A41="Aywaille"
+communal_tax_C41=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A41){return update_column(cell, 2)}}
+communal_tax_A40="Awans"
+communal_tax_C40=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A40){return update_column(cell, 2)}}
+communal_tax_A39="Avelgem"
+communal_tax_C39=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A39){return update_column(cell, 2)}}
+communal_tax_A38="Aubel"
+communal_tax_C38=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A38){return update_column(cell, 2)}}
+communal_tax_A37="Aubange"
+communal_tax_C37=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A37){return update_column(cell, 2)}}
+communal_tax_A36="Attert"
+communal_tax_C36=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A36){return update_column(cell, 2)}}
+communal_tax_C35="WALLONIË"
+communal_tax_A35="Ath"
+communal_tax_A34="Assesse"
+communal_tax_C34=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A34){return update_column(cell, 2)}}
+communal_tax_A33="Assenede"
+communal_tax_C33=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A33){return update_column(cell, 2)}}
+communal_tax_A32="Asse"
+communal_tax_C32=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A32){return update_column(cell, 2)}}
+communal_tax_A31="As"
+communal_tax_C31=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A31){return update_column(cell, 2)}}
+communal_tax_C30="WALLONIË"
+communal_tax_A30="Arlon"
+communal_tax_A29="Arendonk"
+communal_tax_C29=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A29){return update_column(cell, 2)}}
+communal_tax_A28="Ardooie"
+communal_tax_C28=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A28){return update_column(cell, 2)}}
+communal_tax_A27="Anzegem"
+communal_tax_C27=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A27){return update_column(cell, 2)}}
+communal_tax_A26="Antwerpen"
+communal_tax_C26=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A26){return update_column(cell, 2)}}
+communal_tax_A25="Antoing"
+communal_tax_C25=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A25){return update_column(cell, 2)}}
+communal_tax_A24="Anthisnes"
+communal_tax_C24=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A24){return update_column(cell, 2)}}
+communal_tax_A23="Ans"
+communal_tax_C23=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A23){return update_column(cell, 2)}}
+communal_tax_A22="Anhée"
+communal_tax_C22=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A22){return update_column(cell, 2)}}
+communal_tax_A21="Anderlues"
+communal_tax_C21=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A21){return update_column(cell, 2)}}
+communal_tax_A20="Anderlecht"
+communal_tax_C20=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A20){return update_column(cell, 2)}}
+communal_tax_A19="Andenne"
+communal_tax_C19=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A19){return update_column(cell, 2)}}
+communal_tax_A18="Amel"
+communal_tax_C18=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A18){return update_column(cell, 2)}}
+communal_tax_A17="Amay"
+communal_tax_C17=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A17){return update_column(cell, 2)}}
+communal_tax_A16="Alveringem"
+communal_tax_C16=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A16){return update_column(cell, 2)}}
+communal_tax_A15="Alken"
+communal_tax_C15=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A15){return update_column(cell, 2)}}
+communal_tax_A14="Aiseau"-"Presles"
+communal_tax_C14=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A14){return update_column(cell, 2)}}
+communal_tax_A13="Affligem"
+communal_tax_C13=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A13){return update_column(cell, 2)}}
+communal_tax_A12="Aartselaar"
+communal_tax_C12=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A12){return update_column(cell, 2)}}
+communal_tax_A11="Aarschot"
+communal_tax_C11=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A11){return update_column(cell, 2)}}
+communal_tax_A10="Aalter"
+communal_tax_C10=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A10){return update_column(cell, 2)}}
+communal_tax_A9="Aalst"
+communal_tax_C9=for(cell in ["GEWESTEN"]{if(cell == communal_tax_A9){return update_column(cell, 2)}}
+tax_calculation_B113="Zwijndrecht"
+tax_calculation_D113=for(cell in [communal_tax_A9;communal_tax_B9;communal_tax_C9;communal_tax_A10;communal_tax_B10;communal_tax_C10;communal_tax_A11;communal_tax_B11;communal_tax_C11;communal_tax_A12;communal_tax_B12;communal_tax_C12;communal_tax_A13;communal_tax_B13;communal_tax_C13;communal_tax_A14;communal_tax_B14;communal_tax_C14;communal_tax_A15;communal_tax_B15;communal_tax_C15;communal_tax_A16;communal_tax_B16;communal_tax_C16;communal_tax_A17;communal_tax_B17;communal_tax_C17;communal_tax_A18;communal_tax_B18;communal_tax_C18;communal_tax_A19;communal_tax_B19;communal_tax_C19;communal_tax_A20;communal_tax_B20;communal_tax_C20;communal_tax_A21;communal_tax_B21;communal_tax_C21;communal_tax_A22;communal_tax_B22;communal_tax_C22;communal_tax_A23;communal_tax_B23;communal_tax_C23;communal_tax_A24;communal_tax_B24;communal_tax_C24;communal_tax_A25;communal_tax_B25;communal_tax_C25;communal_tax_A26;communal_tax_B26;communal_tax_C26;communal_tax_A27;communal_tax_B27;communal_tax_C27;communal_tax_A28;communal_tax_B28;communal_tax_C28;communal_tax_A29;communal_tax_B29;communal_tax_C29;communal_tax_A30;communal_tax_B30;communal_tax_C30;communal_tax_A31;communal_tax_B31;communal_tax_C31;communal_tax_A32;communal_tax_B32;communal_tax_C32;communal_tax_A33;communal_tax_B33;communal_tax_C33;communal_tax_A34;communal_tax_B34;communal_tax_C34;communal_tax_A35;communal_tax_B35;communal_tax_C35;communal_tax_A36;communal_tax_B36;communal_tax_C36;communal_tax_A37;communal_tax_B37;communal_tax_C37;communal_tax_A38;communal_tax_B38;communal_tax_C38;communal_tax_A39;communal_tax_B39;communal_tax_C39;communal_tax_A40;communal_tax_B40;communal_tax_C40;communal_tax_A41;communal_tax_B41;communal_tax_C41;communal_tax_A42;communal_tax_B42;communal_tax_C42;communal_tax_A43;communal_tax_B43;communal_tax_C43;communal_tax_A44;communal_tax_B44;communal_tax_C44;communal_tax_A45;communal_tax_B45;communal_tax_C45;communal_tax_A46;communal_tax_B46;communal_tax_C46;communal_tax_A47;communal_tax_B47;communal_tax_C47;communal_tax_A48;communal_tax_B48;communal_tax_C48;communal_tax_A49;communal_tax_B49;communal_tax_C49;communal_tax_A50;communal_tax_B50;communal_tax_C50;communal_tax_A51;communal_tax_B51;communal_tax_C51;communal_tax_A52;communal_tax_B52;communal_tax_C52;communal_tax_A53;communal_tax_B53;communal_tax_C53;communal_tax_A54;communal_tax_B54;communal_tax_C54;communal_tax_A55;communal_tax_B55;communal_tax_C55;communal_tax_A56;communal_tax_B56;communal_tax_C56;communal_tax_A57;communal_tax_B57;communal_tax_C57;communal_tax_A58;communal_tax_B58;communal_tax_C58;communal_tax_A59;communal_tax_B59;communal_tax_C59;communal_tax_A60;communal_tax_B60;communal_tax_C60;communal_tax_A61;communal_tax_B61;communal_tax_C61;communal_tax_A62;communal_tax_B62;communal_tax_C62;communal_tax_A63;communal_tax_B63;communal_tax_C63;communal_tax_A64;communal_tax_B64;communal_tax_C64;communal_tax_A65;communal_tax_B65;communal_tax_C65;communal_tax_A66;communal_tax_B66;communal_tax_C66;communal_tax_A67;communal_tax_B67;communal_tax_C67;communal_tax_A68;communal_tax_B68;communal_tax_C68;communal_tax_A69;communal_tax_B69;communal_tax_C69;communal_tax_A70;communal_tax_B70;communal_tax_C70;communal_tax_A71;communal_tax_B71;communal_tax_C71;communal_tax_A72;communal_tax_B72;communal_tax_C72;communal_tax_A73;communal_tax_B73;communal_tax_C73;communal_tax_A74;communal_tax_B74;communal_tax_C74;communal_tax_A75;communal_tax_B75;communal_tax_C75;communal_tax_A76;communal_tax_B76;communal_tax_C76;communal_tax_A77;communal_tax_B77;communal_tax_C77;communal_tax_A78;communal_tax_B78;communal_tax_C78;communal_tax_A79;communal_tax_B79;communal_tax_C79;communal_tax_A80;communal_tax_B80;communal_tax_C80;communal_tax_A81;communal_tax_B81;communal_tax_C81;communal_tax_A82;communal_tax_B82;communal_tax_C82;communal_tax_A83;communal_tax_B83;communal_tax_C83;communal_tax_A84;communal_tax_B84;communal_tax_C84;communal_tax_A85;communal_tax_B85;communal_tax_C85;communal_tax_A86;communal_tax_B86;communal_tax_C86;communal_tax_A87;communal_tax_B87;communal_tax_C87;communal_tax_A88;communal_tax_B88;communal_tax_C88;communal_tax_A89;communal_tax_B89;communal_tax_C89;communal_tax_A90;communal_tax_B90;communal_tax_C90;communal_tax_A91;communal_tax_B91;communal_tax_C91;communal_tax_A92;communal_tax_B92;communal_tax_C92;communal_tax_A93;communal_tax_B93;communal_tax_C93;communal_tax_A94;communal_tax_B94;communal_tax_C94;communal_tax_A95;communal_tax_B95;communal_tax_C95;communal_tax_A96;communal_tax_B96;communal_tax_C96;communal_tax_A97;communal_tax_B97;communal_tax_C97;communal_tax_A98;communal_tax_B98;communal_tax_C98;communal_tax_A99;communal_tax_B99;communal_tax_C99;communal_tax_A100;communal_tax_B100;communal_tax_C100;communal_tax_A101;communal_tax_B101;communal_tax_C101;communal_tax_A102;communal_tax_B102;communal_tax_C102;communal_tax_A103;communal_tax_B103;communal_tax_C103;communal_tax_A104;communal_tax_B104;communal_tax_C104;communal_tax_A105;communal_tax_B105;communal_tax_C105;communal_tax_A106;communal_tax_B106;communal_tax_C106;communal_tax_A107;communal_tax_B107;communal_tax_C107;communal_tax_A108;communal_tax_B108;communal_tax_C108;communal_tax_A109;communal_tax_B109;communal_tax_C109;communal_tax_A110;communal_tax_B110;communal_tax_C110;communal_tax_A111;communal_tax_B111;communal_tax_C111;communal_tax_A112;communal_tax_B112;communal_tax_C112;communal_tax_A113;communal_tax_B113;communal_tax_C113;communal_tax_A114;communal_tax_B114;communal_tax_C114;communal_tax_A115;communal_tax_B115;communal_tax_C115;communal_tax_A116;communal_tax_B116;communal_tax_C116;communal_tax_A117;communal_tax_B117;communal_tax_C117;communal_tax_A118;communal_tax_B118;communal_tax_C118;communal_tax_A119;communal_tax_B119;communal_tax_C119;communal_tax_A120;communal_tax_B120;communal_tax_C120;communal_tax_A121;communal_tax_B121;communal_tax_C121;communal_tax_A122;communal_tax_B122;communal_tax_C122;communal_tax_A123;communal_tax_B123;communal_tax_C123;communal_tax_A124;communal_tax_B124;communal_tax_C124;communal_tax_A125;communal_tax_B125;communal_tax_C125;communal_tax_A126;communal_tax_B126;communal_tax_C126;communal_tax_A127;communal_tax_B127;communal_tax_C127;communal_tax_A128;communal_tax_B128;communal_tax_C128;communal_tax_A129;communal_tax_B129;communal_tax_C129;communal_tax_A130;communal_tax_B130;communal_tax_C130;communal_tax_A131;communal_tax_B131;communal_tax_C131;communal_tax_A132;communal_tax_B132;communal_tax_C132;communal_tax_A133;communal_tax_B133;communal_tax_C133;communal_tax_A134;communal_tax_B134;communal_tax_C134;communal_tax_A135;communal_tax_B135;communal_tax_C135;communal_tax_A136;communal_tax_B136;communal_tax_C136;communal_tax_A137;communal_tax_B137;communal_tax_C137;communal_tax_A138;communal_tax_B138;communal_tax_C138;communal_tax_A139;communal_tax_B139;communal_tax_C139;communal_tax_A140;communal_tax_B140;communal_tax_C140;communal_tax_A141;communal_tax_B141;communal_tax_C141;communal_tax_A142;communal_tax_B142;communal_tax_C142;communal_tax_A143;communal_tax_B143;communal_tax_C143;communal_tax_A144;communal_tax_B144;communal_tax_C144;communal_tax_A145;communal_tax_B145;communal_tax_C145;communal_tax_A146;communal_tax_B146;communal_tax_C146;communal_tax_A147;communal_tax_B147;communal_tax_C147;communal_tax_A148;communal_tax_B148;communal_tax_C148;communal_tax_A149;communal_tax_B149;communal_tax_C149;communal_tax_A150;communal_tax_B150;communal_tax_C150;communal_tax_A151;communal_tax_B151;communal_tax_C151;communal_tax_A152;communal_tax_B152;communal_tax_C152;communal_tax_A153;communal_tax_B153;communal_tax_C153;communal_tax_A154;communal_tax_B154;communal_tax_C154;communal_tax_A155;communal_tax_B155;communal_tax_C155;communal_tax_A156;communal_tax_B156;communal_tax_C156;communal_tax_A157;communal_tax_B157;communal_tax_C157;communal_tax_A158;communal_tax_B158;communal_tax_C158;communal_tax_A159;communal_tax_B159;communal_tax_C159;communal_tax_A160;communal_tax_B160;communal_tax_C160;communal_tax_A161;communal_tax_B161;communal_tax_C161;communal_tax_A162;communal_tax_B162;communal_tax_C162;communal_tax_A163;communal_tax_B163;communal_tax_C163;communal_tax_A164;communal_tax_B164;communal_tax_C164;communal_tax_A165;communal_tax_B165;communal_tax_C165;communal_tax_A166;communal_tax_B166;communal_tax_C166;communal_tax_A167;communal_tax_B167;communal_tax_C167;communal_tax_A168;communal_tax_B168;communal_tax_C168;communal_tax_A169;communal_tax_B169;communal_tax_C169;communal_tax_A170;communal_tax_B170;communal_tax_C170;communal_tax_A171;communal_tax_B171;communal_tax_C171;communal_tax_A172;communal_tax_B172;communal_tax_C172;communal_tax_A173;communal_tax_B173;communal_tax_C173;communal_tax_A174;communal_tax_B174;communal_tax_C174;communal_tax_A175;communal_tax_B175;communal_tax_C175;communal_tax_A176;communal_tax_B176;communal_tax_C176;communal_tax_A177;communal_tax_B177;communal_tax_C177;communal_tax_A178;communal_tax_B178;communal_tax_C178;communal_tax_A179;communal_tax_B179;communal_tax_C179;communal_tax_A180;communal_tax_B180;communal_tax_C180;communal_tax_A181;communal_tax_B181;communal_tax_C181;communal_tax_A182;communal_tax_B182;communal_tax_C182;communal_tax_A183;communal_tax_B183;communal_tax_C183;communal_tax_A184;communal_tax_B184;communal_tax_C184;communal_tax_A185;communal_tax_B185;communal_tax_C185;communal_tax_A186;communal_tax_B186;communal_tax_C186;communal_tax_A187;communal_tax_B187;communal_tax_C187;communal_tax_A188;communal_tax_B188;communal_tax_C188;communal_tax_A189;communal_tax_B189;communal_tax_C189;communal_tax_A190;communal_tax_B190;communal_tax_C190;communal_tax_A191;communal_tax_B191;communal_tax_C191;communal_tax_A192;communal_tax_B192;communal_tax_C192;communal_tax_A193;communal_tax_B193;communal_tax_C193;communal_tax_A194;communal_tax_B194;communal_tax_C194;communal_tax_A195;communal_tax_B195;communal_tax_C195;communal_tax_A196;communal_tax_B196;communal_tax_C196;communal_tax_A197;communal_tax_B197;communal_tax_C197;communal_tax_A198;communal_tax_B198;communal_tax_C198;communal_tax_A199;communal_tax_B199;communal_tax_C199;communal_tax_A200;communal_tax_B200;communal_tax_C200;communal_tax_A201;communal_tax_B201;communal_tax_C201;communal_tax_A202;communal_tax_B202;communal_tax_C202;communal_tax_A203;communal_tax_B203;communal_tax_C203;communal_tax_A204;communal_tax_B204;communal_tax_C204;communal_tax_A205;communal_tax_B205;communal_tax_C205;communal_tax_A206;communal_tax_B206;communal_tax_C206;communal_tax_A207;communal_tax_B207;communal_tax_C207;communal_tax_A208;communal_tax_B208;communal_tax_C208;communal_tax_A209;communal_tax_B209;communal_tax_C209;communal_tax_A210;communal_tax_B210;communal_tax_C210;communal_tax_A211;communal_tax_B211;communal_tax_C211;communal_tax_A212;communal_tax_B212;communal_tax_C212;communal_tax_A213;communal_tax_B213;communal_tax_C213;communal_tax_A214;communal_tax_B214;communal_tax_C214;communal_tax_A215;communal_tax_B215;communal_tax_C215;communal_tax_A216;communal_tax_B216;communal_tax_C216;communal_tax_A217;communal_tax_B217;communal_tax_C217;communal_tax_A218;communal_tax_B218;communal_tax_C218;communal_tax_A219;communal_tax_B219;communal_tax_C219;communal_tax_A220;communal_tax_B220;communal_tax_C220;communal_tax_A221;communal_tax_B221;communal_tax_C221;communal_tax_A222;communal_tax_B222;communal_tax_C222;communal_tax_A223;communal_tax_B223;communal_tax_C223;communal_tax_A224;communal_tax_B224;communal_tax_C224;communal_tax_A225;communal_tax_B225;communal_tax_C225;communal_tax_A226;communal_tax_B226;communal_tax_C226;communal_tax_A227;communal_tax_B227;communal_tax_C227;communal_tax_A228;communal_tax_B228;communal_tax_C228;communal_tax_A229;communal_tax_B229;communal_tax_C229;communal_tax_A230;communal_tax_B230;communal_tax_C230;communal_tax_A231;communal_tax_B231;communal_tax_C231;communal_tax_A232;communal_tax_B232;communal_tax_C232;communal_tax_A233;communal_tax_B233;communal_tax_C233;communal_tax_A234;communal_tax_B234;communal_tax_C234;communal_tax_A235;communal_tax_B235;communal_tax_C235;communal_tax_A236;communal_tax_B236;communal_tax_C236;communal_tax_A237;communal_tax_B237;communal_tax_C237;communal_tax_A238;communal_tax_B238;communal_tax_C238;communal_tax_A239;communal_tax_B239;communal_tax_C239;communal_tax_A240;communal_tax_B240;communal_tax_C240;communal_tax_A241;communal_tax_B241;communal_tax_C241;communal_tax_A242;communal_tax_B242;communal_tax_C242;communal_tax_A243;communal_tax_B243;communal_tax_C243;communal_tax_A244;communal_tax_B244;communal_tax_C244;communal_tax_A245;communal_tax_B245;communal_tax_C245;communal_tax_A246;communal_tax_B246;communal_tax_C246;communal_tax_A247;communal_tax_B247;communal_tax_C247;communal_tax_A248;communal_tax_B248;communal_tax_C248;communal_tax_A249;communal_tax_B249;communal_tax_C249;communal_tax_A250;communal_tax_B250;communal_tax_C250;communal_tax_A251;communal_tax_B251;communal_tax_C251;communal_tax_A252;communal_tax_B252;communal_tax_C252;communal_tax_A253;communal_tax_B253;communal_tax_C253;communal_tax_A254;communal_tax_B254;communal_tax_C254;communal_tax_A255;communal_tax_B255;communal_tax_C255;communal_tax_A256;communal_tax_B256;communal_tax_C256;communal_tax_A257;communal_tax_B257;communal_tax_C257;communal_tax_A258;communal_tax_B258;communal_tax_C258;communal_tax_A259;communal_tax_B259;communal_tax_C259;communal_tax_A260;communal_tax_B260;communal_tax_C260;communal_tax_A261;communal_tax_B261;communal_tax_C261;communal_tax_A262;communal_tax_B262;communal_tax_C262;communal_tax_A263;communal_tax_B263;communal_tax_C263;communal_tax_A264;communal_tax_B264;communal_tax_C264;communal_tax_A265;communal_tax_B265;communal_tax_C265;communal_tax_A266;communal_tax_B266;communal_tax_C266;communal_tax_A267;communal_tax_B267;communal_tax_C267;communal_tax_A268;communal_tax_B268;communal_tax_C268;communal_tax_A269;communal_tax_B269;communal_tax_C269;communal_tax_A270;communal_tax_B270;communal_tax_C270;communal_tax_A271;communal_tax_B271;communal_tax_C271;communal_tax_A272;communal_tax_B272;communal_tax_C272;communal_tax_A273;communal_tax_B273;communal_tax_C273;communal_tax_A274;communal_tax_B274;communal_tax_C274;communal_tax_A275;communal_tax_B275;communal_tax_C275;communal_tax_A276;communal_tax_B276;communal_tax_C276;communal_tax_A277;communal_tax_B277;communal_tax_C277;communal_tax_A278;communal_tax_B278;communal_tax_C278;communal_tax_A279;communal_tax_B279;communal_tax_C279;communal_tax_A280;communal_tax_B280;communal_tax_C280;communal_tax_A281;communal_tax_B281;communal_tax_C281;communal_tax_A282;communal_tax_B282;communal_tax_C282;communal_tax_A283;communal_tax_B283;communal_tax_C283;communal_tax_A284;communal_tax_B284;communal_tax_C284;communal_tax_A285;communal_tax_B285;communal_tax_C285;communal_tax_A286;communal_tax_B286;communal_tax_C286;communal_tax_A287;communal_tax_B287;communal_tax_C287;communal_tax_A288;communal_tax_B288;communal_tax_C288;communal_tax_A289;communal_tax_B289;communal_tax_C289;communal_tax_A290;communal_tax_B290;communal_tax_C290;communal_tax_A291;communal_tax_B291;communal_tax_C291;communal_tax_A292;communal_tax_B292;communal_tax_C292;communal_tax_A293;communal_tax_B293;communal_tax_C293;communal_tax_A294;communal_tax_B294;communal_tax_C294;communal_tax_A295;communal_tax_B295;communal_tax_C295;communal_tax_A296;communal_tax_B296;communal_tax_C296;communal_tax_A297;communal_tax_B297;communal_tax_C297;communal_tax_A298;communal_tax_B298;communal_tax_C298;communal_tax_A299;communal_tax_B299;communal_tax_C299;communal_tax_A300;communal_tax_B300;communal_tax_C300;communal_tax_A301;communal_tax_B301;communal_tax_C301;communal_tax_A302;communal_tax_B302;communal_tax_C302;communal_tax_A303;communal_tax_B303;communal_tax_C303;communal_tax_A304;communal_tax_B304;communal_tax_C304;communal_tax_A305;communal_tax_B305;communal_tax_C305;communal_tax_A306;communal_tax_B306;communal_tax_C306;communal_tax_A307;communal_tax_B307;communal_tax_C307;communal_tax_A308;communal_tax_B308;communal_tax_C308;communal_tax_A309;communal_tax_B309;communal_tax_C309;communal_tax_A310;communal_tax_B310;communal_tax_C310;communal_tax_A311;communal_tax_B311;communal_tax_C311;communal_tax_A312;communal_tax_B312;communal_tax_C312;communal_tax_A313;communal_tax_B313;communal_tax_C313;communal_tax_A314;communal_tax_B314;communal_tax_C314;communal_tax_A315;communal_tax_B315;communal_tax_C315;communal_tax_A316;communal_tax_B316;communal_tax_C316;communal_tax_A317;communal_tax_B317;communal_tax_C317;communal_tax_A318;communal_tax_B318;communal_tax_C318;communal_tax_A319;communal_tax_B319;communal_tax_C319;communal_tax_A320;communal_tax_B320;communal_tax_C320;communal_tax_A321;communal_tax_B321;communal_tax_C321;communal_tax_A322;communal_tax_B322;communal_tax_C322;communal_tax_A323;communal_tax_B323;communal_tax_C323;communal_tax_A324;communal_tax_B324;communal_tax_C324;communal_tax_A325;communal_tax_B325;communal_tax_C325;communal_tax_A326;communal_tax_B326;communal_tax_C326;communal_tax_A327;communal_tax_B327;communal_tax_C327;communal_tax_A328;communal_tax_B328;communal_tax_C328;communal_tax_A329;communal_tax_B329;communal_tax_C329;communal_tax_A330;communal_tax_B330;communal_tax_C330;communal_tax_A331;communal_tax_B331;communal_tax_C331;communal_tax_A332;communal_tax_B332;communal_tax_C332;communal_tax_A333;communal_tax_B333;communal_tax_C333;communal_tax_A334;communal_tax_B334;communal_tax_C334;communal_tax_A335;communal_tax_B335;communal_tax_C335;communal_tax_A336;communal_tax_B336;communal_tax_C336;communal_tax_A337;communal_tax_B337;communal_tax_C337;communal_tax_A338;communal_tax_B338;communal_tax_C338;communal_tax_A339;communal_tax_B339;communal_tax_C339;communal_tax_A340;communal_tax_B340;communal_tax_C340;communal_tax_A341;communal_tax_B341;communal_tax_C341;communal_tax_A342;communal_tax_B342;communal_tax_C342;communal_tax_A343;communal_tax_B343;communal_tax_C343;communal_tax_A344;communal_tax_B344;communal_tax_C344;communal_tax_A345;communal_tax_B345;communal_tax_C345;communal_tax_A346;communal_tax_B346;communal_tax_C346;communal_tax_A347;communal_tax_B347;communal_tax_C347;communal_tax_A348;communal_tax_B348;communal_tax_C348;communal_tax_A349;communal_tax_B349;communal_tax_C349;communal_tax_A350;communal_tax_B350;communal_tax_C350;communal_tax_A351;communal_tax_B351;communal_tax_C351;communal_tax_A352;communal_tax_B352;communal_tax_C352;communal_tax_A353;communal_tax_B353;communal_tax_C353;communal_tax_A354;communal_tax_B354;communal_tax_C354;communal_tax_A355;communal_tax_B355;communal_tax_C355;communal_tax_A356;communal_tax_B356;communal_tax_C356;communal_tax_A357;communal_tax_B357;communal_tax_C357;communal_tax_A358;communal_tax_B358;communal_tax_C358;communal_tax_A359;communal_tax_B359;communal_tax_C359;communal_tax_A360;communal_tax_B360;communal_tax_C360;communal_tax_A361;communal_tax_B361;communal_tax_C361;communal_tax_A362;communal_tax_B362;communal_tax_C362;communal_tax_A363;communal_tax_B363;communal_tax_C363;communal_tax_A364;communal_tax_B364;communal_tax_C364;communal_tax_A365;communal_tax_B365;communal_tax_C365;communal_tax_A366;communal_tax_B366;communal_tax_C366;communal_tax_A367;communal_tax_B367;communal_tax_C367;communal_tax_A368;communal_tax_B368;communal_tax_C368;communal_tax_A369;communal_tax_B369;communal_tax_C369;communal_tax_A370;communal_tax_B370;communal_tax_C370;communal_tax_A371;communal_tax_B371;communal_tax_C371;communal_tax_A372;communal_tax_B372;communal_tax_C372;communal_tax_A373;communal_tax_B373;communal_tax_C373;communal_tax_A374;communal_tax_B374;communal_tax_C374;communal_tax_A375;communal_tax_B375;communal_tax_C375;communal_tax_A376;communal_tax_B376;communal_tax_C376;communal_tax_A377;communal_tax_B377;communal_tax_C377;communal_tax_A378;communal_tax_B378;communal_tax_C378;communal_tax_A379;communal_tax_B379;communal_tax_C379;communal_tax_A380;communal_tax_B380;communal_tax_C380;communal_tax_A381;communal_tax_B381;communal_tax_C381;communal_tax_A382;communal_tax_B382;communal_tax_C382;communal_tax_A383;communal_tax_B383;communal_tax_C383;communal_tax_A384;communal_tax_B384;communal_tax_C384;communal_tax_A385;communal_tax_B385;communal_tax_C385;communal_tax_A386;communal_tax_B386;communal_tax_C386;communal_tax_A387;communal_tax_B387;communal_tax_C387;communal_tax_A388;communal_tax_B388;communal_tax_C388;communal_tax_A389;communal_tax_B389;communal_tax_C389;communal_tax_A390;communal_tax_B390;communal_tax_C390;communal_tax_A391;communal_tax_B391;communal_tax_C391;communal_tax_A392;communal_tax_B392;communal_tax_C392;communal_tax_A393;communal_tax_B393;communal_tax_C393;communal_tax_A394;communal_tax_B394;communal_tax_C394;communal_tax_A395;communal_tax_B395;communal_tax_C395;communal_tax_A396;communal_tax_B396;communal_tax_C396;communal_tax_A397;communal_tax_B397;communal_tax_C397;communal_tax_A398;communal_tax_B398;communal_tax_C398;communal_tax_A399;communal_tax_B399;communal_tax_C399;communal_tax_A400;communal_tax_B400;communal_tax_C400;communal_tax_A401;communal_tax_B401;communal_tax_C401;communal_tax_A402;communal_tax_B402;communal_tax_C402;communal_tax_A403;communal_tax_B403;communal_tax_C403;communal_tax_A404;communal_tax_B404;communal_tax_C404;communal_tax_A405;communal_tax_B405;communal_tax_C405;communal_tax_A406;communal_tax_B406;communal_tax_C406;communal_tax_A407;communal_tax_B407;communal_tax_C407;communal_tax_A408;communal_tax_B408;communal_tax_C408;communal_tax_A409;communal_tax_B409;communal_tax_C409;communal_tax_A410;communal_tax_B410;communal_tax_C410;communal_tax_A411;communal_tax_B411;communal_tax_C411;communal_tax_A412;communal_tax_B412;communal_tax_C412;communal_tax_A413;communal_tax_B413;communal_tax_C413;communal_tax_A414;communal_tax_B414;communal_tax_C414;communal_tax_A415;communal_tax_B415;communal_tax_C415;communal_tax_A416;communal_tax_B416;communal_tax_C416;communal_tax_A417;communal_tax_B417;communal_tax_C417;communal_tax_A418;communal_tax_B418;communal_tax_C418;communal_tax_A419;communal_tax_B419;communal_tax_C419;communal_tax_A420;communal_tax_B420;communal_tax_C420;communal_tax_A421;communal_tax_B421;communal_tax_C421;communal_tax_A422;communal_tax_B422;communal_tax_C422;communal_tax_A423;communal_tax_B423;communal_tax_C423;communal_tax_A424;communal_tax_B424;communal_tax_C424;communal_tax_A425;communal_tax_B425;communal_tax_C425;communal_tax_A426;communal_tax_B426;communal_tax_C426;communal_tax_A427;communal_tax_B427;communal_tax_C427;communal_tax_A428;communal_tax_B428;communal_tax_C428;communal_tax_A429;communal_tax_B429;communal_tax_C429;communal_tax_A430;communal_tax_B430;communal_tax_C430;communal_tax_A431;communal_tax_B431;communal_tax_C431;communal_tax_A432;communal_tax_B432;communal_tax_C432;communal_tax_A433;communal_tax_B433;communal_tax_C433;communal_tax_A434;communal_tax_B434;communal_tax_C434;communal_tax_A435;communal_tax_B435;communal_tax_C435;communal_tax_A436;communal_tax_B436;communal_tax_C436;communal_tax_A437;communal_tax_B437;communal_tax_C437;communal_tax_A438;communal_tax_B438;communal_tax_C438;communal_tax_A439;communal_tax_B439;communal_tax_C439;communal_tax_A440;communal_tax_B440;communal_tax_C440;communal_tax_A441;communal_tax_B441;communal_tax_C441;communal_tax_A442;communal_tax_B442;communal_tax_C442;communal_tax_A443;communal_tax_B443;communal_tax_C443;communal_tax_A444;communal_tax_B444;communal_tax_C444;communal_tax_A445;communal_tax_B445;communal_tax_C445;communal_tax_A446;communal_tax_B446;communal_tax_C446;communal_tax_A447;communal_tax_B447;communal_tax_C447;communal_tax_A448;communal_tax_B448;communal_tax_C448;communal_tax_A449;communal_tax_B449;communal_tax_C449;communal_tax_A450;communal_tax_B450;communal_tax_C450;communal_tax_A451;communal_tax_B451;communal_tax_C451;communal_tax_A452;communal_tax_B452;communal_tax_C452;communal_tax_A453;communal_tax_B453;communal_tax_C453;communal_tax_A454;communal_tax_B454;communal_tax_C454;communal_tax_A455;communal_tax_B455;communal_tax_C455;communal_tax_A456;communal_tax_B456;communal_tax_C456;communal_tax_A457;communal_tax_B457;communal_tax_C457;communal_tax_A458;communal_tax_B458;communal_tax_C458;communal_tax_A459;communal_tax_B459;communal_tax_C459;communal_tax_A460;communal_tax_B460;communal_tax_C460;communal_tax_A461;communal_tax_B461;communal_tax_C461;communal_tax_A462;communal_tax_B462;communal_tax_C462;communal_tax_A463;communal_tax_B463;communal_tax_C463;communal_tax_A464;communal_tax_B464;communal_tax_C464;communal_tax_A465;communal_tax_B465;communal_tax_C465;communal_tax_A466;communal_tax_B466;communal_tax_C466;communal_tax_A467;communal_tax_B467;communal_tax_C467;communal_tax_A468;communal_tax_B468;communal_tax_C468;communal_tax_A469;communal_tax_B469;communal_tax_C469;communal_tax_A470;communal_tax_B470;communal_tax_C470;communal_tax_A471;communal_tax_B471;communal_tax_C471;communal_tax_A472;communal_tax_B472;communal_tax_C472;communal_tax_A473;communal_tax_B473;communal_tax_C473;communal_tax_A474;communal_tax_B474;communal_tax_C474;communal_tax_A475;communal_tax_B475;communal_tax_C475;communal_tax_A476;communal_tax_B476;communal_tax_C476;communal_tax_A477;communal_tax_B477;communal_tax_C477;communal_tax_A478;communal_tax_B478;communal_tax_C478;communal_tax_A479;communal_tax_B479;communal_tax_C479;communal_tax_A480;communal_tax_B480;communal_tax_C480;communal_tax_A481;communal_tax_B481;communal_tax_C481;communal_tax_A482;communal_tax_B482;communal_tax_C482;communal_tax_A483;communal_tax_B483;communal_tax_C483;communal_tax_A484;communal_tax_B484;communal_tax_C484;communal_tax_A485;communal_tax_B485;communal_tax_C485;communal_tax_A486;communal_tax_B486;communal_tax_C486;communal_tax_A487;communal_tax_B487;communal_tax_C487;communal_tax_A488;communal_tax_B488;communal_tax_C488;communal_tax_A489;communal_tax_B489;communal_tax_C489;communal_tax_A490;communal_tax_B490;communal_tax_C490;communal_tax_A491;communal_tax_B491;communal_tax_C491;communal_tax_A492;communal_tax_B492;communal_tax_C492;communal_tax_A493;communal_tax_B493;communal_tax_C493;communal_tax_A494;communal_tax_B494;communal_tax_C494;communal_tax_A495;communal_tax_B495;communal_tax_C495;communal_tax_A496;communal_tax_B496;communal_tax_C496;communal_tax_A497;communal_tax_B497;communal_tax_C497;communal_tax_A498;communal_tax_B498;communal_tax_C498;communal_tax_A499;communal_tax_B499;communal_tax_C499;communal_tax_A500;communal_tax_B500;communal_tax_C500;communal_tax_A501;communal_tax_B501;communal_tax_C501;communal_tax_A502;communal_tax_B502;communal_tax_C502;communal_tax_A503;communal_tax_B503;communal_tax_C503;communal_tax_A504;communal_tax_B504;communal_tax_C504;communal_tax_A505;communal_tax_B505;communal_tax_C505;communal_tax_A506;communal_tax_B506;communal_tax_C506;communal_tax_A507;communal_tax_B507;communal_tax_C507;communal_tax_A508;communal_tax_B508;communal_tax_C508;communal_tax_A509;communal_tax_B509;communal_tax_C509;communal_tax_A510;communal_tax_B510;communal_tax_C510;communal_tax_A511;communal_tax_B511;communal_tax_C511;communal_tax_A512;communal_tax_B512;communal_tax_C512;communal_tax_A513;communal_tax_B513;communal_tax_C513;communal_tax_A514;communal_tax_B514;communal_tax_C514;communal_tax_A515;communal_tax_B515;communal_tax_C515;communal_tax_A516;communal_tax_B516;communal_tax_C516;communal_tax_A517;communal_tax_B517;communal_tax_C517;communal_tax_A518;communal_tax_B518;communal_tax_C518;communal_tax_A519;communal_tax_B519;communal_tax_C519;communal_tax_A520;communal_tax_B520;communal_tax_C520;communal_tax_A521;communal_tax_B521;communal_tax_C521;communal_tax_A522;communal_tax_B522;communal_tax_C522;communal_tax_A523;communal_tax_B523;communal_tax_C523;communal_tax_A524;communal_tax_B524;communal_tax_C524;communal_tax_A525;communal_tax_B525;communal_tax_C525;communal_tax_A526;communal_tax_B526;communal_tax_C526;communal_tax_A527;communal_tax_B527;communal_tax_C527;communal_tax_A528;communal_tax_B528;communal_tax_C528;communal_tax_A529;communal_tax_B529;communal_tax_C529;communal_tax_A530;communal_tax_B530;communal_tax_C530;communal_tax_A531;communal_tax_B531;communal_tax_C531;communal_tax_A532;communal_tax_B532;communal_tax_C532;communal_tax_A533;communal_tax_B533;communal_tax_C533;communal_tax_A534;communal_tax_B534;communal_tax_C534;communal_tax_A535;communal_tax_B535;communal_tax_C535;communal_tax_A536;communal_tax_B536;communal_tax_C536;communal_tax_A537;communal_tax_B537;communal_tax_C537;communal_tax_A538;communal_tax_B538;communal_tax_C538;communal_tax_A539;communal_tax_B539;communal_tax_C539;communal_tax_A540;communal_tax_B540;communal_tax_C540;communal_tax_A541;communal_tax_B541;communal_tax_C541;communal_tax_A542;communal_tax_B542;communal_tax_C542;communal_tax_A543;communal_tax_B543;communal_tax_C543;communal_tax_A544;communal_tax_B544;communal_tax_C544;communal_tax_A545;communal_tax_B545;communal_tax_C545;communal_tax_A546;communal_tax_B546;communal_tax_C546;communal_tax_A547;communal_tax_B547;communal_tax_C547;communal_tax_A548;communal_tax_B548;communal_tax_C548;communal_tax_A549;communal_tax_B549;communal_tax_C549;communal_tax_A550;communal_tax_B550;communal_tax_C550;communal_tax_A551;communal_tax_B551;communal_tax_C551;communal_tax_A552;communal_tax_B552;communal_tax_C552;communal_tax_A553;communal_tax_B553;communal_tax_C553;communal_tax_A554;communal_tax_B554;communal_tax_C554;communal_tax_A555;communal_tax_B555;communal_tax_C555;communal_tax_A556;communal_tax_B556;communal_tax_C556;communal_tax_A557;communal_tax_B557;communal_tax_C557;communal_tax_A558;communal_tax_B558;communal_tax_C558;communal_tax_A559;communal_tax_B559;communal_tax_C559;communal_tax_A560;communal_tax_B560;communal_tax_C560;communal_tax_A561;communal_tax_B561;communal_tax_C561;communal_tax_A562;communal_tax_B562;communal_tax_C562;communal_tax_A563;communal_tax_B563;communal_tax_C563;communal_tax_A564;communal_tax_B564;communal_tax_C564;communal_tax_A565;communal_tax_B565;communal_tax_C565;communal_tax_A566;communal_tax_B566;communal_tax_C566;communal_tax_A567;communal_tax_B567;communal_tax_C567;communal_tax_A568;communal_tax_B568;communal_tax_C568;communal_tax_A569;communal_tax_B569;communal_tax_C569;communal_tax_A570;communal_tax_B570;communal_tax_C570;communal_tax_A571;communal_tax_B571;communal_tax_C571;communal_tax_A572;communal_tax_B572;communal_tax_C572;communal_tax_A573;communal_tax_B573;communal_tax_C573;communal_tax_A574;communal_tax_B574;communal_tax_C574;communal_tax_A575;communal_tax_B575;communal_tax_C575;communal_tax_A576;communal_tax_B576;communal_tax_C576;communal_tax_A577;communal_tax_B577;communal_tax_C577;communal_tax_A578;communal_tax_B578;communal_tax_C578;communal_tax_A579;communal_tax_B579;communal_tax_C579;communal_tax_A580;communal_tax_B580;communal_tax_C580;communal_tax_A581;communal_tax_B581;communal_tax_C581;communal_tax_A582;communal_tax_B582;communal_tax_C582;communal_tax_A583;communal_tax_B583;communal_tax_C583;communal_tax_A584;communal_tax_B584;communal_tax_C584;communal_tax_A585;communal_tax_B585;communal_tax_C585;communal_tax_A586;communal_tax_B586;communal_tax_C586;communal_tax_A587;communal_tax_B587;communal_tax_C587;communal_tax_A588;communal_tax_B588;communal_tax_C588;communal_tax_A589;communal_tax_B589;communal_tax_C589]{if(cell == tax_calculation_B113){return update_column(cell, 3)}}

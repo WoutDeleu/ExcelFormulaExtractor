@@ -1,0 +1,11 @@
+tax_calculation_L1417=0
+tax_calculation_L1416=0
+tax_calculation_L1414=0
+tax_calculation_L1413=0
+tax_calculation_L1412=0
+tax_calculation_L1411=0
+tax_calculation_L1410=0
+tax_calculation_L1409=0
+tax_calculation_L1408=0
+tax_calculation_L1407=0
+tax_calculation_L1406=0

@@ -1,0 +1,3 @@
+tax_calculation_Q1187=abs(tax_calculation_Q1183)
+tax_calculation_Q1188=abs(tax_calculation_Q1187)*(-overview_indexed_amounts_F239)
+tax_calculation_D48=tax_calculation_Q1188
