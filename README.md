@@ -8,7 +8,7 @@ The idea is to summarize and analyse complex and long excel files withouth havin
 1. Clone or download the repository.
 2. Ensure you have Python 3.x installed and Python added to the path of your device.
 3. Install the required dependencies:
-    ```bash
+    ```shell
     pip install -r requirements.txt
     ```
 4. Run the script with the desired flags
@@ -16,7 +16,7 @@ The idea is to summarize and analyse complex and long excel files withouth havin
 ## How to Use
 ### Without command line arguments
 1. Execute the script without flag options.
-    ```Python
+    ```shell
     python main.py
     ```
 2. Select the Excel file you want to analyze.
