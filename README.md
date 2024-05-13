@@ -16,7 +16,7 @@ The idea is to summarize and analyse complex and long excel files withouth havin
 ## How to Use
 ### Without command line arguments
 1. Execute the script without flag options.
-    ```Python
+    ```bash
     python main.py
     ```
 2. Select the Excel file you want to analyze.
