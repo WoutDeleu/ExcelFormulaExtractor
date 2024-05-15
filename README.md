@@ -7,6 +7,12 @@ The idea is to summarize and analyse complex and long excel files withouth havin
 ### Contents
 - [Installation](#Installation)
 - [How To Use](#How-to-Use)
+    - [Without command line arguments](#Without-command-line-arguments)
+    - [Command line arguments](#Command-line-arguments)
+- [How it works](#How-it-works)
+- [Output](#Output)
+- [Contribution](#Contribution)
+
 
 ## Installation 🐍
 1. Clone or download this repository, and enter the folder.
@@ -28,7 +34,7 @@ The idea is to summarize and analyse complex and long excel files withouth havin
     - For a full analysis, the tool will extract data from predefined starting cells.
     - For a specific analysis, input the sheet name and cell location to start the extraction as an answer to the prompt.
 
-### Command Line arguments
+### Command line arguments
 ```
 --full_analysis
     Resolves all the formulas, errors and variables from a predefined list of cells!
