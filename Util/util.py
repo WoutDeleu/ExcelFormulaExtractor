@@ -59,7 +59,7 @@ def write_results_to_file(data_structure, filename, name):
         file.close()
     
 
-def print_results(formulas, values, exceptions, filename='', to_file=True):
+def print_results(formulas, values, exceptions, filename='', write_to_file=True):
     print('######################################################################################################')
     print('##########################################  VALUES  ##################################################')
     print('######################################################################################################')
@@ -83,12 +83,12 @@ def print_results(formulas, values, exceptions, filename='', to_file=True):
         print(error.cell.location + '-' + error.cell.sheetname + ': ' + str(error.value))
     print()
     
-    if filename != '' and to_file:
-        write_results_to_file(values, 'results/'+filename, 'values')
-        write_results_to_file(formulas, 'results/'+filename, 'formulas')
-        write_results_to_file(exceptions, 'results/'+filename, 'exceptions')
-    elif to_file:
+    if filename != '' and write_to_file:
+        write_results_to_file(values, 'results/' + filename, 'values')
+        write_results_to_file(formulas, 'results/' + filename, 'formulas')
+        write_results_to_file(exceptions, 'results/' + filename, 'exceptions')
+    elif write_to_file:
         filename = input('What is the filename where you want to write your results to? ')
-        write_results_to_file(values, 'results/'+filename, 'values')
-        write_results_to_file(formulas, 'results/'+filename, 'formulas')
-        write_results_to_file(exceptions, 'results/'+filename, 'exceptions')
+        write_results_to_file(values, 'results/' + filename, 'values')
+        write_results_to_file(formulas, 'results/' + filename, 'formulas')
+        write_results_to_file(exceptions, 'results/' + filename, 'exceptions')

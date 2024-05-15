@@ -8,6 +8,7 @@ from ExcelHandler.excel_extractor import *
 from tkinter.filedialog import askopenfilename
 import datetime
 from openpyxl.worksheet.formula import ArrayFormula
+import argparse
 
 warnings.simplefilter(action='ignore', category=UserWarning)
 
@@ -27,7 +28,7 @@ def is_already_calculated_externally(cell):
         if cell.location == value:
             return True
     return False
-    
+
 def handle_constants(formulas, values, exceptions, sheet, cell):
     if isinstance(sheet[cell.location].value, datetime.time) or isinstance(sheet[cell.location].value, datetime.datetime) or is_constant(sheet[cell.location].value):
         value = sheet[cell.location].value
@@ -117,7 +118,7 @@ def resolve_cell(workbook, cell, formulas, values, exceptions):
     
     else:
         return handle_formulas(formulas, values, exceptions, workbook, sheet, cell)
-    
+
 
 
 def run_full_analysis(workbook):
@@ -152,49 +153,70 @@ def run_full_analysis(workbook):
             filename = names[i] + '_oldest'
         else:
             filename = names[i] + '_youngest'
-        print_results(formulas, values, exceptions, filename=filename, to_file=True)
+        print_results(formulas, values, exceptions, filename=filename, write_to_file=True)
         i += 1
         if i == len(names):
             i = 0
 
 
-def main():
+def main(args):
     print('Welcome to the Excel Extraction Tool')
-    print('Please select the Excel file you want to analyse')
-    filename = askopenfilename()
-    workbook = read_in_excel(filename)
+    if args.file is None:
+        print('Please select the Excel file you want to analyse')
+        filename = askopenfilename()
+        workbook = read_in_excel(filename)
+    else:
+        workbook = read_in_excel(args.file)
     
-    doese_run_full_analysis = input('Do you want the full analysis? (y/n):')
-    if doese_run_full_analysis == 'y':
+    if args.full_analysis and args.single_cell:
+        print('Please provide either the full analysis or the single cell analysis, not both at the same time')
+        sys.exit()
+    
+    if args.full_analysis:
         run_full_analysis(workbook)
-        return
-    
-    print('Enter the sheetname and cell location of the cell you want to start the analysis from')
-    sheetname = input("\tsheetname: ")
-    cell_number = input("\tcell number: ")
-    starting_cell = Cell(sheetname, cell_number)
-    
-    
-    global nested_table_cells
-    if cell_number in nested_table_cells:
-        popped_value = nested_table_cells.pop(cell_number)
-    
-    # TODO - Remove this hardcoded list of starting cells
-    global table_cells
-    if cell_number in table_cells:
-        table_cells.remove(cell_number)
-    
-    # Stack to keep track of formulas and values 
-    formulas = Stack()
-    values = Stack()
-    exceptions = Stack()
-    
-    formulas, values, exceptions = resolve_cell(workbook, starting_cell, formulas, values, exceptions)
-    print_results(formulas, values, exceptions)
-    
-    
+    else:
+        if not args.single_cell:
+            doese_run_full_analysis = input('Do you want the full analysis? (y/n):')
+            if doese_run_full_analysis == 'y':
+                run_full_analysis(workbook)
+
+        if bool(args.cell is not None) != bool(args.sheetname is not None):
+            print('Please provide both the cell and the sheetname, or none of the 2, not just one of them')
+            sys.exit()
+        elif args.cell is not None and args.sheetname is not None:
+            starting_cell = Cell(args.sheetname, args.cell)
+        else:
+            print('Enter the sheetname and cell location of the cell you want to start the analysis from')
+            sheetname = input("\tsheetname: ")
+            cell_number = input("\tcell number: ")
+            starting_cell = Cell(sheetname, cell_number)
+        
+        # TODO - Remove this hardcoded list of starting cells
+        global nested_table_cells
+        if cell_number in nested_table_cells:
+            popped_value = nested_table_cells.pop(cell_number)
+        global table_cells
+        if cell_number in table_cells:
+            table_cells.remove(cell_number)
+        
+        # Stack to keep track of formulas and values 
+        formulas = Stack()
+        values = Stack()
+        exceptions = Stack()
+        
+        formulas, values, exceptions = resolve_cell(workbook, starting_cell, formulas, values, exceptions)
+        print_results(formulas, values, exceptions, write_to_file=args.write_to_file)
+
+
 if __name__ == '__main__':
-    main()
-
-
-
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--full_analysis', action='store_true', help='Run the full analysis, based on the hardcoded starting cells')
+    parser.add_argument('--single_cell', action='store_true', help='Run the full analysis, based on the hardcoded starting cells')
+    parser.add_argument('-f', '--file', type=str, help='The Excel file to extract the formulas from')
+    parser.add_argument('-c', '--cell', type=str, help='The cell you want to start the analysis from')
+    parser.add_argument('-sh', '--sheetname', type=str, help='The sheetname of the cell you want to start the analysis from')
+    parser.add_argument('-wtf', '--write_to_file', action='store_true', help='Use this flag if you want to write the results to files')
+    # TODO - add argument for the to ignore cells
+    args = parser.parse_args()
+    
+    main(args)
