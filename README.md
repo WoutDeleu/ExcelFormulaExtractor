@@ -4,13 +4,13 @@ This tool is designed to extract formulas, constants, and exceptions from an Exc
 
 The idea is to summarize and analyse complex and long excel files withouth having to click through all the involved cells manually!
 
-### Contents
-- [Installation](#Installation-🐍)
+## Contents
+- [Installation 🐍](#Installation-🐍)
 - [How To Use](#How-to-Use)
     - [Without command line arguments](#Without-command-line-arguments)
     - [Command line arguments](#Command-line-arguments)
-- [How it works](#How-it-works-🧑‍🏫)
-- [Output](#Output-📁)
+- [How it works 🧑‍🏫](#How-it-works-🧑‍🏫)
+- [Output 📁](#Output-📁)
 - [Contribution](#Contribution)
 
 
