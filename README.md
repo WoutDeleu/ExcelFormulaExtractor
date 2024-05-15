@@ -76,6 +76,6 @@ The tool generates output files containing extracted formulas, constants, and ex
 - ... \__exceptions.txt_file: contains all the edge cases of cell contents, which the script isn't build for. These cells need to be checked manually for anomallities or faults. Where each cell is used needs to be checked. A good example is e.g. an empty excel file!
 
 ## Contribution
-This script was designed with a limitted amount of time available! So not all the possible features are included, a big scope is still not fully exploited! 
+This script was designed with a limitted amount of time available! So not all the possible features are included, a big scope is still not fully exploited! Feel free to 
 
 ## License
