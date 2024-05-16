@@ -62,7 +62,8 @@ def handle_exceptions(formulas, values, exceptions, sheet, cell):
         print()
         
         exceptions.add(CellValue(cell, 'None'))
-        
+    
+    # TODO - Remove this hardcoded list of exceptions
     if sheet[cell.location].value == 'Ottignies- Louvain- La-Neuve':
         exceptions.add(CellValue(cell, sheet[cell.location].value))
         print('Cell: ' + cell.location)

@@ -1,7 +1,4 @@
 PLANNING
-    - order error der uit halen
-
-    - cell tracker
 
     - Translator naar Liquid
 

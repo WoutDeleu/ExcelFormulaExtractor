@@ -71,7 +71,7 @@ def extract_formula_cells(sheetname, excel_formula, formula='', cells=Set()):
             
         elif element[0] == '+':
             cells, current_formula = extract_formula_cells(sheetname, element[1:], formula='', cells=cells)
-            current_formula = 'abs(' + current_formula + ')'
+            current_formula = '(' + current_formula + ')'
             
         elif element[0] == '-':
             cells, current_formula = extract_formula_cells(sheetname, element[1:], formula='', cells=cells)
