@@ -85,8 +85,10 @@ The excel functions that are handled by this script (the one more thourough then
 - _MID_
 - _RIGHT_
 
-### Naming
-When looking at the resulting files, you will notice a specific naming convention. Every variable name is build up by 2 parts. The first being 
+### Variable Naming in results
+When looking at the resulting files, you will notice a specific naming convention. Every variable name is build up by 2 parts, sheetname en cell number.
+- Sheetname: referring to the sheetname of the original excel file. 
+- Cellnumber: referring to the cell location on that sheet!
 
 ### Running a Full Analysis
 - The tool iterates through predefined starting cells, extracting formulas, constants, and exceptions.
@@ -96,9 +98,9 @@ When looking at the resulting files, you will notice a specific naming conventio
 - Specify the sheet name and cell location to begin the analysis.
 - Results are displayed for the provided cell and its dependencies.
 
-
 ### Caution
-Manually check
+- Manually check the order of the dependencies! There are some known bugs that occured with the order of the formulas. This should be quite rare, but caution is needed when analysing results.
+- Look out for double calculated cells. At the moment, it is not possible to track all the already visited cells _across different runs_. Meaning that when a cell is used a lot accross different cells, and branches out extremely (like for example Tax Calculation - D113), this can cause exponential expansion of the result files. Some thourough analysis is therefore needed when encountering such cases, or preferrably before running the tool. Tax Calculation - D113 for example is 'easy' to build manually, so if you leave this cell out of the calculations by the script, the complexity is decreased significantly! 
 
 ## Output 📁
 The tool generates output files containing extracted formulas, constants, and exceptions. Output files are saved in the _results_ directory as the script.
