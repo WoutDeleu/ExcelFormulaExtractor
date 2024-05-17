@@ -130,6 +130,11 @@ To help you get started, here is a list of current tasks and features we are wor
 - The TODO's inside the code
 - A language parser to immediately get code in the correct syntax of a chosen language. E.g. running the code, and getting a fully functional Python file as a result
 
+- Simplify formulas
+    - Substituate formulas in one another
+        - Direct assignments -> substituting
+    - VLOOKUPs
+
 ### How to Contribute
 We welcome contributions from the community! To ensure a smooth process, please follow the guidelines below:
 
