@@ -22,8 +22,8 @@ tax_calculation_C624=if(tax_calculation_C120=="NVT"){4340/2}else{"MROUND(4340*$E
 tax_calculation_F624=if(tax_calculation_M590>tax_calculation_Q590){if(tax_calculation_C101==0){0}else{if((tax_calculation_C101==2&tax_calculation_C97==0&tax_calculation_C98==0&tax_calculation_C102==0)){tax_calculation_C624}else{if((tax_calculation_C97==2&tax_calculation_C101==0&tax_calculation_C98==0&tax_calculation_C102==0)){tax_calculation_C624}else{if((tax_calculation_C97==1&tax_calculation_C101==1&tax_calculation_C102==0&tax_calculation_C98==0)){tax_calculation_C624}else{if((tax_calculation_C97==1&tax_calculation_C98==1&tax_calculation_C101==0&tax_calculation_C102==0)){tax_calculation_C624}else{if((tax_calculation_C97==0&tax_calculation_C98==0&tax_calculation_C101==1&tax_calculation_C102==1)){tax_calculation_C624}else{0}}}}}}}else{0}
 tax_calculation_C623=if(tax_calculation_C120=="NVT"){1690}else{"MROUND(1690*$E$120,10)"}
 tax_calculation_F623=(-if(tax_calculation_M590>tax_calculation_Q590){if((tax_calculation_C97==0&tax_calculation_C101==0)){0}else{if((tax_calculation_C101==1&tax_calculation_C97==0&tax_calculation_C102==0)){tax_calculation_C623/2}else{if((tax_calculation_C97==1&tax_calculation_C101==0&tax_calculation_C98==0)){tax_calculation_C623/2}else{0}}}}else{0})
-tax_calculation_C622=if(tax_calculation_C120=="NVT"){MAX(MIN(1090*(20740-tax_calculation_M590)/(20740-16370);1090);0)}else{(iferror)"MROUND(MIN((1090*E120)*(20740-M590)/(20710-16370),1090*E120),10)"}
-tax_calculation_M535=abs(tax_calculation_M524)+tax_calculation_M526+tax_calculation_M527+tax_calculation_M529+tax_calculation_M531+tax_calculation_M532+tax_calculation_M533
+tax_calculation_C622=if(tax_calculation_C120=="NVT"){MAX(MIN(1090*(20740-tax_calculation_M590)/(20740-16370);1090);0)}else{"MROUND(MIN((1090*E120)*(20740-M590)/(20710-16370),1090*E120),10)"}
+tax_calculation_M535=(tax_calculation_M524)+tax_calculation_M526+tax_calculation_M527+tax_calculation_M529+tax_calculation_M531+tax_calculation_M532+tax_calculation_M533
 tax_calculation_F622=if((tax_calculation_C88==1&tax_calculation_M590<20740&tax_calculation_M535>3490)){tax_calculation_C622}else{0}
 tax_calculation_C621=if(tax_calculation_C120=="NVT"){1690}else{"MROUND(1690*$E$120,10)"}
 tax_calculation_F621=if((tax_calculation_C70==1&tax_calculation_C71==1&tax_calculation_C72==1)){tax_calculation_C621}else{0}
@@ -67,7 +67,7 @@ tax_calculation_Q527=if(tax_calculation_M526>0){(-tax_calculation_M526)}else{0}
 tax_calculation_H533=if((tax_calculation_F69=="YES"&tax_calculation_P529>0&tax_calculation_P529>(-tax_calculation_Q527))){"YES"}else{if((tax_calculation_P529==0&tax_calculation_Q527==0)){"NVT"}else{if(tax_calculation_F69=="NO"){"NVT"}else{"NO"}}}
 tax_calculation_Q531=if(tax_calculation_H533=="YES"){(-(tax_calculation_Q526+tax_calculation_Q527))}else{0}
 tax_calculation_Q529=if((tax_calculation_P529>0&tax_calculation_F69=="YES"&tax_calculation_P529>(-tax_calculation_Q527))){(-tax_calculation_P529)}else{0}
-tax_calculation_Q535=abs(tax_calculation_Q524)+tax_calculation_Q526+tax_calculation_Q527+tax_calculation_Q529+tax_calculation_Q531+tax_calculation_Q532+tax_calculation_Q533
+tax_calculation_Q535=(tax_calculation_Q524)+tax_calculation_Q526+tax_calculation_Q527+tax_calculation_Q529+tax_calculation_Q531+tax_calculation_Q532+tax_calculation_Q533
 tax_calculation_M583=tax_calculation_M581+tax_calculation_M535+tax_calculation_M166
 tax_calculation_M586=(-tax_calculation_L586)*0.8
 tax_calculation_M533=if(tax_calculation_H533=="Yes"){(-tax_calculation_M526)}else{0}

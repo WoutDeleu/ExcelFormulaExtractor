@@ -21,5 +21,5 @@ vak_x_(jill)_B54=tax_calculation_L1360
 vak_x_(jill)_D54=(vak_x_(jill)_B54)
 tax_calculation_M1360=vak_x_(jill)_D54
 tax_calculation_M1359=" "
-tax_calculation_M1358=(iferror)"Voorafbetalingen!C70"
+tax_calculation_M1358="Voorafbetalingen!C70"
 tax_calculation_C57=(tax_calculation_M1358+tax_calculation_M1359+tax_calculation_M1360+tax_calculation_M1361+tax_calculation_M1362+tax_calculation_M1363+tax_calculation_M1364+tax_calculation_M1365+tax_calculation_M1366+tax_calculation_M1367+tax_calculation_M1368+tax_calculation_M1369+tax_calculation_M1370+tax_calculation_M1371)

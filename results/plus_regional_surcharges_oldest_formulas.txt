@@ -1,5 +1,5 @@
-tax_calculation_M1187=abs(tax_calculation_M1183)
-tax_calculation_M1190=abs(tax_calculation_M1187)+tax_calculation_M1188
-tax_calculation_M1191=if((tax_calculation_D113=="WALLONIË"|tax_calculation_D113=="VLAANDEREN")){abs(tax_calculation_M1190)*overview_indexed_amounts_F240}else{abs(tax_calculation_M1190)*overview_indexed_amounts_F242}
-tax_calculation_M1254=abs(tax_calculation_M1191)
+tax_calculation_M1187=(tax_calculation_M1183)
+tax_calculation_M1190=(tax_calculation_M1187)+tax_calculation_M1188
+tax_calculation_M1191=if((tax_calculation_D113=="WALLONIË"|tax_calculation_D113=="VLAANDEREN")){(tax_calculation_M1190)*overview_indexed_amounts_F240}else{(tax_calculation_M1190)*overview_indexed_amounts_F242}
+tax_calculation_M1254=(tax_calculation_M1191)
 tax_calculation_C51=tax_calculation_M1254

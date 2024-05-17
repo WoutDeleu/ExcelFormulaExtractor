@@ -20,5 +20,5 @@ tax_calculation_Q1361=vak_x_(jill)_D114
 vak_x_(jill)_B120=tax_calculation_P1360
 vak_x_(jill)_D120=(vak_x_(jill)_B120)
 tax_calculation_Q1360=vak_x_(jill)_D120
-tax_calculation_Q1358=(iferror)"Voorafbetalingen!E70"
+tax_calculation_Q1358="Voorafbetalingen!E70"
 tax_calculation_D57=(tax_calculation_Q1358+tax_calculation_Q1359+tax_calculation_Q1360+tax_calculation_Q1361+tax_calculation_Q1362+tax_calculation_Q1363+tax_calculation_Q1364+tax_calculation_Q1365+tax_calculation_Q1366+tax_calculation_Q1367+tax_calculation_Q1368+tax_calculation_Q1369+tax_calculation_Q1370+tax_calculation_Q1371)
