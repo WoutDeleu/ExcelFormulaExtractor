@@ -28,7 +28,7 @@ def extract_formula_cells(sheetname, excel_formula, formula='', cells=Set()):
         
         if is_iferror(element[:7]):
             cells, current_formula = extract_formula_cells(sheetname, element[8:-3], formula='', cells=cells)
-            current_formula = '(iferror)' + current_formula
+            # current_formula = '(iferror)' + current_formula
             
         elif is_if(element[:2]):
             cells, current_formula = handle_if_logic(cells, sheetname, element)
